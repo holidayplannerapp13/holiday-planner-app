@@ -1,4 +1,4 @@
-// App.tsx — Calendarific + cultural holidays with country normalization
+// App.tsx — Calendarific + cultural holidays with week fix and date display
 import React, { useState } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
 import calendarificHolidayData from "./data/calendarific-holidays.json";
@@ -13,8 +13,8 @@ countryTable.countries.forEach((c: { code: string; name: string }) => {
 });
 
 const MONTHS = [
-  "January","February","March","April","May","June",
-  "July","August","September","October","November","December"
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
 ];
 
 interface WeekRow {
@@ -59,7 +59,6 @@ const App: React.FC = () => {
     setSelectedCountries([]);
     setWeekData([]);
 
-    // Filter holidays from static JSON instead of API
     const calendarificHolidays = (calendarificHolidayData as Holiday[]).filter((h) => {
       const d = new Date(h.date);
       return d.getFullYear() === +year && d.getMonth() === monthIdx;
@@ -70,6 +69,7 @@ const App: React.FC = () => {
       return d.getFullYear() === +year && d.getMonth() === monthIdx;
     });
 
+    // Merge and normalize
     const merged = [...calendarificHolidays, ...culturalHolidays].map((h) => {
       const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
       return { ...h, country: fullName };
@@ -93,13 +93,9 @@ const App: React.FC = () => {
 
     const rows = generateWeeks(monthIdx).map((row) => {
       const wkNum = parseInt(row.week.split(" ")[2]) - 1;
-      const startOfWeek = new Date(+year, monthIdx, 1 + wkNum * 7);
-      const wkStart = new Date(startOfWeek);
-      const dayOfWeek = wkStart.getDay(); // 0 (Sun) - 6 (Sat)
-      wkStart.setDate(wkStart.getDate() - dayOfWeek); // shift to Sunday
-
+      const wkStart = new Date(+year, monthIdx, 1 + wkNum * 7);
       const wkEnd = new Date(wkStart);
-      wkEnd.setDate(wkStart.getDate() + 6); // extend to Saturday
+      wkEnd.setDate(wkEnd.getDate() + 6); // include full week (Sunday through Saturday)
 
       const weekHolidays = filtered.filter((h) => {
         const d = new Date(h.date);
