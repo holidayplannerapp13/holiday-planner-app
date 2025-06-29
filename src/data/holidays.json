@@ -1,0 +1,18 @@
+[
+  {
+    "week": 1,
+    "date": "2025-09-15",
+    "holiday": "Hispanic Heritage Month Begins",
+    "country": "US",
+    "localName": "Mes de la Herencia Hispana",
+    "theme": "Cultural"
+  },
+  {
+    "week": 2,
+    "date": "2025-10-03",
+    "holiday": "German Unity Day",
+    "country": "DE",
+    "localName": "Tag der Deutschen Einheit",
+    "theme": "National"
+  }
+]

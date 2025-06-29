@@ -1,0 +1,7 @@
+{
+  "calendars": [
+    { "country": "US" },
+    { "country": "GB" },
+    { "country": "CA" }
+  ]
+}
