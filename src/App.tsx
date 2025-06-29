@@ -1,4 +1,3 @@
-// App.tsx — Calendarific + cultural holidays with week fix and date display
 import React, { useState } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
 import calendarificHolidayData from "./data/calendarific-holidays.json";
@@ -6,15 +5,14 @@ import countryTable from "./data/countryTable.json";
 import type { Holiday } from "./types";
 import "./styles.css";
 
-// Lookup maps for normalization
 const codeToName = new Map<string, string>();
 countryTable.countries.forEach((c: { code: string; name: string }) => {
   codeToName.set(c.code.toUpperCase(), c.name);
 });
 
 const MONTHS = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+  "January","February","March","April","May","June",
+  "July","August","September","October","November","December"
 ];
 
 interface WeekRow {
@@ -36,9 +34,13 @@ const App: React.FC = () => {
 
   const generateWeeks = (monthIdx: number): WeekRow[] => {
     const rows: WeekRow[] = [];
-    let wk = 1;
     const cursor = new Date(+year, monthIdx, 1);
+    let wk = 1;
     while (cursor.getMonth() === monthIdx) {
+      const start = new Date(cursor);
+      const end = new Date(start);
+      end.setDate(end.getDate() + 6);
+
       rows.push({
         week: `${MONTHS[monthIdx]} – Week ${wk}`,
         lessons: "",
@@ -47,6 +49,7 @@ const App: React.FC = () => {
         assessment: "",
         importantDates: "",
       });
+
       cursor.setDate(cursor.getDate() + 7);
       wk++;
     }
@@ -69,7 +72,6 @@ const App: React.FC = () => {
       return d.getFullYear() === +year && d.getMonth() === monthIdx;
     });
 
-    // Merge and normalize
     const merged = [...calendarificHolidays, ...culturalHolidays].map((h) => {
       const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
       return { ...h, country: fullName };
@@ -91,11 +93,10 @@ const App: React.FC = () => {
     const monthIdx = MONTHS.indexOf(selectedMonth);
     const filtered = allHolidays.filter((h) => selectedCountries.includes(h.country));
 
-    const rows = generateWeeks(monthIdx).map((row) => {
-      const wkNum = parseInt(row.week.split(" ")[2]) - 1;
-      const wkStart = new Date(+year, monthIdx, 1 + wkNum * 7);
+    const rows = generateWeeks(monthIdx).map((row, i) => {
+      const wkStart = new Date(+year, monthIdx, 1 + i * 7);
       const wkEnd = new Date(wkStart);
-      wkEnd.setDate(wkEnd.getDate() + 6); // include full week (Sunday through Saturday)
+      wkEnd.setDate(wkStart.getDate() + 6);
 
       const weekHolidays = filtered.filter((h) => {
         const d = new Date(h.date);
@@ -125,7 +126,6 @@ const App: React.FC = () => {
     <div className="app">
       <h1>Holiday Planner</h1>
 
-      {/* Step 1 */}
       {!selectedMonth && (
         <>
           <h2>Step 1 – Choose Month</h2>
@@ -136,17 +136,11 @@ const App: React.FC = () => {
           ))}
           <br />
           <label style={{ marginTop: 12, display: "inline-block" }}>
-            Year:{" "}
-            <input
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-              style={{ width: 80 }}
-            />
+            Year: <input value={year} onChange={(e) => setYear(e.target.value)} style={{ width: 80 }} />
           </label>
         </>
       )}
 
-      {/* Step 2 */}
       {selectedMonth && availableCountries.length > 0 && weekData.length === 0 && (
         <>
           <h2>Step 2 – Select Countries with Holidays</h2>
@@ -175,7 +169,6 @@ const App: React.FC = () => {
         </>
       )}
 
-      {/* Step 3 */}
       {weekData.length > 0 && (
         <>
           <h2>
@@ -197,7 +190,7 @@ const App: React.FC = () => {
                 <tr key={row.week}>
                   <td>{row.week}</td>
                   {(
-                    ["lessons","concepts","holidayIntegrations","assessment","importantDates"] as const
+                    ["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"] as const
                   ).map((field) => (
                     <td key={field}>
                       <textarea
