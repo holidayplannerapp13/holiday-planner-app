@@ -1,5 +1,6 @@
-// src/App.tsx – Final: Lesson Plan Layout + Editable Table + Print Support
-import { useState } from "react";
+// Updated App.tsx to match step-by-step layout flow and CSV-style lesson plan output
+
+import { useState, useMemo } from "react";
 import { getCalendarificHolidays } from "./utils/fetchCalendarificHolidays";
 import type { Holiday } from "./types";
 import countryTable from "./data/countryTable.json";
@@ -13,38 +14,47 @@ const CURRENT_YEAR = new Date().getFullYear();
 type ByWeek = Record<string, Holiday[]>;
 
 export default function App() {
-  const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
-  const [holidaysByWeek, setHolidaysByWeek] = useState<ByWeek>({});
-  const [availableCountries, setAvailableCountries] = useState<string[]>([]);
   const [month, setMonth] = useState<string>("");
   const [year, setYear] = useState<number>(CURRENT_YEAR);
+  const [holidaysByWeek, setHolidaysByWeek] = useState<ByWeek>({});
+  const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
 
-  function handleSelectMonth(m: string) {
-    setMonth(m);
-    setSelectedCountries([]);
-    setHolidaysByWeek({});
-    const countrySet = new Set<string>();
+  const availableCountryCodes = useMemo(() => {
+    const set = new Set<string>();
     for (const { code } of countryTable.countries as any[]) {
-      countrySet.add(code.toUpperCase());
+      set.add(code.toUpperCase());
     }
-    setAvailableCountries(Array.from(countrySet).sort());
-  }
+    return Array.from(set);
+  }, []);
 
-  async function handleContinue() {
-    if (!selectedCountries.length || !month) return;
+  const countriesWithHolidays = useMemo(() => {
+    const nameToCode = new Map<string, string>();
+    for (const { name, code } of countryTable.countries as any[]) {
+      nameToCode.set(name.toLowerCase(), code.toUpperCase());
+    }
+    const idx = MONTHS.indexOf(month);
+    const holidays = (culturalHolidays as Holiday[]).filter((h) => {
+      const d = new Date(h.date);
+      const iso = nameToCode.get((h.country ?? "").toLowerCase());
+      return d.getFullYear() === year && d.getMonth() === idx && iso;
+    });
+    return Array.from(new Set(holidays.map((h) => nameToCode.get((h.country ?? "").toLowerCase())!)));
+  }, [month, year]);
+
+  async function handleFetch() {
+    if (!month || !countriesWithHolidays.length) return;
     setLoading(true);
-
-    const monthIdx = MONTHS.indexOf(month);
+    const idx = MONTHS.indexOf(month);
     const fetched: Holiday[] = [];
 
-    for (const code of selectedCountries) {
+    for (const code of countriesWithHolidays) {
       try {
         const list = await getCalendarificHolidays(code);
         fetched.push(
           ...list.filter((h) => {
             const d = new Date(h.date);
-            return d.getFullYear() === year && d.getMonth() === monthIdx;
+            return d.getFullYear() === year && d.getMonth() === idx;
           })
         );
       } catch (err) {
@@ -60,11 +70,7 @@ export default function App() {
     const cultural = (culturalHolidays as Holiday[]).filter((h) => {
       const d = new Date(h.date);
       const iso = nameToCode.get((h.country ?? "").toLowerCase());
-      return (
-        d.getFullYear() === year &&
-        d.getMonth() === monthIdx &&
-        iso && selectedCountries.includes(iso)
-      );
+      return d.getFullYear() === year && d.getMonth() === idx && iso && countriesWithHolidays.includes(iso);
     });
 
     const all = [...fetched, ...cultural];
@@ -75,8 +81,8 @@ export default function App() {
       const key = `${MONTHS[d.getMonth()]} – Week ${wk}`;
       (byWeek[key] ??= []).push(h);
     }
-
     setHolidaysByWeek(byWeek);
+    setSelectedCountries(countriesWithHolidays);
     setLoading(false);
   }
 
@@ -84,75 +90,42 @@ export default function App() {
     <div style={{ padding: 24, fontFamily: "sans-serif" }}>
       <h1>Holiday Planner</h1>
 
-      {/* Step 1 – Month Picker */}
-      <section style={{ marginBottom: 24 }}>
-        <h2>Choose Month</h2>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {MONTHS.map((m) => (
-            <button
-              key={m}
-              onClick={() => handleSelectMonth(m)}
-              style={{
-                padding: "6px 10px",
-                border: "1px solid #333",
-                background: m === month ? "#c6f6d5" : "#fff",
-              }}
-            >
-              {m}
-            </button>
-          ))}
-        </div>
-        <div style={{ marginTop: 12 }}>
-          <label>Year: </label>
-          <input
-            type="number"
-            value={year}
-            onChange={(e) => setYear(Number(e.target.value))}
-            style={{ width: 90 }}
-          />
-        </div>
-      </section>
-
-      {/* Step 2 – Country Picker */}
-      {month && (
-        <section style={{ marginBottom: 24 }}>
-          <h2>Select Countries for {month} {year}</h2>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-            {availableCountries.map((code) => {
-              const label = (countryTable.countries as any[]).find((c) => c.code === code)?.name;
-              return (
-                <button
-                  key={code}
-                  onClick={() =>
-                    setSelectedCountries((prev) =>
-                      prev.includes(code)
-                        ? prev.filter((c) => c !== code)
-                        : [...prev, code]
-                    )
-                  }
-                  style={{
-                    padding: "6px 10px",
-                    border: "1px solid #333",
-                    background: selectedCountries.includes(code) ? "#90cdf4" : "#fff",
-                  }}
-                >
-                  {code} – {label}
-                </button>
-              );
-            })}
+      {!month ? (
+        <section>
+          <h2>Choose Month</h2>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {MONTHS.map((m) => (
+              <button
+                key={m}
+                onClick={() => {
+                  setMonth(m);
+                  setHolidaysByWeek({});
+                }}
+                style={{ padding: "6px 10px", border: "1px solid #333" }}
+              >
+                {m}
+              </button>
+            ))}
           </div>
-          <button
-            style={{ marginTop: 16, padding: "6px 14px" }}
-            disabled={!selectedCountries.length || loading}
-            onClick={handleContinue}
-          >
-            {loading ? "Loading…" : "Continue"}
+          <div style={{ marginTop: 12 }}>
+            <label>Year: </label>
+            <input
+              type="number"
+              value={year}
+              onChange={(e) => setYear(Number(e.target.value))}
+              style={{ width: 90 }}
+            />
+          </div>
+        </section>
+      ) : !Object.keys(holidaysByWeek).length ? (
+        <section>
+          <h2>Fetching Holidays in {month} {year}</h2>
+          <p>{countriesWithHolidays.length} countries with holidays found.</p>
+          <button disabled={loading} onClick={handleFetch}>
+            {loading ? "Loading…" : "View Lesson Plan"}
           </button>
         </section>
-      )}
-
-      {/* Step 3 – Final Table View */}
-      {Object.keys(holidaysByWeek).length > 0 && (
+      ) : (
         <section>
           <h2>{month} {year} – Lesson Plan</h2>
           <table border={1} cellPadding={6} style={{ borderCollapse: "collapse", width: "100%" }}>
@@ -176,14 +149,11 @@ export default function App() {
                   <tr key={wk}>
                     <td>{wk}</td>
                     <td>
-                      {holidays.map((h, idx) => {
-                        const formatted = new Date(h.date).toISOString().split("T")[0];
-                        return (
-                          <div key={idx}>
-                            {formatted} — {h.localName} ({h.country})
-                          </div>
-                        );
-                      })}
+                      {holidays.map((h, idx) => (
+                        <div key={idx}>
+                          {new Date(h.date).toISOString().split("T")[0]} — {h.localName} ({h.country})
+                        </div>
+                      ))}
                     </td>
                     <td contentEditable></td>
                     <td contentEditable></td>
