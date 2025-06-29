@@ -1,5 +1,5 @@
-// src/App.tsx – Revised: Lesson Plan Format Output
-import { useEffect, useState } from "react";
+// src/App.tsx – Final: Lesson Plan Layout + Editable Table + Print Support
+import { useState } from "react";
 import { getCalendarificHolidays } from "./utils/fetchCalendarificHolidays";
 import type { Holiday } from "./types";
 import countryTable from "./data/countryTable.json";
@@ -9,9 +9,7 @@ const MONTHS = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
 ];
-
 const CURRENT_YEAR = new Date().getFullYear();
-
 type ByWeek = Record<string, Holiday[]>;
 
 export default function App() {
@@ -70,7 +68,6 @@ export default function App() {
     });
 
     const all = [...fetched, ...cultural];
-
     const byWeek: ByWeek = {};
     for (const h of all) {
       const d = new Date(h.date);
@@ -87,7 +84,7 @@ export default function App() {
     <div style={{ padding: 24, fontFamily: "sans-serif" }}>
       <h1>Holiday Planner</h1>
 
-      {/* Month Picker */}
+      {/* Step 1 – Month Picker */}
       <section style={{ marginBottom: 24 }}>
         <h2>Choose Month</h2>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
@@ -116,7 +113,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Country Selector */}
+      {/* Step 2 – Country Picker */}
       {month && (
         <section style={{ marginBottom: 24 }}>
           <h2>Select Countries for {month} {year}</h2>
@@ -144,7 +141,6 @@ export default function App() {
               );
             })}
           </div>
-
           <button
             style={{ marginTop: 16, padding: "6px 14px" }}
             disabled={!selectedCountries.length || loading}
@@ -155,7 +151,7 @@ export default function App() {
         </section>
       )}
 
-      {/* Results – CSV Layout */}
+      {/* Step 3 – Final Table View */}
       {Object.keys(holidaysByWeek).length > 0 && (
         <section>
           <h2>{month} {year} – Lesson Plan</h2>
@@ -163,7 +159,7 @@ export default function App() {
             <thead style={{ background: "#f0f0f0" }}>
               <tr>
                 <th style={{ width: 150 }}>Week</th>
-                <th style={{ width: 180 }}>Important Data</th>
+                <th style={{ width: 200 }}>Important Data</th>
                 <th>Musicianship</th>
                 <th>Repertoire</th>
                 <th>Movement</th>
@@ -180,11 +176,14 @@ export default function App() {
                   <tr key={wk}>
                     <td>{wk}</td>
                     <td>
-                      {holidays.map((h, idx) => (
-                        <div key={idx}>
-                          {h.date} — {h.localName} ({h.country})
-                        </div>
-                      ))}
+                      {holidays.map((h, idx) => {
+                        const formatted = new Date(h.date).toISOString().split("T")[0];
+                        return (
+                          <div key={idx}>
+                            {formatted} — {h.localName} ({h.country})
+                          </div>
+                        );
+                      })}
                     </td>
                     <td contentEditable></td>
                     <td contentEditable></td>
