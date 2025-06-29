@@ -1,0 +1,39 @@
+/* src/styles.css */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+table.lesson-plan {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.lesson-plan th,
+.lesson-plan td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  vertical-align: top;
+}
+
+textarea {
+  width: 100%;
+  height: 4em;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+}
