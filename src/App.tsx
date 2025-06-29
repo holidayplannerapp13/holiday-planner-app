@@ -1,8 +1,8 @@
 // App.tsx — Calendarific + cultural holidays with country normalization
 import React, { useState } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
+import calendarificData from "./data/calendarific-holidays.json";
 import countryTable from "./data/countryTable.json";
-import { getCalendarificHolidays } from "./utils/fetchCalendarificHolidays";
 import type { Holiday } from "./types";
 import "./styles.css";
 
@@ -59,22 +59,11 @@ const App: React.FC = () => {
     setSelectedCountries([]);
     setWeekData([]);
 
-    // Calendarific holidays
-    const calendarificISO = countryTable.countries.map(c => c.code);
-    const calResults = await Promise.all(
-      calendarificISO.map(async (code) => {
-        try {
-          const holidays = await getCalendarificHolidays(code);
-          return holidays.filter((h) => {
-            const d = new Date(h.date);
-            return d.getFullYear() === +year && d.getMonth() === monthIdx;
-          });
-        } catch {
-          return [];
-        }
-      })
-    );
-    const calendarificHolidays = calResults.flat();
+    // Calendarific holidays (local file only)
+    const calendarificHolidays = (calendarificData as Holiday[]).filter((h) => {
+      const d = new Date(h.date);
+      return d.getFullYear() === +year && d.getMonth() === monthIdx;
+    });
 
     // Cultural holidays
     const culturalHolidays = (culturalHolidayData as Holiday[]).filter((h) => {
@@ -210,7 +199,7 @@ const App: React.FC = () => {
                 <tr key={row.week}>
                   <td>{row.week}</td>
                   {(
-                    ["lessons","concepts","holidayIntegrations","assessment","importantDates"] as const
+                    ["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"] as const
                   ).map((field) => (
                     <td key={field}>
                       <textarea

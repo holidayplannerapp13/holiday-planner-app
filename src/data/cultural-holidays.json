@@ -1,130 +1,2691 @@
 [
   {
-    "date": "2025-01-01",
-    "country": "Japan",
-    "name": "New Year's Day",
-    "localName": "元日",
-    "month": "January",
-    "week": 1
+    "date": "2025-09-01",
+    "country": "SK",
+    "name": "Slovakia Constitution Day",
+    "localName": "Slovakia Constitution Day"
   },
   {
-    "date": "2025-01-26",
-    "country": "India",
-    "name": "Republic Day",
-    "localName": "गणतंत्र दिवस",
-    "month": "January",
-    "week": 4
-  },
-  {
-    "date": "2025-02-10",
-    "country": "China",
-    "name": "Chinese New Year",
-    "localName": "春节",
-    "month": "February",
-    "week": 2
-  },
-  {
-    "date": "2025-03-03",
-    "country": "Bulgaria",
-    "name": "Liberation Day",
-    "localName": "Ден на Освобождението",
-    "month": "March",
-    "week": 1
-  },
-  {
-    "date": "2025-03-20",
-    "country": "Iran",
-    "name": "Nowruz",
-    "localName": "نوروز",
-    "month": "March",
-    "week": 3
-  },
-  {
-    "date": "2025-04-30",
-    "country": "Vietnam",
-    "name": "Reunification Day",
-    "localName": "Ngày Giải Phóng",
-    "month": "April",
-    "week": 5
-  },
-  {
-    "date": "2025-05-01",
-    "country": "International",
-    "name": "Labour Day",
-    "localName": "International Workers' Day",
-    "month": "May",
-    "week": 1
-  },
-  {
-    "date": "2025-05-05",
-    "country": "Japan",
-    "name": "Children's Day",
-    "localName": "こどもの日",
-    "month": "May",
-    "week": 1
-  },
-  {
-    "date": "2025-06-17",
-    "country": "Iceland",
-    "name": "National Day",
-    "localName": "Þjóðhátíðardagurinn",
-    "month": "June",
-    "week": 3
-  },
-  {
-    "date": "2025-07-04",
-    "country": "United States",
-    "name": "Independence Day",
-    "localName": "Independence Day",
-    "month": "July",
-    "week": 1
-  },
-  {
-    "date": "2025-08-15",
-    "country": "India",
-    "name": "Independence Day",
-    "localName": "स्वतंत्रता दिवस",
-    "month": "August",
-    "week": 3
+    "date": "2025-09-01",
+    "country": "UZ",
+    "name": "Uzbekistan Constitution Day",
+    "localName": "Uzbekistan Constitution Day"
   },
   {
     "date": "2025-09-02",
-    "country": "Vietnam",
-    "name": "Independence Day",
-    "localName": "Ngày Quốc Khánh",
-    "month": "September",
-    "week": 1
+    "country": "VN",
+    "name": "Independence day of Vietnam (Ngày Quốc Khánh)",
+    "localName": "Independence day of Vietnam (Ngày Quốc Khánh)"
+  },
+  {
+    "date": "2025-09-02",
+    "country": "ZZ",
+    "name": "VJ Day (US)",
+    "localName": "VJ Day (US)"
+  },
+  {
+    "date": "2025-09-03",
+    "country": "SM",
+    "name": "Foundation Day in San Marino",
+    "localName": "Foundation Day in San Marino"
+  },
+  {
+    "date": "2025-09-04",
+    "country": "ZZ",
+    "name": "Mawlid  (Islamic, Birth of Prophet Muhammad, مولد)",
+    "localName": "Mawlid  (Islamic, Birth of Prophet Muhammad, مولد)"
+  },
+  {
+    "date": "2025-09-04",
+    "country": "ZZ",
+    "name": "Umhlanga Reed Dance day (Swazi)",
+    "localName": "Umhlanga Reed Dance day (Swazi)"
+  },
+  {
+    "date": "2025-09-06",
+    "country": "ZZ",
+    "name": "Swaziland Independence Day",
+    "localName": "Swaziland Independence Day"
+  },
+  {
+    "date": "2025-09-06",
+    "country": "IN",
+    "name": "Ullambana (Buddhist, 盂蘭盆經)",
+    "localName": "Ullambana (Buddhist, 盂蘭盆經)"
+  },
+  {
+    "date": "2025-09-07",
+    "country": "BR",
+    "name": "Sete de Setembro (Brazil)",
+    "localName": "Sete de Setembro (Brazil)"
+  },
+  {
+    "date": "2025-09-07",
+    "country": "IN",
+    "name": "Pitru Paksha (India, पितृ पक्ष)",
+    "localName": "Pitru Paksha (India, पितृ पक्ष)"
+  },
+  {
+    "date": "2025-09-08",
+    "country": "ZZ",
+    "name": "Liberation Day (Kosrae)",
+    "localName": "Liberation Day (Kosrae)"
+  },
+  {
+    "date": "2025-09-09",
+    "country": "TJ",
+    "name": "Independence Day of Tajikistan",
+    "localName": "Independence Day of Tajikistan"
+  },
+  {
+    "date": "2025-09-11",
+    "country": "ZZ",
+    "name": "Liberation Day (Pohnpei)",
+    "localName": "Liberation Day (Pohnpei)"
+  },
+  {
+    "date": "2025-09-11",
+    "country": "ZZ",
+    "name": "September 11 (USA)",
+    "localName": "September 11 (USA)"
+  },
+  {
+    "date": "2025-09-12",
+    "country": "ZZ",
+    "name": "Heritage Open Days",
+    "localName": "Heritage Open Days"
+  },
+  {
+    "date": "2025-09-13",
+    "country": "ZZ",
+    "name": "European Heritage Days",
+    "localName": "European Heritage Days"
+  },
+  {
+    "date": "2025-09-13",
+    "country": "ZZ",
+    "name": "German Language Day",
+    "localName": "German Language Day"
+  },
+  {
+    "date": "2025-09-13",
+    "country": "ZZ",
+    "name": "Roald Dahl Day",
+    "localName": "Roald Dahl Day"
+  },
+  {
+    "date": "2025-09-15",
+    "country": "CR",
+    "name": "Latin Independence Days (Costa Rica-El Salvador-Guatemala-Honduras)",
+    "localName": "Latin Independence Days (Costa Rica-El Salvador-Guatemala-Honduras)"
+  },
+  {
+    "date": "2025-09-15",
+    "country": "MX",
+    "name": "Grito de Dolores",
+    "localName": "Grito de Dolores"
+  },
+  {
+    "date": "2025-09-15",
+    "country": "NZ",
+    "name": "Te wiki o te reo Māori (Aotearoa, Māori Language Week)",
+    "localName": "Te wiki o te reo Māori (Aotearoa, Māori Language Week)"
+  },
+  {
+    "date": "2025-09-16",
+    "country": "MY",
+    "name": "Malaysia Day (Hari Malaysia)",
+    "localName": "Malaysia Day (Hari Malaysia)"
+  },
+  {
+    "date": "2025-09-16",
+    "country": "ZZ",
+    "name": "Mexican Independence Day",
+    "localName": "Mexican Independence Day"
+  },
+  {
+    "date": "2025-09-16",
+    "country": "GN",
+    "name": "Papua New Guinea Independence Day",
+    "localName": "Papua New Guinea Independence Day"
+  },
+  {
+    "date": "2025-09-18",
+    "country": "CL",
+    "name": "Chile Independence Day",
+    "localName": "Chile Independence Day"
+  },
+  {
+    "date": "2025-09-21",
+    "country": "KH",
+    "name": "Pchum Ben (Cambodia, បុណ្យភ្ជុំបិណ្ឌ)",
+    "localName": "Pchum Ben (Cambodia, បុណ្យភ្ជុំបិណ្ឌ)"
+  },
+  {
+    "date": "2025-09-21",
+    "country": "AM",
+    "name": "Armenia Independence Day",
+    "localName": "Armenia Independence Day"
+  },
+  {
+    "date": "2025-09-21",
+    "country": "BZ",
+    "name": "Belize Independence Day",
+    "localName": "Belize Independence Day"
+  },
+  {
+    "date": "2025-09-21",
+    "country": "ZZ",
+    "name": "Mabon",
+    "localName": "Mabon"
+  },
+  {
+    "date": "2025-09-21",
+    "country": "MT",
+    "name": "Malta Independence Day",
+    "localName": "Malta Independence Day"
+  },
+  {
+    "date": "2025-09-22",
+    "country": "ZZ",
+    "name": "Autumnal Equinox",
+    "localName": "Autumnal Equinox"
+  },
+  {
+    "date": "2025-09-22",
+    "country": "ML",
+    "name": "Mali Independence Day",
+    "localName": "Mali Independence Day"
+  },
+  {
+    "date": "2025-09-22",
+    "country": "IN",
+    "name": "Navaratri (India, नवरात्रि)",
+    "localName": "Navaratri (India, नवरात्रि)"
+  },
+  {
+    "date": "2025-09-22",
+    "country": "NP",
+    "name": "Dashain (Nepal, बडादसैँ)",
+    "localName": "Dashain (Nepal, बडादसैँ)"
+  },
+  {
+    "date": "2025-09-22",
+    "country": "ZZ",
+    "name": "Rosh Hashanah  (Jewish,רֹאשׁ הַשָּׁנָה)",
+    "localName": "Rosh Hashanah  (Jewish,רֹאשׁ הַשָּׁנָה)"
+  },
+  {
+    "date": "2025-09-24",
+    "country": "ZA",
+    "name": "Heritage Day South Africa",
+    "localName": "Heritage Day South Africa"
+  },
+  {
+    "date": "2025-09-26",
+    "country": "ZZ",
+    "name": "Native American Day",
+    "localName": "Native American Day"
+  },
+  {
+    "date": "2025-09-26",
+    "country": "MH",
+    "name": "Manit Day (Marshall Islands (RMI))",
+    "localName": "Manit Day (Marshall Islands (RMI))"
+  },
+  {
+    "date": "2025-09-26",
+    "country": "ZZ",
+    "name": "European Day of Languages",
+    "localName": "European Day of Languages"
+  },
+  {
+    "date": "2025-09-28",
+    "country": "CZ",
+    "name": "St. Wencelas Day (Czech Republic)",
+    "localName": "St. Wencelas Day (Czech Republic)"
+  },
+  {
+    "date": "2025-09-29",
+    "country": "ZZ",
+    "name": "Confucius Day (China, 孔子誕辰)",
+    "localName": "Confucius Day (China, 孔子誕辰)"
+  },
+  {
+    "date": "2025-09-29",
+    "country": "NP",
+    "name": "Phulpati (Nepal, बडादसैँ)",
+    "localName": "Phulpati (Nepal, बडादसैँ)"
+  },
+  {
+    "date": "2025-09-30",
+    "country": "BW",
+    "name": "Botswana Independence Day",
+    "localName": "Botswana Independence Day"
+  },
+  {
+    "date": "2025-09-30",
+    "country": "IN",
+    "name": "Durga Ashtami India, दुर्गा अष्टमी",
+    "localName": "Durga Ashtami India, दुर्गा अष्टमी"
   },
   {
     "date": "2025-10-01",
-    "country": "China",
-    "name": "National Day",
-    "localName": "国庆节",
-    "month": "October",
-    "week": 1
+    "country": "IN",
+    "name": "Maha Navami India, महा नवमी",
+    "localName": "Maha Navami India, महा नवमी"
+  },
+  {
+    "date": "2025-10-01",
+    "country": "ZZ",
+    "name": "Constitution Day Chuuk",
+    "localName": "Constitution Day Chuuk"
+  },
+  {
+    "date": "2025-10-01",
+    "country": "ZZ",
+    "name": "Cypress Independence Day",
+    "localName": "Cypress Independence Day"
+  },
+  {
+    "date": "2025-10-01",
+    "country": "NE",
+    "name": "Nigeria Independence Day",
+    "localName": "Nigeria Independence Day"
+  },
+  {
+    "date": "2025-10-01",
+    "country": "TV",
+    "name": "Tuvalu Independence Day",
+    "localName": "Tuvalu Independence Day"
+  },
+  {
+    "date": "2025-10-01",
+    "country": "PW",
+    "name": "Palau Independence Day",
+    "localName": "Palau Independence Day"
+  },
+  {
+    "date": "2025-10-02",
+    "country": "GN",
+    "name": "Guinea Independence Day",
+    "localName": "Guinea Independence Day"
+  },
+  {
+    "date": "2025-10-02",
+    "country": "ZZ",
+    "name": "Vijayadashami Hindu, विजयदशमी",
+    "localName": "Vijayadashami Hindu, विजयदशमी"
+  },
+  {
+    "date": "2025-10-02",
+    "country": "ZZ",
+    "name": "Yom Kippur Jewish, יוֹם כִּפּוּר‎",
+    "localName": "Yom Kippur Jewish, יוֹם כִּפּוּר‎"
   },
   {
     "date": "2025-10-03",
-    "country": "Germany",
-    "name": "Unity Day",
-    "localName": "Tag der Deutschen Einheit",
-    "month": "October",
-    "week": 1
+    "country": "IQ",
+    "name": "Iraq Independence Day",
+    "localName": "Iraq Independence Day"
+  },
+  {
+    "date": "2025-10-04",
+    "country": "LS",
+    "name": "Lesotho Independence Day",
+    "localName": "Lesotho Independence Day"
+  },
+  {
+    "date": "2025-10-05",
+    "country": "MM",
+    "name": "Full Moon of Thadingyut Myanmar, သီတင်းကျွတ်ပွဲတော်",
+    "localName": "Full Moon of Thadingyut Myanmar, သီတင်းကျွတ်ပွဲတော်"
+  },
+  {
+    "date": "2025-10-05",
+    "country": "PT",
+    "name": "Republic Day (Portugal)",
+    "localName": "Republic Day (Portugal)"
+  },
+  {
+    "date": "2025-10-05",
+    "country": "VU",
+    "name": "Vanuatu Constitution Day",
+    "localName": "Vanuatu Constitution Day"
+  },
+  {
+    "date": "2025-10-06",
+    "country": "ZZ",
+    "name": "Chuseok Korea, 추석",
+    "localName": "Chuseok Korea, 추석"
+  },
+  {
+    "date": "2025-10-06",
+    "country": "ZZ",
+    "name": "Mid-Autumn Moon Festival/Mooncake Fesitval China, 中秋",
+    "localName": "Mid-Autumn Moon Festival/Mooncake Fesitval China, 中秋"
+  },
+  {
+    "date": "2025-10-06",
+    "country": "ZZ",
+    "name": "Sukkot (Jewish, סוכות),",
+    "localName": "Sukkot (Jewish, סוכות),"
+  },
+  {
+    "date": "2025-10-07",
+    "country": "ZZ",
+    "name": "Lao (Buddhist)",
+    "localName": "Lao (Buddhist)"
+  },
+  {
+    "date": "2025-10-08",
+    "country": "ZZ",
+    "name": "Boun Suang Heua (Laos Boat Racing Festival, பவுன் சுவாங் ஹுவா)",
+    "localName": "Boun Suang Heua (Laos Boat Racing Festival, பவுன் சுவாங் ஹுவா)"
+  },
+  {
+    "date": "2025-10-09",
+    "country": "UG",
+    "name": "Uganda Independence Day",
+    "localName": "Uganda Independence Day"
+  },
+  {
+    "date": "2025-10-09",
+    "country": "CU",
+    "name": "Cuba Independence Day",
+    "localName": "Cuba Independence Day"
+  },
+  {
+    "date": "2025-10-09",
+    "country": "CW",
+    "name": "Curaçao Day",
+    "localName": "Curaçao Day"
+  },
+  {
+    "date": "2025-10-09",
+    "country": "FJ",
+    "name": "Fiji Day",
+    "localName": "Fiji Day"
+  },
+  {
+    "date": "2025-10-10",
+    "country": "ZZ",
+    "name": "Maroons Day",
+    "localName": "Maroons Day"
+  },
+  {
+    "date": "2025-10-10",
+    "country": "ZZ",
+    "name": "National Day (Taiwan)",
+    "localName": "National Day (Taiwan)"
+  },
+  {
+    "date": "2025-10-12",
+    "country": "ES",
+    "name": "Dia de la Raza",
+    "localName": "Dia de la Raza"
+  },
+  {
+    "date": "2025-10-12",
+    "country": "GQ",
+    "name": "Equatorial Guinea Independence Day",
+    "localName": "Equatorial Guinea Independence Day"
+  },
+  {
+    "date": "2025-10-12",
+    "country": "ZZ",
+    "name": "Hispanic Day",
+    "localName": "Hispanic Day"
+  },
+  {
+    "date": "2025-10-12",
+    "country": "VE",
+    "name": "Indigenous Resistence Day (Venezuela)",
+    "localName": "Indigenous Resistence Day (Venezuela)"
+  },
+  {
+    "date": "2025-10-12",
+    "country": "WS",
+    "name": "Lotu a Tamaiti Samoa",
+    "localName": "Lotu a Tamaiti Samoa"
+  },
+  {
+    "date": "2025-10-13",
+    "country": "ZZ",
+    "name": "Indigenous People's Day (USA)",
+    "localName": "Indigenous People's Day (USA)"
+  },
+  {
+    "date": "2025-10-14",
+    "country": "GB",
+    "name": "Ada Lovelace Day",
+    "localName": "Ada Lovelace Day"
+  },
+  {
+    "date": "2025-10-14",
+    "country": "ZZ",
+    "name": "Shemini Atzeret (Jewish, שְׁמִינִי עֲצֶֽרֶת‎)",
+    "localName": "Shemini Atzeret (Jewish, שְׁמִינִי עֲצֶֽרֶת‎)"
+  },
+  {
+    "date": "2025-10-15",
+    "country": "YE",
+    "name": "Yemen Liberation Day",
+    "localName": "Yemen Liberation Day"
+  },
+  {
+    "date": "2025-10-17",
+    "country": "BO",
+    "name": "Day of Dignity (Bolivia)",
+    "localName": "Day of Dignity (Bolivia)"
+  },
+  {
+    "date": "2025-10-17",
+    "country": "HT",
+    "name": "Dessalines Day (Haiti)",
+    "localName": "Dessalines Day (Haiti)"
+  },
+  {
+    "date": "2025-10-18",
+    "country": "IN",
+    "name": "Kati Bihu (India, बिहु त्योहार)",
+    "localName": "Kati Bihu (India, बिहु त्योहार)"
+  },
+  {
+    "date": "2025-10-20",
+    "country": "IN",
+    "name": "Diwali (India, दिवाळी)",
+    "localName": "Diwali (India, दिवाळी)"
+  },
+  {
+    "date": "2025-10-20",
+    "country": "IN",
+    "name": "Naraka Chaturdashi (India, नर्क चतुर्दशी)",
+    "localName": "Naraka Chaturdashi (India, नर्क चतुर्दशी)"
+  },
+  {
+    "date": "2025-10-20",
+    "country": "GT",
+    "name": "Revolution Day (Guatemala)",
+    "localName": "Revolution Day (Guatemala)"
+  },
+  {
+    "date": "2025-10-23",
+    "country": "HU",
+    "name": "Republic Day (Hungary)",
+    "localName": "Republic Day (Hungary)"
+  },
+  {
+    "date": "2025-10-23",
+    "country": "LY",
+    "name": "Liberation Day (Libya)",
+    "localName": "Liberation Day (Libya)"
+  },
+  {
+    "date": "2025-10-24",
+    "country": "ZZ",
+    "name": "United Nations Day",
+    "localName": "United Nations Day"
+  },
+  {
+    "date": "2025-10-24",
+    "country": "ZM",
+    "name": "Zambia Independence Day",
+    "localName": "Zambia Independence Day"
+  },
+  {
+    "date": "2025-10-26",
+    "country": "PH",
+    "name": "Masskara Day (Philippines)",
+    "localName": "Masskara Day (Philippines)"
+  },
+  {
+    "date": "2025-10-28",
+    "country": "GR",
+    "name": "Ohi Day (Greece)",
+    "localName": "Ohi Day (Greece)"
+  },
+  {
+    "date": "2025-10-29",
+    "country": "ZZ",
+    "name": "Chung Yeung Festival (China, 重陽節)",
+    "localName": "Chung Yeung Festival (China, 重陽節)"
+  },
+  {
+    "date": "2025-10-29",
+    "country": "IN",
+    "name": "Maha Saptami (India, महासप्तमी)",
+    "localName": "Maha Saptami (India, महासप्तमी)"
+  },
+  {
+    "date": "2025-10-29",
+    "country": "ZZ",
+    "name": "Republic Day (Turkey)",
+    "localName": "Republic Day (Turkey)"
+  },
+  {
+    "date": "2025-10-30",
+    "country": "ZZ",
+    "name": "Mischief Night",
+    "localName": "Mischief Night"
+  },
+  {
+    "date": "2025-10-31",
+    "country": "ZZ",
+    "name": "Halloween",
+    "localName": "Halloween"
+  },
+  {
+    "date": "2025-11-01",
+    "country": "ZZ",
+    "name": "Samhain",
+    "localName": "Samhain"
+  },
+  {
+    "date": "2025-11-01",
+    "country": "ZZ",
+    "name": "All Saints Day",
+    "localName": "All Saints Day"
+  },
+  {
+    "date": "2025-11-01",
+    "country": "ZZ",
+    "name": "Calan Gaeaf",
+    "localName": "Calan Gaeaf"
+  },
+  {
+    "date": "2025-11-01",
+    "country": "ZZ",
+    "name": "Antigua Independence Day",
+    "localName": "Antigua Independence Day"
+  },
+  {
+    "date": "2025-11-01",
+    "country": "ZZ",
+    "name": "Satowan Day (Chuuk)",
+    "localName": "Satowan Day (Chuuk)"
+  },
+  {
+    "date": "2025-11-02",
+    "country": "ZZ",
+    "name": "All Souls Day",
+    "localName": "All Souls Day"
+  },
+  {
+    "date": "2025-11-02",
+    "country": "MX",
+    "name": "Día de los Muertos (Mexico)",
+    "localName": "Día de los Muertos (Mexico)"
+  },
+  {
+    "date": "2025-11-02",
+    "country": "DM",
+    "name": "Dominican Independence Day",
+    "localName": "Dominican Independence Day"
   },
   {
     "date": "2025-11-03",
-    "country": "Japan",
-    "name": "Culture Day",
-    "localName": "文化の日",
-    "month": "November",
-    "week": 1
+    "country": "JP",
+    "name": "Culture Day (Japan, 文化の日)",
+    "localName": "Culture Day (Japan, 文化の日)"
+  },
+  {
+    "date": "2025-11-03",
+    "country": "ZZ",
+    "name": "Federated States of Micronesia (FSM) Independence Day",
+    "localName": "Federated States of Micronesia (FSM) Independence Day"
+  },
+  {
+    "date": "2025-11-04",
+    "country": "ZZ",
+    "name": "Russia's Day of Unity (День народного единства)",
+    "localName": "Russia's Day of Unity (День народного единства)"
+  },
+  {
+    "date": "2025-11-05",
+    "country": "GB",
+    "name": "Bonfire Night",
+    "localName": "Bonfire Night"
+  },
+  {
+    "date": "2025-11-05",
+    "country": "TH",
+    "name": "Yi Peng (ยี่เป็ง)/Loi Krathong (ลอยกระทง) (Thailand)",
+    "localName": "Yi Peng (ยี่เป็ง)/Loi Krathong (ลอยกระทง) (Thailand)"
+  },
+  {
+    "date": "2025-11-06",
+    "country": "LR",
+    "name": "Liberia Thanksgiving",
+    "localName": "Liberia Thanksgiving"
+  },
+  {
+    "date": "2025-11-08",
+    "country": "ZZ",
+    "name": "Constitution Day (Pohnpei)",
+    "localName": "Constitution Day (Pohnpei)"
+  },
+  {
+    "date": "2025-11-09",
+    "country": "KH",
+    "name": "Cambodia Independence Day (បុណ្យឯករាជ្យជាតិកម្ពុជា)",
+    "localName": "Cambodia Independence Day (បុណ្យឯករាជ្យជាតិកម្ពុជា)"
+  },
+  {
+    "date": "2025-11-10",
+    "country": "DM",
+    "name": "Constitution Day (Dominican Republic)",
+    "localName": "Constitution Day (Dominican Republic)"
+  },
+  {
+    "date": "2025-11-11",
+    "country": "ZZ",
+    "name": "Armistice Day (Europe)",
+    "localName": "Armistice Day (Europe)"
+  },
+  {
+    "date": "2025-11-11",
+    "country": "ZZ",
+    "name": "Veterans Day (USA)",
+    "localName": "Veterans Day (USA)"
+  },
+  {
+    "date": "2025-11-11",
+    "country": "DE",
+    "name": "Fasching (Germany)",
+    "localName": "Fasching (Germany)"
+  },
+  {
+    "date": "2025-11-15",
+    "country": "BR",
+    "name": "Republic Proclamation Day (Brazil)",
+    "localName": "Republic Proclamation Day (Brazil)"
+  },
+  {
+    "date": "2025-11-17",
+    "country": "ZZ",
+    "name": "President's Day (RMI)",
+    "localName": "President's Day (RMI)"
+  },
+  {
+    "date": "2025-11-18",
+    "country": "LV",
+    "name": "Latvia Independence Day",
+    "localName": "Latvia Independence Day"
+  },
+  {
+    "date": "2025-11-20",
+    "country": "MX",
+    "name": "Revolution Day Mexico",
+    "localName": "Revolution Day Mexico"
+  },
+  {
+    "date": "2025-11-20",
+    "country": "ZZ",
+    "name": "Transgender Day of Rememberance",
+    "localName": "Transgender Day of Rememberance"
+  },
+  {
+    "date": "2025-11-22",
+    "country": "LB",
+    "name": "Lebanon Independence Day",
+    "localName": "Lebanon Independence Day"
+  },
+  {
+    "date": "2025-11-23",
+    "country": "ZZ",
+    "name": "Fibonacci Day",
+    "localName": "Fibonacci Day"
+  },
+  {
+    "date": "2025-11-23",
+    "country": "ZZ",
+    "name": "Presidents Day (FSM)",
+    "localName": "Presidents Day (FSM)"
+  },
+  {
+    "date": "2025-11-25",
+    "country": "ZZ",
+    "name": "National Day of Bosnia and Herzigovina",
+    "localName": "National Day of Bosnia and Herzigovina"
+  },
+  {
+    "date": "2025-11-25",
+    "country": "SR",
+    "name": "Suriname Independence Day",
+    "localName": "Suriname Independence Day"
+  },
+  {
+    "date": "2025-11-27",
+    "country": "ZZ",
+    "name": "Thanksgiving",
+    "localName": "Thanksgiving"
+  },
+  {
+    "date": "2025-11-28",
+    "country": "ZZ",
+    "name": "Native American Heritage Day (USA)",
+    "localName": "Native American Heritage Day (USA)"
+  },
+  {
+    "date": "2025-11-28",
+    "country": "AL",
+    "name": "Albania Independence Day",
+    "localName": "Albania Independence Day"
+  },
+  {
+    "date": "2025-11-28",
+    "country": "MR",
+    "name": "Mauritania Independence Day",
+    "localName": "Mauritania Independence Day"
+  },
+  {
+    "date": "2025-11-29",
+    "country": "ZZ",
+    "name": "International Day of Solidarity with the Palestinian People",
+    "localName": "International Day of Solidarity with the Palestinian People"
+  },
+  {
+    "date": "2025-11-29",
+    "country": "VU",
+    "name": "National Unity Day (Vanuatu)",
+    "localName": "National Unity Day (Vanuatu)"
+  },
+  {
+    "date": "2025-11-30",
+    "country": "BB",
+    "name": "Barbados Independence Day",
+    "localName": "Barbados Independence Day"
+  },
+  {
+    "date": "2025-11-30",
+    "country": "HT",
+    "name": "Bonifacio Day (Haiti)",
+    "localName": "Bonifacio Day (Haiti)"
+  },
+  {
+    "date": "2025-11-30",
+    "country": "ZZ",
+    "name": "St. Andrew's Day (Scotland)",
+    "localName": "St. Andrew's Day (Scotland)"
+  },
+  {
+    "date": "2025-11-30",
+    "country": "ZZ",
+    "name": "First Sunday of Advent",
+    "localName": "First Sunday of Advent"
+  },
+  {
+    "date": "2025-12-01",
+    "country": "ZZ",
+    "name": "Rosa Parks Day",
+    "localName": "Rosa Parks Day"
+  },
+  {
+    "date": "2025-12-01",
+    "country": "CF",
+    "name": "Central African Republic Republic Day",
+    "localName": "Central African Republic Republic Day"
+  },
+  {
+    "date": "2025-12-01",
+    "country": "ZZ",
+    "name": "Kakakhstan's First President's Day",
+    "localName": "Kakakhstan's First President's Day"
+  },
+  {
+    "date": "2025-12-01",
+    "country": "PT",
+    "name": "Portugal Independence Day",
+    "localName": "Portugal Independence Day"
+  },
+  {
+    "date": "2025-12-01",
+    "country": "OM",
+    "name": "Romania Independence Day",
+    "localName": "Romania Independence Day"
+  },
+  {
+    "date": "2025-12-02",
+    "country": "ZZ",
+    "name": "Lao National Day (ວັນຊາດ)",
+    "localName": "Lao National Day (ວັນຊາດ)"
+  },
+  {
+    "date": "2025-12-02",
+    "country": "ZZ",
+    "name": "UAE National Day",
+    "localName": "UAE National Day"
+  },
+  {
+    "date": "2025-12-03",
+    "country": "ZZ",
+    "name": "Saba Day (Saba)",
+    "localName": "Saba Day (Saba)"
+  },
+  {
+    "date": "2025-12-04",
+    "country": "TO",
+    "name": "Tupoa I Day (Tonga)",
+    "localName": "Tupoa I Day (Tonga)"
+  },
+  {
+    "date": "2025-12-05",
+    "country": "AT",
+    "name": "Krampusnacht (Germany)",
+    "localName": "Krampusnacht (Germany)"
+  },
+  {
+    "date": "2025-12-05",
+    "country": "ZZ",
+    "name": "Gospel Day (RMI)",
+    "localName": "Gospel Day (RMI)"
+  },
+  {
+    "date": "2025-12-06",
+    "country": "ZZ",
+    "name": "St. Nicholas Day",
+    "localName": "St. Nicholas Day"
+  },
+  {
+    "date": "2025-12-06",
+    "country": "FI",
+    "name": "Finland independence Day",
+    "localName": "Finland independence Day"
+  },
+  {
+    "date": "2025-12-07",
+    "country": "ZZ",
+    "name": "Second Sunday of Advent",
+    "localName": "Second Sunday of Advent"
+  },
+  {
+    "date": "2025-12-07",
+    "country": "LK",
+    "name": "Unduvap Full Moon Poya (Sri Lanka)",
+    "localName": "Unduvap Full Moon Poya (Sri Lanka)"
+  },
+  {
+    "date": "2025-12-08",
+    "country": "ZZ",
+    "name": "Rōhatsu (臘八)/Bodhi day (Buddhist)",
+    "localName": "Rōhatsu (臘八)/Bodhi day (Buddhist)"
+  },
+  {
+    "date": "2025-12-08",
+    "country": "NP",
+    "name": "Udhauli Parva (Nepal, उधौली)",
+    "localName": "Udhauli Parva (Nepal, उधौली)"
+  },
+  {
+    "date": "2025-12-08",
+    "country": "UZ",
+    "name": "Constitution Day of Uzbekistan",
+    "localName": "Constitution Day of Uzbekistan"
+  },
+  {
+    "date": "2025-12-08",
+    "country": "GU",
+    "name": "Our Lady of Camarin Day (Guam)",
+    "localName": "Our Lady of Camarin Day (Guam)"
+  },
+  {
+    "date": "2025-12-09",
+    "country": "ZZ",
+    "name": "Tanzania Independence Day",
+    "localName": "Tanzania Independence Day"
+  },
+  {
+    "date": "2025-12-11",
+    "country": "CA",
+    "name": "Anniversary of the Statute of Westminster (Canada)",
+    "localName": "Anniversary of the Statute of Westminster (Canada)"
+  },
+  {
+    "date": "2025-12-12",
+    "country": "TH",
+    "name": "Constitution Day (Thailand)",
+    "localName": "Constitution Day (Thailand)"
+  },
+  {
+    "date": "2025-12-12",
+    "country": "KE",
+    "name": "Jamhuri Day (Kenya)",
+    "localName": "Jamhuri Day (Kenya)"
+  },
+  {
+    "date": "2025-12-13",
+    "country": "MT",
+    "name": "Malta Republic Day",
+    "localName": "Malta Republic Day"
+  },
+  {
+    "date": "2025-12-14",
+    "country": "ZZ",
+    "name": "Third Sunday of Advent",
+    "localName": "Third Sunday of Advent"
+  },
+  {
+    "date": "2025-12-14",
+    "country": "ZZ",
+    "name": "Hannukah (Jewish, חֲנֻכָּה‎),",
+    "localName": "Hannukah (Jewish, חֲנֻכָּה‎),"
+  },
+  {
+    "date": "2025-12-16",
+    "country": "BH",
+    "name": "Bahrain National Day",
+    "localName": "Bahrain National Day"
+  },
+  {
+    "date": "2025-12-16",
+    "country": "KZ",
+    "name": "Kazakhstan independence Day",
+    "localName": "Kazakhstan independence Day"
+  },
+  {
+    "date": "2025-12-16",
+    "country": "ZZ",
+    "name": "Las Posadas (Latin America)",
+    "localName": "Las Posadas (Latin America)"
+  },
+  {
+    "date": "2025-12-17",
+    "country": "BT",
+    "name": "Bhutan National Day",
+    "localName": "Bhutan National Day"
+  },
+  {
+    "date": "2025-12-17",
+    "country": "ZZ",
+    "name": "Saturnalia",
+    "localName": "Saturnalia"
+  },
+  {
+    "date": "2025-12-18",
+    "country": "ZZ",
+    "name": "Arabic Language Day",
+    "localName": "Arabic Language Day"
+  },
+  {
+    "date": "2025-12-18",
+    "country": "QA",
+    "name": "Qatar National Day",
+    "localName": "Qatar National Day"
+  },
+  {
+    "date": "2025-12-18",
+    "country": "NE",
+    "name": "Republic Day of Niger",
+    "localName": "Republic Day of Niger"
+  },
+  {
+    "date": "2025-12-19",
+    "country": "ZZ",
+    "name": "Goa Liberation Day",
+    "localName": "Goa Liberation Day"
+  },
+  {
+    "date": "2025-12-20",
+    "country": "ZZ",
+    "name": "Sacagawea Day",
+    "localName": "Sacagawea Day"
+  },
+  {
+    "date": "2025-12-21",
+    "country": "ZZ",
+    "name": "Winter Solstice",
+    "localName": "Winter Solstice"
+  },
+  {
+    "date": "2025-12-21",
+    "country": "ZZ",
+    "name": "Dongzhi (China, 冬至)",
+    "localName": "Dongzhi (China, 冬至)"
+  },
+  {
+    "date": "2025-12-21",
+    "country": "ZZ",
+    "name": "Yule",
+    "localName": "Yule"
+  },
+  {
+    "date": "2025-12-21",
+    "country": "ZZ",
+    "name": "Fourth Sunday of Advent",
+    "localName": "Fourth Sunday of Advent"
+  },
+  {
+    "date": "2025-12-21",
+    "country": "ZZ",
+    "name": "São Tomé Day",
+    "localName": "São Tomé Day"
+  },
+  {
+    "date": "2025-12-22",
+    "country": "ZW",
+    "name": "Unity Day Zimbabwe",
+    "localName": "Unity Day Zimbabwe"
+  },
+  {
+    "date": "2025-12-23",
+    "country": "IN",
+    "name": "Kisan Diwas (India, राष्ट्रीय किसान दिवस)",
+    "localName": "Kisan Diwas (India, राष्ट्रीय किसान दिवस)"
+  },
+  {
+    "date": "2025-12-24",
+    "country": "ZZ",
+    "name": "Christmas Eve",
+    "localName": "Christmas Eve"
+  },
+  {
+    "date": "2025-12-24",
+    "country": "LY",
+    "name": "Libya Independence Day",
+    "localName": "Libya Independence Day"
+  },
+  {
+    "date": "2025-12-24",
+    "country": "ZZ",
+    "name": "Constitution Day (Yap)",
+    "localName": "Constitution Day (Yap)"
   },
   {
     "date": "2025-12-25",
-    "country": "International",
-    "name": "Christmas Day",
-    "localName": "Christmas",
-    "month": "December",
-    "week": 4
+    "country": "ZZ",
+    "name": "Christmas",
+    "localName": "Christmas"
+  },
+  {
+    "date": "2025-12-25",
+    "country": "GB",
+    "name": "Mari Lwyd",
+    "localName": "Mari Lwyd"
+  },
+  {
+    "date": "2025-12-26",
+    "country": "BS",
+    "name": "Junkanoo (The Bahamas)",
+    "localName": "Junkanoo (The Bahamas)"
+  },
+  {
+    "date": "2025-12-26",
+    "country": "ZZ",
+    "name": "Kwanzaa",
+    "localName": "Kwanzaa"
+  },
+  {
+    "date": "2025-12-26",
+    "country": "IE",
+    "name": "St. Stephen's Day (Ireland)",
+    "localName": "St. Stephen's Day (Ireland)"
+  },
+  {
+    "date": "2025-12-26",
+    "country": "PW",
+    "name": "Family Day (Palau, Vanuatu)",
+    "localName": "Family Day (Palau, Vanuatu)"
+  },
+  {
+    "date": "2025-12-26",
+    "country": "ZZ",
+    "name": "Boxing Day",
+    "localName": "Boxing Day"
+  },
+  {
+    "date": "2025-12-26",
+    "country": "SI",
+    "name": "Slovenia Independence Day",
+    "localName": "Slovenia Independence Day"
+  },
+  {
+    "date": "2025-12-29",
+    "country": "IE",
+    "name": "Constitution of Ireland",
+    "localName": "Constitution of Ireland"
+  },
+  {
+    "date": "2025-12-29",
+    "country": "ZZ",
+    "name": "Mogolia Independence Day",
+    "localName": "Mogolia Independence Day"
+  },
+  {
+    "date": "2025-12-31",
+    "country": "ZZ",
+    "name": "Hogmanay",
+    "localName": "Hogmanay"
+  },
+  {
+    "date": "2025-12-31",
+    "country": "ZZ",
+    "name": "New Years Eve",
+    "localName": "New Years Eve"
+  },
+  {
+    "date": "2025-01-01",
+    "country": "ZZ",
+    "name": "New Years Day",
+    "localName": "New Years Day"
+  },
+  {
+    "date": "2025-01-01",
+    "country": "HT",
+    "name": "Haitian Independence Day",
+    "localName": "Haitian Independence Day"
+  },
+  {
+    "date": "2025-01-01",
+    "country": "SD",
+    "name": "Sudan Independence Day",
+    "localName": "Sudan Independence Day"
+  },
+  {
+    "date": "2025-01-02",
+    "country": "HT",
+    "name": "Ancestry Day (Haiti)",
+    "localName": "Ancestry Day (Haiti)"
+  },
+  {
+    "date": "2025-01-02",
+    "country": "ZZ",
+    "name": "St. Basil's Day",
+    "localName": "St. Basil's Day"
+  },
+  {
+    "date": "2025-01-03",
+    "country": "ZZ",
+    "name": "Perihelion Day",
+    "localName": "Perihelion Day"
+  },
+  {
+    "date": "2025-01-03",
+    "country": "ZZ",
+    "name": "Mahayana New Year (Buddhist)",
+    "localName": "Mahayana New Year (Buddhist)"
+  },
+  {
+    "date": "2025-01-04",
+    "country": "ZZ",
+    "name": "Hansel Monday (Scotland)",
+    "localName": "Hansel Monday (Scotland)"
+  },
+  {
+    "date": "2025-01-04",
+    "country": "ZZ",
+    "name": "Twelfth Night",
+    "localName": "Twelfth Night"
+  },
+  {
+    "date": "2025-01-06",
+    "country": "AM",
+    "name": "Armenian Christmas",
+    "localName": "Armenian Christmas"
+  },
+  {
+    "date": "2025-01-06",
+    "country": "ZZ",
+    "name": "Epiphany/Three Kings Day",
+    "localName": "Epiphany/Three Kings Day"
+  },
+  {
+    "date": "2025-01-07",
+    "country": "ZZ",
+    "name": "Orthodox Christmas",
+    "localName": "Orthodox Christmas"
+  },
+  {
+    "date": "2025-01-11",
+    "country": "ZZ",
+    "name": "Kosrae Constitution Day",
+    "localName": "Kosrae Constitution Day"
+  },
+  {
+    "date": "2025-01-13",
+    "country": "ZZ",
+    "name": "Calennig (Welsh)",
+    "localName": "Calennig (Welsh)"
+  },
+  {
+    "date": "2025-01-13",
+    "country": "IN",
+    "name": "Lohri (India, लोहड़ी)",
+    "localName": "Lohri (India, लोहड़ी)"
+  },
+  {
+    "date": "2025-01-13",
+    "country": "IN",
+    "name": "Makar Sankranti (India, मकरसङ्क्रान्ति)",
+    "localName": "Makar Sankranti (India, मकरसङ्क्रान्ति)"
+  },
+  {
+    "date": "2025-01-13",
+    "country": "ZZ",
+    "name": "Novy God (Russia, Новый Год)",
+    "localName": "Novy God (Russia, Новый Год)"
+  },
+  {
+    "date": "2025-01-13",
+    "country": "ZZ",
+    "name": "Orthodox New Year",
+    "localName": "Orthodox New Year"
+  },
+  {
+    "date": "2025-01-16",
+    "country": "ZZ",
+    "name": "Isra  (Islamic, الإسراء والمعراج)",
+    "localName": "Isra  (Islamic, الإسراء والمعراج)"
+  },
+  {
+    "date": "2025-01-16",
+    "country": "ZZ",
+    "name": "Mi'raj  (Islamic, الإسراء والمعراج)",
+    "localName": "Mi'raj  (Islamic, الإسراء والمعراج)"
+  },
+  {
+    "date": "2025-01-19",
+    "country": "ZZ",
+    "name": "Civil Rights Day (USA)",
+    "localName": "Civil Rights Day (USA)"
+  },
+  {
+    "date": "2025-01-20",
+    "country": "ZZ",
+    "name": "Innauguration Day",
+    "localName": "Innauguration Day"
+  },
+  {
+    "date": "2025-01-20",
+    "country": "ZZ",
+    "name": "Martin Luther King Jr. Day",
+    "localName": "Martin Luther King Jr. Day"
+  },
+  {
+    "date": "2025-01-22",
+    "country": "BO",
+    "name": "Plurinational State Day (Bolivia)",
+    "localName": "Plurinational State Day (Bolivia)"
+  },
+  {
+    "date": "2025-01-23",
+    "country": "IN",
+    "name": "Vasant Panchami (India, वसन्त पञ्चमी)",
+    "localName": "Vasant Panchami (India, वसन्त पञ्चमी)"
+  },
+  {
+    "date": "2025-01-23",
+    "country": "ZZ",
+    "name": "First Philippine Republic Day",
+    "localName": "First Philippine Republic Day"
+  },
+  {
+    "date": "2025-01-24",
+    "country": "OM",
+    "name": "Unification Day (Romania)",
+    "localName": "Unification Day (Romania)"
+  },
+  {
+    "date": "2025-01-25",
+    "country": "ZZ",
+    "name": "Burns Night (Scotland)",
+    "localName": "Burns Night (Scotland)"
+  },
+  {
+    "date": "2025-01-25",
+    "country": "ZZ",
+    "name": "St. Dwynwen's Day (Wales)",
+    "localName": "St. Dwynwen's Day (Wales)"
+  },
+  {
+    "date": "2025-01-26",
+    "country": "IN",
+    "name": "Indian Republic Day",
+    "localName": "Indian Republic Day"
+  },
+  {
+    "date": "2025-01-27",
+    "country": "ZZ",
+    "name": "Holocaust Memorial Day",
+    "localName": "Holocaust Memorial Day"
+  },
+  {
+    "date": "2025-02-01",
+    "country": "ZZ",
+    "name": "Imbolc",
+    "localName": "Imbolc"
+  },
+  {
+    "date": "2025-02-01",
+    "country": "IN",
+    "name": "Magha Purnima (India, माघ पूर्णिमा)",
+    "localName": "Magha Purnima (India, माघ पूर्णिमा)"
+  },
+  {
+    "date": "2025-02-01",
+    "country": "ZZ",
+    "name": "Thaipusam (Tamil Hindu, थाईपुसम)",
+    "localName": "Thaipusam (Tamil Hindu, थाईपुसम)"
+  },
+  {
+    "date": "2025-02-01",
+    "country": "LK",
+    "name": "Navam full moon Poya (Sri Lanka)",
+    "localName": "Navam full moon Poya (Sri Lanka)"
+  },
+  {
+    "date": "2025-02-01",
+    "country": "ZZ",
+    "name": "Tu biShavat (Jewish, ט״ו בשבט),",
+    "localName": "Tu biShavat (Jewish, ט״ו בשבט),"
+  },
+  {
+    "date": "2025-02-03",
+    "country": "ZZ",
+    "name": "Laylat al-Barat  (Islamic,ليلة البراءة)",
+    "localName": "Laylat al-Barat  (Islamic,ليلة البراءة)"
+  },
+  {
+    "date": "2025-02-03",
+    "country": "JP",
+    "name": "Setsubun (Japan, 節分)",
+    "localName": "Setsubun (Japan, 節分)"
+  },
+  {
+    "date": "2025-02-04",
+    "country": "AO",
+    "name": "Angola Liberation Day",
+    "localName": "Angola Liberation Day"
+  },
+  {
+    "date": "2025-02-04",
+    "country": "LK",
+    "name": "National Day of Sri Lanka",
+    "localName": "National Day of Sri Lanka"
+  },
+  {
+    "date": "2025-02-05",
+    "country": "SM",
+    "name": "Liberation Day (San Marino)",
+    "localName": "Liberation Day (San Marino)"
+  },
+  {
+    "date": "2025-02-05",
+    "country": "BI",
+    "name": "Unity Day (Burundi)",
+    "localName": "Unity Day (Burundi)"
+  },
+  {
+    "date": "2025-02-06",
+    "country": "ZZ",
+    "name": "Sami National Day (Sami)",
+    "localName": "Sami National Day (Sami)"
+  },
+  {
+    "date": "2025-02-06",
+    "country": "ZZ",
+    "name": "Waitangi Day (Aotearoa)",
+    "localName": "Waitangi Day (Aotearoa)"
+  },
+  {
+    "date": "2025-02-07",
+    "country": "GD",
+    "name": "Grenada Independence Day",
+    "localName": "Grenada Independence Day"
+  },
+  {
+    "date": "2025-02-15",
+    "country": "XK",
+    "name": "Day of Ashkalia (Kosovo)",
+    "localName": "Day of Ashkalia (Kosovo)"
+  },
+  {
+    "date": "2025-02-15",
+    "country": "ZZ",
+    "name": "Fastelavn (European)",
+    "localName": "Fastelavn (European)"
+  },
+  {
+    "date": "2025-02-15",
+    "country": "AF",
+    "name": "Liberation Day (Afghanistan)",
+    "localName": "Liberation Day (Afghanistan)"
+  },
+  {
+    "date": "2025-02-15",
+    "country": "IN",
+    "name": "Maha Shivaratri (India, महाशिवरात्रि)",
+    "localName": "Maha Shivaratri (India, महाशिवरात्रि)"
+  },
+  {
+    "date": "2025-02-15",
+    "country": "ZZ",
+    "name": "Parinirvana (East Asia)",
+    "localName": "Parinirvana (East Asia)"
+  },
+  {
+    "date": "2025-02-15",
+    "country": "RS",
+    "name": "Sovereignty Day (Serbia)",
+    "localName": "Sovereignty Day (Serbia)"
+  },
+  {
+    "date": "2025-02-15",
+    "country": "ZZ",
+    "name": "Susan B Anthony Day (USA)",
+    "localName": "Susan B Anthony Day (USA)"
+  },
+  {
+    "date": "2025-02-16",
+    "country": "ZZ",
+    "name": "Carnival (various South America)",
+    "localName": "Carnival (various South America)"
+  },
+  {
+    "date": "2025-02-16",
+    "country": "ZZ",
+    "name": "Maslenitsa (Slavic)",
+    "localName": "Maslenitsa (Slavic)"
+  },
+  {
+    "date": "2025-02-16",
+    "country": "ZZ",
+    "name": "President's Day",
+    "localName": "President's Day"
+  },
+  {
+    "date": "2025-02-17",
+    "country": "ZZ",
+    "name": "Fat Tuesday",
+    "localName": "Fat Tuesday"
+  },
+  {
+    "date": "2025-02-17",
+    "country": "LY",
+    "name": "February 17th Revolution (Libya)",
+    "localName": "February 17th Revolution (Libya)"
+  },
+  {
+    "date": "2025-02-17",
+    "country": "ZZ",
+    "name": "Carnival (various)",
+    "localName": "Carnival (various)"
+  },
+  {
+    "date": "2025-02-17",
+    "country": "XK",
+    "name": "Kosovo Independence Day",
+    "localName": "Kosovo Independence Day"
+  },
+  {
+    "date": "2025-02-17",
+    "country": "VN",
+    "name": "Lunar New Year (China, Korea, Vietnam, Hmong, Ryukyu)",
+    "localName": "Lunar New Year (China, Korea, Vietnam, Hmong, Ryukyu)"
+  },
+  {
+    "date": "2025-02-17",
+    "country": "ZZ",
+    "name": "Ramadan /19 (Islamic, رمضان)",
+    "localName": "Ramadan /19 (Islamic, رمضان)"
+  },
+  {
+    "date": "2025-02-18",
+    "country": "ZZ",
+    "name": "Gambia Independence Day",
+    "localName": "Gambia Independence Day"
+  },
+  {
+    "date": "2025-02-18",
+    "country": "ZZ",
+    "name": "Ash Wednesday",
+    "localName": "Ash Wednesday"
+  },
+  {
+    "date": "2025-02-21",
+    "country": "ZZ",
+    "name": "World Language Day",
+    "localName": "World Language Day"
+  },
+  {
+    "date": "2025-02-21",
+    "country": "VU",
+    "name": "Father Walter Lini Day (Vanuatu)",
+    "localName": "Father Walter Lini Day (Vanuatu)"
+  },
+  {
+    "date": "2025-02-22",
+    "country": "DZ",
+    "name": "Day of Fraternity and Cohesion (Algeria)",
+    "localName": "Day of Fraternity and Cohesion (Algeria)"
+  },
+  {
+    "date": "2025-02-22",
+    "country": "ZZ",
+    "name": "St. Lucia Independence Day",
+    "localName": "St. Lucia Independence Day"
+  },
+  {
+    "date": "2025-02-23",
+    "country": "JP",
+    "name": "Emperor's Birthday (Japan, 天皇誕生日)",
+    "localName": "Emperor's Birthday (Japan, 天皇誕生日)"
+  },
+  {
+    "date": "2025-02-23",
+    "country": "GY",
+    "name": "Guyana Republic Day",
+    "localName": "Guyana Republic Day"
+  },
+  {
+    "date": "2025-02-23",
+    "country": "ZZ",
+    "name": "National Day (Brunei)",
+    "localName": "National Day (Brunei)"
+  },
+  {
+    "date": "2025-02-23",
+    "country": "ZZ",
+    "name": "Orthodox Lent /11",
+    "localName": "Orthodox Lent /11"
+  },
+  {
+    "date": "2025-02-24",
+    "country": "OM",
+    "name": "Dragobete (Romania)",
+    "localName": "Dragobete (Romania)"
+  },
+  {
+    "date": "2025-02-24",
+    "country": "EE",
+    "name": "Estonia Independence Day",
+    "localName": "Estonia Independence Day"
+  },
+  {
+    "date": "2025-02-24",
+    "country": "SE",
+    "name": "Sweden Finns Day (Sweden)",
+    "localName": "Sweden Finns Day (Sweden)"
+  },
+  {
+    "date": "2025-02-25",
+    "country": "SR",
+    "name": "Day of Liberation and Innovation (Suriname)",
+    "localName": "Day of Liberation and Innovation (Suriname)"
+  },
+  {
+    "date": "2025-02-25",
+    "country": "KW",
+    "name": "Kuwait National Day",
+    "localName": "Kuwait National Day"
+  },
+  {
+    "date": "2025-02-26",
+    "country": "ZZ",
+    "name": "Black Lives Matter Day",
+    "localName": "Black Lives Matter Day"
+  },
+  {
+    "date": "2025-02-27",
+    "country": "ZZ",
+    "name": "Domican Republic Independence Day",
+    "localName": "Domican Republic Independence Day"
+  },
+  {
+    "date": "2025-03-01",
+    "country": "BG",
+    "name": "Baba Marta/Mǎrțișor (Bulgaria/Romania)",
+    "localName": "Baba Marta/Mǎrțișor (Bulgaria/Romania)"
+  },
+  {
+    "date": "2025-03-01",
+    "country": "ZZ",
+    "name": "Yap Day",
+    "localName": "Yap Day"
+  },
+  {
+    "date": "2025-03-01",
+    "country": "ZZ",
+    "name": "Remembrance Day (RMI)",
+    "localName": "Remembrance Day (RMI)"
+  },
+  {
+    "date": "2025-03-02",
+    "country": "ZZ",
+    "name": "Purim (Jewish, פּוּרִים),",
+    "localName": "Purim (Jewish, פּוּרִים),"
+  },
+  {
+    "date": "2025-03-02",
+    "country": "GU",
+    "name": "Chamoro Heritage Day (Guam, Mes Chamoro)",
+    "localName": "Chamoro Heritage Day (Guam, Mes Chamoro)"
+  },
+  {
+    "date": "2025-03-03",
+    "country": "BG",
+    "name": "Bulgaria Liberation Day",
+    "localName": "Bulgaria Liberation Day"
+  },
+  {
+    "date": "2025-03-03",
+    "country": "IN",
+    "name": "Dol Jatra (India, दोल जात्रा)",
+    "localName": "Dol Jatra (India, दोल जात्रा)"
+  },
+  {
+    "date": "2025-03-03",
+    "country": "ZZ",
+    "name": "Hinamatsuri (雛祭り)",
+    "localName": "Hinamatsuri (雛祭り)"
+  },
+  {
+    "date": "2025-03-03",
+    "country": "ZZ",
+    "name": "Lantern Festival (Taiwan, 臺灣燈會)",
+    "localName": "Lantern Festival (Taiwan, 臺灣燈會)"
+  },
+  {
+    "date": "2025-03-04",
+    "country": "ZZ",
+    "name": "Holi (Hindu, होली)",
+    "localName": "Holi (Hindu, होली)"
+  },
+  {
+    "date": "2025-03-04",
+    "country": "ZZ",
+    "name": "Makha Buka Day (Buddhist)",
+    "localName": "Makha Buka Day (Buddhist)"
+  },
+  {
+    "date": "2025-03-05",
+    "country": "VU",
+    "name": "Custom Chief's Day (Vanuatu)",
+    "localName": "Custom Chief's Day (Vanuatu)"
+  },
+  {
+    "date": "2025-03-06",
+    "country": "GH",
+    "name": "Ghana Independence Day",
+    "localName": "Ghana Independence Day"
+  },
+  {
+    "date": "2025-03-08",
+    "country": "NP",
+    "name": "Nari Dibas (Nepal, नारी दिवस)",
+    "localName": "Nari Dibas (Nepal, नारी दिवस)"
+  },
+  {
+    "date": "2025-03-09",
+    "country": "ZZ",
+    "name": "Commonwealth Day (UK Commonwealth) )",
+    "localName": "Commonwealth Day (UK Commonwealth) )"
+  },
+  {
+    "date": "2025-03-10",
+    "country": "ZZ",
+    "name": "Hariet Tubman Day",
+    "localName": "Hariet Tubman Day"
+  },
+  {
+    "date": "2025-03-11",
+    "country": "ZZ",
+    "name": "Zhonghe Festival (龍抬頭)",
+    "localName": "Zhonghe Festival (龍抬頭)"
+  },
+  {
+    "date": "2025-03-12",
+    "country": "ZZ",
+    "name": "Aztec New Year (Yancuic Xīhuitl)",
+    "localName": "Aztec New Year (Yancuic Xīhuitl)"
+  },
+  {
+    "date": "2025-03-12",
+    "country": "MU",
+    "name": "Mauritius Independence Day",
+    "localName": "Mauritius Independence Day"
+  },
+  {
+    "date": "2025-03-14",
+    "country": "AD",
+    "name": "Constitution Day (Andorra)",
+    "localName": "Constitution Day (Andorra)"
+  },
+  {
+    "date": "2025-03-14",
+    "country": "ZZ",
+    "name": "Pi Day",
+    "localName": "Pi Day"
+  },
+  {
+    "date": "2025-03-15",
+    "country": "JP",
+    "name": "Honen Matsuri (Japan, 豊年祭)",
+    "localName": "Honen Matsuri (Japan, 豊年祭)"
+  },
+  {
+    "date": "2025-03-15",
+    "country": "ZZ",
+    "name": "Ides of March",
+    "localName": "Ides of March"
+  },
+  {
+    "date": "2025-03-15",
+    "country": "BY",
+    "name": "Belarus Constitution Day",
+    "localName": "Belarus Constitution Day"
+  },
+  {
+    "date": "2025-03-16",
+    "country": "ZZ",
+    "name": "Laylat al-Qadr (Islamic, لیلة القدر),",
+    "localName": "Laylat al-Qadr (Islamic, لیلة القدر),"
+  },
+  {
+    "date": "2025-03-17",
+    "country": "ZZ",
+    "name": "St. Patrick's Day",
+    "localName": "St. Patrick's Day"
+  },
+  {
+    "date": "2025-03-20",
+    "country": "ZZ",
+    "name": "Eid al-Fitr (Islamic, عيد الفطر),",
+    "localName": "Eid al-Fitr (Islamic, عيد الفطر),"
+  },
+  {
+    "date": "2025-03-19",
+    "country": "ZZ",
+    "name": "Zhonge Festival (China, 中和)",
+    "localName": "Zhonge Festival (China, 中和)"
+  },
+  {
+    "date": "2025-03-20",
+    "country": "ZZ",
+    "name": "Longtaitou Festival (China, 龍抬頭)",
+    "localName": "Longtaitou Festival (China, 龍抬頭)"
+  },
+  {
+    "date": "2025-03-20",
+    "country": "ZZ",
+    "name": "Vernal Equinox",
+    "localName": "Vernal Equinox"
+  },
+  {
+    "date": "2025-03-20",
+    "country": "ZZ",
+    "name": "Ostara",
+    "localName": "Ostara"
+  },
+  {
+    "date": "2025-03-21",
+    "country": "ZZ",
+    "name": "Nowruz (Persian, نوروز),",
+    "localName": "Nowruz (Persian, نوروز),"
+  },
+  {
+    "date": "2025-03-21",
+    "country": "AF",
+    "name": "Afghanistan Day ,",
+    "localName": "Afghanistan Day ,"
+  },
+  {
+    "date": "2025-03-22",
+    "country": "NA",
+    "name": "Namibia Independence Day",
+    "localName": "Namibia Independence Day"
+  },
+  {
+    "date": "2025-03-22",
+    "country": "PR",
+    "name": "Emancipation Day (Puerto Rico)",
+    "localName": "Emancipation Day (Puerto Rico)"
+  },
+  {
+    "date": "2025-03-23",
+    "country": "ZA",
+    "name": "Day of Liberation (South Africa)",
+    "localName": "Day of Liberation (South Africa)"
+  },
+  {
+    "date": "2025-03-25",
+    "country": "ZZ",
+    "name": "National Guadalupe Day",
+    "localName": "National Guadalupe Day"
+  },
+  {
+    "date": "2025-03-26",
+    "country": "BD",
+    "name": "Independence Day of Bangladesh",
+    "localName": "Independence Day of Bangladesh"
+  },
+  {
+    "date": "2025-03-26",
+    "country": "IN",
+    "name": "Ram Navami (India, राम नवमी,)",
+    "localName": "Ram Navami (India, राम नवमी,)"
+  },
+  {
+    "date": "2025-03-26",
+    "country": "ZZ",
+    "name": "Prince Kuhio Day (Hawai'i)",
+    "localName": "Prince Kuhio Day (Hawai'i)"
+  },
+  {
+    "date": "2025-03-29",
+    "country": "ZZ",
+    "name": "Palm Sunday",
+    "localName": "Palm Sunday"
+  },
+  {
+    "date": "2025-03-30",
+    "country": "ZZ",
+    "name": "Land Day (Palestine)",
+    "localName": "Land Day (Palestine)"
+  },
+  {
+    "date": "2025-03-31",
+    "country": "ZZ",
+    "name": "Trans Day of Visibility",
+    "localName": "Trans Day of Visibility"
+  },
+  {
+    "date": "2025-03-31",
+    "country": "IN",
+    "name": "Mahavir Jayanti (India, महावीर जन्म कल्याणक)",
+    "localName": "Mahavir Jayanti (India, महावीर जन्म कल्याणक)"
+  },
+  {
+    "date": "2025-03-31",
+    "country": "ZZ",
+    "name": "César Chavez day (USA)",
+    "localName": "César Chavez day (USA)"
+  },
+  {
+    "date": "2025-03-31",
+    "country": "ZZ",
+    "name": "Culture Day (FSM)",
+    "localName": "Culture Day (FSM)"
+  },
+  {
+    "date": "2025-04-01",
+    "country": "ZZ",
+    "name": "April Fool's Day",
+    "localName": "April Fool's Day"
+  },
+  {
+    "date": "2025-04-01",
+    "country": "ZZ",
+    "name": "Assyrian New Year (Assyrian, ܚܕ ܒܢܝܣܢ),",
+    "localName": "Assyrian New Year (Assyrian, ܚܕ ܒܢܝܣܢ),"
+  },
+  {
+    "date": "2025-04-01",
+    "country": "ZZ",
+    "name": "Pesach (Jewish, פסח),",
+    "localName": "Pesach (Jewish, פסח),"
+  },
+  {
+    "date": "2025-04-02",
+    "country": "ZZ",
+    "name": "Theravada New Year",
+    "localName": "Theravada New Year"
+  },
+  {
+    "date": "2025-04-03",
+    "country": "AM",
+    "name": "Armenian Appreciation Day",
+    "localName": "Armenian Appreciation Day"
+  },
+  {
+    "date": "2025-04-03",
+    "country": "ZZ",
+    "name": "Good Friday",
+    "localName": "Good Friday"
+  },
+  {
+    "date": "2025-04-04",
+    "country": "SN",
+    "name": "Senegal Independence Day",
+    "localName": "Senegal Independence Day"
+  },
+  {
+    "date": "2025-04-05",
+    "country": "ZZ",
+    "name": "Qingming Festival (China, 清明節)",
+    "localName": "Qingming Festival (China, 清明節)"
+  },
+  {
+    "date": "2025-04-05",
+    "country": "ZZ",
+    "name": "Easter",
+    "localName": "Easter"
+  },
+  {
+    "date": "2025-04-05",
+    "country": "ZZ",
+    "name": "Orthodox Palm Sunday",
+    "localName": "Orthodox Palm Sunday"
+  },
+  {
+    "date": "2025-04-05",
+    "country": "ZZ",
+    "name": "Merrie Monarch Festival (Hawai'i)",
+    "localName": "Merrie Monarch Festival (Hawai'i)"
+  },
+  {
+    "date": "2025-04-06",
+    "country": "PL",
+    "name": "Śmigus-dyngus (Poland)",
+    "localName": "Śmigus-dyngus (Poland)"
+  },
+  {
+    "date": "2025-04-06",
+    "country": "ZZ",
+    "name": "Tartan Day (Scotland)",
+    "localName": "Tartan Day (Scotland)"
+  },
+  {
+    "date": "2025-04-08",
+    "country": "ZZ",
+    "name": "Day of Romas",
+    "localName": "Day of Romas"
+  },
+  {
+    "date": "2025-04-09",
+    "country": "PH",
+    "name": "Bataan Day (Philippines)",
+    "localName": "Bataan Day (Philippines)"
+  },
+  {
+    "date": "2025-04-09",
+    "country": "XK",
+    "name": "Kosovo Constitution Day",
+    "localName": "Kosovo Constitution Day"
+  },
+  {
+    "date": "2025-04-10",
+    "country": "ZZ",
+    "name": "Day of Silence",
+    "localName": "Day of Silence"
+  },
+  {
+    "date": "2025-04-10",
+    "country": "ZZ",
+    "name": "Orthodox Good Friday",
+    "localName": "Orthodox Good Friday"
+  },
+  {
+    "date": "2025-04-12",
+    "country": "ZZ",
+    "name": "Orthodox Easter",
+    "localName": "Orthodox Easter"
+  },
+  {
+    "date": "2025-04-12",
+    "endDate": "2025-05-25",
+    "country": "JP",
+    "name": "Orthodox Easter",
+    "localName": "Orthodox Easter"
+  },
+  {
+    "date": "2025-04-13",
+    "country": "TH",
+    "name": "Songkran Water Festival (Thailand, เทศกาลสงกรานต์)",
+    "localName": "Songkran Water Festival (Thailand, เทศกาลสงกรานต์)"
+  },
+  {
+    "date": "2025-04-13",
+    "country": "ZZ",
+    "name": "Yom HaShoah (Jewish, יום השואה),",
+    "localName": "Yom HaShoah (Jewish, יום השואה),"
+  },
+  {
+    "date": "2025-04-14",
+    "country": "ZZ",
+    "name": "Puthandu (Tamil New Year, புத்தாண்டு)",
+    "localName": "Puthandu (Tamil New Year, புத்தாண்டு)"
+  },
+  {
+    "date": "2025-04-14",
+    "country": "KH",
+    "name": "Cambodian New Year",
+    "localName": "Cambodian New Year"
+  },
+  {
+    "date": "2025-04-16",
+    "country": "ZZ",
+    "name": ", Syria Independence Day 4/17",
+    "localName": ", Syria Independence Day 4/17"
+  },
+  {
+    "date": "2025-04-20",
+    "country": "ZZ",
+    "name": "Chinese Language Day",
+    "localName": "Chinese Language Day"
+  },
+  {
+    "date": "2025-04-21",
+    "country": "ZZ",
+    "name": "Festival of Ridvan (Bahá'í, رضوان),",
+    "localName": "Festival of Ridvan (Bahá'í, رضوان),"
+  },
+  {
+    "date": "2025-04-21",
+    "country": "IL",
+    "name": "Yom Ha'atzmaut (Israel, הָעַצְמָאוּת),",
+    "localName": "Yom Ha'atzmaut (Israel, הָעַצְמָאוּת),"
+  },
+  {
+    "date": "2025-04-22",
+    "country": "ZZ",
+    "name": "Earth Day",
+    "localName": "Earth Day"
+  },
+  {
+    "date": "2025-04-23",
+    "country": "ZZ",
+    "name": "Gathering of Nations",
+    "localName": "Gathering of Nations"
+  },
+  {
+    "date": "2025-04-23",
+    "country": "ZZ",
+    "name": "Spanish Language Day",
+    "localName": "Spanish Language Day"
+  },
+  {
+    "date": "2025-04-23",
+    "country": "ZZ",
+    "name": "World English Day",
+    "localName": "World English Day"
+  },
+  {
+    "date": "2025-04-25",
+    "country": "ZZ",
+    "name": "Anzac Day Māori",
+    "localName": "Anzac Day Māori"
+  },
+  {
+    "date": "2025-04-25",
+    "country": "PT",
+    "name": "Freedom Day (Portugal)",
+    "localName": "Freedom Day (Portugal)"
+  },
+  {
+    "date": "2025-04-25",
+    "country": "IT",
+    "name": "National Liberation Day (Italy)",
+    "localName": "National Liberation Day (Italy)"
+  },
+  {
+    "date": "2025-04-25",
+    "country": "ZZ",
+    "name": "Liberation Day (Sinai)",
+    "localName": "Liberation Day (Sinai)"
+  },
+  {
+    "date": "2025-04-27",
+    "country": "ZA",
+    "name": "Freedom Day (South Africa)",
+    "localName": "Freedom Day (South Africa)"
+  },
+  {
+    "date": "2025-04-27",
+    "country": "ZZ",
+    "name": "Koningsday",
+    "localName": "Koningsday"
+  },
+  {
+    "date": "2025-04-27",
+    "country": "ZZ",
+    "name": "Lapu Lapu Day",
+    "localName": "Lapu Lapu Day"
+  },
+  {
+    "date": "2025-04-27",
+    "country": "SL",
+    "name": "Sierra Leone Independence Day",
+    "localName": "Sierra Leone Independence Day"
+  },
+  {
+    "date": "2025-04-27",
+    "country": "TG",
+    "name": "Togo Independence Day",
+    "localName": "Togo Independence Day"
+  },
+  {
+    "date": "2025-04-29",
+    "country": "JP",
+    "name": "Golden Week (Japan, ゴールデンウィーク) /5",
+    "localName": "Golden Week (Japan, ゴールデンウィーク) /5"
+  },
+  {
+    "date": "2025-04-29",
+    "country": "JP",
+    "name": "Shōwa Day (Japan, 昭和の日)",
+    "localName": "Shōwa Day (Japan, 昭和の日)"
+  },
+  {
+    "date": "2025-04-30",
+    "country": "ZZ",
+    "name": "Pesach Sheni (Jewish, פסח שני),",
+    "localName": "Pesach Sheni (Jewish, פסח שני),"
+  },
+  {
+    "date": "2025-04-30",
+    "country": "DE",
+    "name": "Walpurgisnacht (Germany)",
+    "localName": "Walpurgisnacht (Germany)"
+  },
+  {
+    "date": "2025-05-01",
+    "country": "ZZ",
+    "name": "Beltane (Celtic)",
+    "localName": "Beltane (Celtic)"
+  },
+  {
+    "date": "2025-05-01",
+    "country": "ZZ",
+    "name": "Lei Day (Hawai'i)",
+    "localName": "Lei Day (Hawai'i)"
+  },
+  {
+    "date": "2025-05-01",
+    "country": "ZZ",
+    "name": "May Day",
+    "localName": "May Day"
+  },
+  {
+    "date": "2025-05-01",
+    "country": "ZZ",
+    "name": "Calan Mai (Wales)",
+    "localName": "Calan Mai (Wales)"
+  },
+  {
+    "date": "2025-05-01",
+    "country": "ZZ",
+    "name": "Constitution Day (RMI)",
+    "localName": "Constitution Day (RMI)"
+  },
+  {
+    "date": "2025-05-01",
+    "country": "KI",
+    "name": "Labour Day (Vanuatu/Kiribati)",
+    "localName": "Labour Day (Vanuatu/Kiribati)"
+  },
+  {
+    "date": "2025-05-01",
+    "country": "ZZ",
+    "name": "Vesak (Buddhist)",
+    "localName": "Vesak (Buddhist)"
+  },
+  {
+    "date": "2025-04-03",
+    "country": "JP",
+    "name": "Constitution Memorial Day (Japan, 憲法記念日)",
+    "localName": "Constitution Memorial Day (Japan, 憲法記念日)"
+  },
+  {
+    "date": "2025-05-04",
+    "country": "JP",
+    "name": "Midori no Hi (Japan, みどりの日)",
+    "localName": "Midori no Hi (Japan, みどりの日)"
+  },
+  {
+    "date": "2025-05-04",
+    "country": "NL",
+    "name": "Dodenherdenking (Netherlands)",
+    "localName": "Dodenherdenking (Netherlands)"
+  },
+  {
+    "date": "2025-05-04",
+    "country": "ZZ",
+    "name": "Lag BaOmer  (Jewish, לַ״ג בָּעוֹמֶר)",
+    "localName": "Lag BaOmer  (Jewish, לַ״ג בָּעוֹמֶר)"
+  },
+  {
+    "date": "2025-05-05",
+    "country": "NL",
+    "name": "Bevrijdingsdag (Netherlands)",
+    "localName": "Bevrijdingsdag (Netherlands)"
+  },
+  {
+    "date": "2025-05-05",
+    "country": "MX",
+    "name": "Cinco de Mayo (Mexico)",
+    "localName": "Cinco de Mayo (Mexico)"
+  },
+  {
+    "date": "2025-05-05",
+    "country": "JP",
+    "name": "Kodomo no Hi (Japan, こどもの日)",
+    "localName": "Kodomo no Hi (Japan, こどもの日)"
+  },
+  {
+    "date": "2025-05-08",
+    "country": "GG",
+    "name": "VE Day , Liberation Day (Guernsey) 5/9",
+    "localName": "VE Day , Liberation Day (Guernsey) 5/9"
+  },
+  {
+    "date": "2025-05-09",
+    "country": "ZZ",
+    "name": "Victory Day (Russia, День Победы)",
+    "localName": "Victory Day (Russia, День Победы)"
+  },
+  {
+    "date": "2025-05-10",
+    "country": "ZZ",
+    "name": "Constitution Day (FSM)",
+    "localName": "Constitution Day (FSM)"
+  },
+  {
+    "date": "2025-05-10",
+    "country": "ZZ",
+    "name": "Mother's Day",
+    "localName": "Mother's Day"
+  },
+  {
+    "date": "2025-05-14",
+    "country": "PY",
+    "name": "Paraguay Independence Day",
+    "localName": "Paraguay Independence Day"
+  },
+  {
+    "date": "2025-05-14",
+    "country": "IL",
+    "name": "Yom Yerushaláyim (Israel, יום ירושלים),",
+    "localName": "Yom Yerushaláyim (Israel, יום ירושלים),"
+  },
+  {
+    "date": "2025-05-16",
+    "country": "IN",
+    "name": "Vat Savitri (India, वट सावित्री)",
+    "localName": "Vat Savitri (India, वट सावित्री)"
+  },
+  {
+    "date": "2025-05-19",
+    "country": "ZZ",
+    "name": "Malcom X Day",
+    "localName": "Malcom X Day"
+  },
+  {
+    "date": "2025-05-20",
+    "country": "CM",
+    "name": "Cameroon Republic Day",
+    "localName": "Cameroon Republic Day"
+  },
+  {
+    "date": "2025-05-20",
+    "country": "ZZ",
+    "name": "East Timor Republic Day",
+    "localName": "East Timor Republic Day"
+  },
+  {
+    "date": "2025-05-21",
+    "country": "ZZ",
+    "name": "Shavuot (Jewish, שבועות),",
+    "localName": "Shavuot (Jewish, שבועות),"
+  },
+  {
+    "date": "2025-05-22",
+    "country": "MQ",
+    "name": "Slavery Abolition Day (Martinique)",
+    "localName": "Slavery Abolition Day (Martinique)"
+  },
+  {
+    "date": "2025-05-22",
+    "country": "BM",
+    "name": "Bermuda Day (Bermuda)",
+    "localName": "Bermuda Day (Bermuda)"
+  },
+  {
+    "date": "2025-05-24",
+    "country": "ER",
+    "name": "Eritrean Independence Day",
+    "localName": "Eritrean Independence Day"
+  },
+  {
+    "date": "2025-05-24",
+    "country": "ZZ",
+    "name": "Pentecost",
+    "localName": "Pentecost"
+  },
+  {
+    "date": "2025-05-25",
+    "country": "ZZ",
+    "name": "Memorial Day",
+    "localName": "Memorial Day"
+  },
+  {
+    "date": "2025-05-25",
+    "country": "ZZ",
+    "name": "African Liberation Day",
+    "localName": "African Liberation Day"
+  },
+  {
+    "date": "2025-05-25",
+    "country": "JO",
+    "name": "Jordan Independence Day",
+    "localName": "Jordan Independence Day"
+  },
+  {
+    "date": "2025-05-25",
+    "country": "AR",
+    "name": "May Revolution Day (Argentina)",
+    "localName": "May Revolution Day (Argentina)"
+  },
+  {
+    "date": "2025-05-26",
+    "country": "GE",
+    "name": "Georgia Independence Day",
+    "localName": "Georgia Independence Day"
+  },
+  {
+    "date": "2025-05-26",
+    "country": "GY",
+    "name": "Guyana Independence Day",
+    "localName": "Guyana Independence Day"
+  },
+  {
+    "date": "2025-05-26",
+    "country": "ZZ",
+    "name": "Eid al-Adha (Islamic, عيد الأضحى),",
+    "localName": "Eid al-Adha (Islamic, عيد الأضحى),"
+  },
+  {
+    "date": "2025-05-27",
+    "country": "ZZ",
+    "name": "Slavery Abolition Day (Guadalupe)",
+    "localName": "Slavery Abolition Day (Guadalupe)"
+  },
+  {
+    "date": "2025-05-28",
+    "country": "ZZ",
+    "name": "Abolition Day (Saint Martin)",
+    "localName": "Abolition Day (Saint Martin)"
+  },
+  {
+    "date": "2025-05-28",
+    "country": "AZ",
+    "name": "Founding of the Democratic Republic of Azerbaijan",
+    "localName": "Founding of the Democratic Republic of Azerbaijan"
+  },
+  {
+    "date": "2025-05-28",
+    "country": "ET",
+    "name": "National Day of Ethiopia",
+    "localName": "National Day of Ethiopia"
+  },
+  {
+    "date": "2025-05-31",
+    "country": "ZZ",
+    "name": "Orthodox Pentecost",
+    "localName": "Orthodox Pentecost"
+  },
+  {
+    "date": "2025-05-31",
+    "country": "WS",
+    "name": "Samoan Language Week /6",
+    "localName": "Samoan Language Week /6"
+  },
+  {
+    "date": "2025-06-01",
+    "country": "KE",
+    "name": "Madaraka Day (Kenya)",
+    "localName": "Madaraka Day (Kenya)"
+  },
+  {
+    "date": "2025-06-01",
+    "country": "WS",
+    "name": "Samoa Independence Day",
+    "localName": "Samoa Independence Day"
+  },
+  {
+    "date": "2025-06-03",
+    "country": "ZZ",
+    "name": "Eid al-Ghadir (Islamic, عید الغدیر),",
+    "localName": "Eid al-Ghadir (Islamic, عید الغدیر),"
+  },
+  {
+    "date": "2025-06-06",
+    "country": "ZZ",
+    "name": "D-Day",
+    "localName": "D-Day"
+  },
+  {
+    "date": "2025-06-07",
+    "country": "ZZ",
+    "name": "Eid al-Adha (Islamic, عيد الأضحى),",
+    "localName": "Eid al-Adha (Islamic, عيد الأضحى),"
+  },
+  {
+    "date": "2025-06-10",
+    "country": "GF",
+    "name": "Abolition Day (French Guiana)",
+    "localName": "Abolition Day (French Guiana)"
+  },
+  {
+    "date": "2025-06-10",
+    "country": "LK",
+    "name": "Poson Festival (Sri Lanka, පොසොන් උත්සවය)",
+    "localName": "Poson Festival (Sri Lanka, පොසොන් උත්සවය)"
+  },
+  {
+    "date": "2025-06-11",
+    "country": "ZZ",
+    "name": "King Kamehameha Day",
+    "localName": "King Kamehameha Day"
+  },
+  {
+    "date": "2025-06-11",
+    "country": "PH",
+    "name": "Philippines Independence Day",
+    "localName": "Philippines Independence Day"
+  },
+  {
+    "date": "2025-06-12",
+    "country": "ZZ",
+    "name": "Russia Day",
+    "localName": "Russia Day"
+  },
+  {
+    "date": "2025-06-14",
+    "country": "ZZ",
+    "name": "Flag Day",
+    "localName": "Flag Day"
+  },
+  {
+    "date": "2025-06-14",
+    "country": "ZZ",
+    "name": "Falkland Islands Liberation Day",
+    "localName": "Falkland Islands Liberation Day"
+  },
+  {
+    "date": "2025-06-15",
+    "country": "ZZ",
+    "name": "Magna Carta Day (England)",
+    "localName": "Magna Carta Day (England)"
+  },
+  {
+    "date": "2025-06-16",
+    "country": "IE",
+    "name": "Bloomsday (Ireland)",
+    "localName": "Bloomsday (Ireland)"
+  },
+  {
+    "date": "2025-06-16",
+    "country": "ZZ",
+    "name": "Islamic New Year (Islamic, رأس السنة الهجرية),",
+    "localName": "Islamic New Year (Islamic, رأس السنة الهجرية),"
+  },
+  {
+    "date": "2025-06-17",
+    "country": "IS",
+    "name": "Iceland Independence Day",
+    "localName": "Iceland Independence Day"
+  },
+  {
+    "date": "2025-06-18",
+    "country": "SC",
+    "name": "Seychelles Constitution Day",
+    "localName": "Seychelles Constitution Day"
+  },
+  {
+    "date": "2025-06-19",
+    "country": "ZZ",
+    "name": "Juneteenth",
+    "localName": "Juneteenth"
+  },
+  {
+    "date": "2025-06-19",
+    "country": "ZZ",
+    "name": "Dragon Boat Festival (China, 端午節)",
+    "localName": "Dragon Boat Festival (China, 端午節)"
+  },
+  {
+    "date": "2025-06-20",
+    "country": "CL",
+    "name": "Indigenous People's Day (Chile)",
+    "localName": "Indigenous People's Day (Chile)"
+  },
+  {
+    "date": "2025-06-21",
+    "country": "CA",
+    "name": "Indigenous People's Day (Canada)",
+    "localName": "Indigenous People's Day (Canada)"
+  },
+  {
+    "date": "2025-06-21",
+    "country": "ZZ",
+    "name": "Father's Day",
+    "localName": "Father's Day"
+  },
+  {
+    "date": "2025-06-21",
+    "country": "BO",
+    "name": "Aymara New Year (Bolivia)",
+    "localName": "Aymara New Year (Bolivia)"
+  },
+  {
+    "date": "2025-06-21",
+    "country": "ZZ",
+    "name": "Andean New Year (Willkakuti)",
+    "localName": "Andean New Year (Willkakuti)"
+  },
+  {
+    "date": "2025-06-21",
+    "country": "ZZ",
+    "name": "Summer Solstice",
+    "localName": "Summer Solstice"
+  },
+  {
+    "date": "2025-06-21",
+    "country": "ZZ",
+    "name": "Litha",
+    "localName": "Litha"
+  },
+  {
+    "date": "2025-06-23",
+    "country": "ZZ",
+    "name": "Jura Independence Day",
+    "localName": "Jura Independence Day"
+  },
+  {
+    "date": "2025-06-23",
+    "country": "LU",
+    "name": "Luxembourg National Day",
+    "localName": "Luxembourg National Day"
+  },
+  {
+    "date": "2025-06-23",
+    "country": "ZZ",
+    "name": "Līgo",
+    "localName": "Līgo"
+  },
+  {
+    "date": "2025-06-24",
+    "country": "ZZ",
+    "name": "Jāņi",
+    "localName": "Jāņi"
+  },
+  {
+    "date": "2025-06-24",
+    "country": "ZZ",
+    "name": "Armed Forces Day (UK)",
+    "localName": "Armed Forces Day (UK)"
+  },
+  {
+    "date": "2025-06-24",
+    "country": "PE",
+    "name": "Inti Raymi (Peru)",
+    "localName": "Inti Raymi (Peru)"
+  },
+  {
+    "date": "2025-06-24",
+    "country": "ZZ",
+    "name": "Midsummer (Northern Europe)",
+    "localName": "Midsummer (Northern Europe)"
+  },
+  {
+    "date": "2025-06-25",
+    "country": "HR",
+    "name": "Croatia Independence Day",
+    "localName": "Croatia Independence Day"
+  },
+  {
+    "date": "2025-06-25",
+    "country": "MZ",
+    "name": "Mozambique Independence Day",
+    "localName": "Mozambique Independence Day"
+  },
+  {
+    "date": "2025-06-26",
+    "country": "MG",
+    "name": "Madagascar Independence Day",
+    "localName": "Madagascar Independence Day"
+  },
+  {
+    "date": "2025-06-26",
+    "country": "ML",
+    "name": "Somalia Independence Day",
+    "localName": "Somalia Independence Day"
+  },
+  {
+    "date": "2025-06-27",
+    "country": "NP",
+    "name": "Attwari (Nepal, अटवारी)",
+    "localName": "Attwari (Nepal, अटवारी)"
+  },
+  {
+    "date": "2025-06-27",
+    "country": "TJ",
+    "name": "Day of National Unity (Tajikistan)",
+    "localName": "Day of National Unity (Tajikistan)"
+  },
+  {
+    "date": "2025-06-27",
+    "country": "DJ",
+    "name": "Djibouti Independence Day",
+    "localName": "Djibouti Independence Day"
+  },
+  {
+    "date": "2025-06-28",
+    "country": "UA",
+    "name": "Constitution Day (Ukraine, День Конституції України)",
+    "localName": "Constitution Day (Ukraine, День Конституції України)"
+  },
+  {
+    "date": "2025-06-29",
+    "country": "SC",
+    "name": "Seychelles Independence Day",
+    "localName": "Seychelles Independence Day"
+  },
+  {
+    "date": "2025-06-30",
+    "country": "ZZ",
+    "name": "Congo Independence Day",
+    "localName": "Congo Independence Day"
   }
 ]
