@@ -1,10 +1,25 @@
-// App.tsx — Calendarific + Cultural holidays, filtered by country + editable planner
+// src/App.tsx — Calendarific + cultural holidays, normalized country names
 import React, { useState } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
 import countryTable from "./data/countryTable.json";
 import { getCalendarificHolidays } from "./utils/fetchCalendarificHolidays";
 import type { Holiday } from "./types";
 import "./styles.css";
+
+/* ---------- helpers ---------- */
+
+// quick lookup tables
+const codeToName = new Map<string, string>();
+const nameToCode = new Map<string, string>();
+countryTable.countries.forEach((c: { code: string; name: string }) => {
+  codeToName.set(c.code.toUpperCase(), c.name);
+  nameToCode.set(c.name, c.code.toUpperCase());
+});
+
+const MONTHS = [
+  "January","February","March","April","May","June",
+  "July","August","September","October","November","December",
+];
 
 interface WeekRow {
   week: string;
@@ -15,155 +30,189 @@ interface WeekRow {
   importantDates: string;
 }
 
-const MONTHS = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
+/* ---------- component ---------- */
 
 const App: React.FC = () => {
   const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
   const [year, setYear] = useState("2025");
-  const [weekData, setWeekData] = useState<WeekRow[]>([]);
-  const [allHolidays, setAllHolidays] = useState<Holiday[]>([]);
-  const [availableCountries, setAvailableCountries] = useState<string[]>([]);
-  const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
 
-  const generateWeeks = (monthIndex: number): WeekRow[] => {
-    const d = new Date(parseInt(year), monthIndex, 1);
+  const [allHolidays, setAllHolidays] = useState<Holiday[]>([]);
+  const [availableCountries, setAvailableCountries] = useState<string[]>([]);   // full names
+  const [selectedCountries, setSelectedCountries] = useState<string[]>([]);     // full names
+
+  const [weekData, setWeekData] = useState<WeekRow[]>([]);
+
+  /* ---- utils ---- */
+
+  const generateWeeks = (monthIdx: number): WeekRow[] => {
     const rows: WeekRow[] = [];
     let wk = 1;
-    while (d.getMonth() === monthIndex) {
+    const cursor = new Date(+year, monthIdx, 1);
+
+    while (cursor.getMonth() === monthIdx) {
       rows.push({
-        week: `${MONTHS[monthIndex]} – Week ${wk}`,
+        week: `${MONTHS[monthIdx]} – Week ${wk}`,
         lessons: "",
         concepts: "",
         holidayIntegrations: "",
         assessment: "",
-        importantDates: ""
+        importantDates: "",
       });
-      d.setDate(d.getDate() + 7);
+      cursor.setDate(cursor.getDate() + 7);
       wk++;
     }
     return rows;
   };
 
+  /* ---- step 1 ---- */
+
   const handleMonthSelect = async (monthLabel: string) => {
     const monthIdx = MONTHS.indexOf(monthLabel);
     setSelectedMonth(monthLabel);
     setSelectedCountries([]);
+    setWeekData([]);
 
-    const calendarificCountries = countryTable.countries.map(c => c.code);
-    const calendarificResults = await Promise.all(
-      calendarificCountries.map(async (code) => {
+    /* Calendarific slice */
+    const calendarificISO = countryTable.countries.map((c: any) => c.code);
+    const calResults = await Promise.all(
+      calendarificISO.map(async (code) => {
         try {
-          const res = await getCalendarificHolidays(code);
-          return res.filter((h) => {
+          const list = await getCalendarificHolidays(code);
+          return list.filter((h) => {
             const d = new Date(h.date);
-            return d.getFullYear() === parseInt(year) && d.getMonth() === monthIdx;
+            return d.getFullYear() === +year && d.getMonth() === monthIdx;
           });
-        } catch {
-          return [];
-        }
-      })
+        } catch { return []; }
+      }),
     );
-    const calendarificHolidays = calendarificResults.flat();
+    const calendarificHolidays = calResults.flat();
 
+    /* Cultural slice */
     const culturalHolidays: Holiday[] = (culturalHolidayData as Holiday[]).filter((h) => {
       const d = new Date(h.date);
-      return d.getFullYear() === parseInt(year) && d.getMonth() === monthIdx;
+      return d.getFullYear() === +year && d.getMonth() === monthIdx;
     });
 
     const merged = [...calendarificHolidays, ...culturalHolidays];
-    setAllHolidays(merged);
 
-    const countries = Array.from(new Set(merged.map((h) => h.country))).sort();
-    setAvailableCountries(countries);
+    /* Normalise country names */
+    const mergedWithNames = merged.map((h) => {
+      const fullName = codeToName.get(h.country) ?? h.country;
+      return { ...h, country: fullName };           // overwrite country with full name
+    });
+
+    setAllHolidays(mergedWithNames);
+
+    const names = Array.from(new Set(mergedWithNames.map((h) => h.country))).sort();
+    setAvailableCountries(names);
   };
 
-  const handleCountrySelect = (code: string) => {
+  /* ---- step 2 ---- */
+
+  const toggleCountry = (name: string) =>
     setSelectedCountries((prev) =>
-      prev.includes(code) ? prev.filter((c) => c !== code) : [...prev, code]
+      prev.includes(name) ? prev.filter((c) => c !== name) : [...prev, name],
     );
-  };
+
+  /* ---- step 3 ---- */
 
   const generateLessonPlan = () => {
     if (!selectedMonth) return;
     const monthIdx = MONTHS.indexOf(selectedMonth);
 
-    const filteredHolidays = allHolidays.filter((h) => selectedCountries.includes(h.country));
+    const filtered = allHolidays.filter((h) => selectedCountries.includes(h.country));
 
     const rows = generateWeeks(monthIdx).map((row) => {
       const wkNum = parseInt(row.week.split(" ")[2]) - 1;
-      const weekStart = new Date(parseInt(year), monthIdx, 1 + wkNum * 7);
-      const weekEnd = new Date(weekStart);
-      weekEnd.setDate(weekEnd.getDate() + 6);
+      const wkStart = new Date(+year, monthIdx, 1 + wkNum * 7);
+      const wkEnd = new Date(wkStart);
+      wkEnd.setDate(wkEnd.getDate() + 6);
 
-      const weekHolidays = filteredHolidays.filter((h) => {
-        const hd = new Date(h.date);
-        return hd >= weekStart && hd <= weekEnd;
+      const weekHol = filtered.filter((h) => {
+        const d = new Date(h.date);
+        return d >= wkStart && d <= wkEnd;
       });
 
       return {
         ...row,
-        importantDates: weekHolidays
+        importantDates: weekHol
           .map((h) => `${h.date} — ${h.localName || h.name} (${h.country})`)
-          .join("\n")
+          .join("\n"),
       };
     });
 
     setWeekData(rows);
   };
 
-  const onCellChange = (idx: number, field: keyof WeekRow, val: string) => {
+  const updateCell = (idx: number, field: keyof WeekRow, val: string) =>
     setWeekData((prev) => {
       const copy = [...prev];
       copy[idx] = { ...copy[idx], [field]: val };
       return copy;
     });
-  };
+
+  /* ---------- render ---------- */
 
   return (
     <div className="app">
       <h1>Holiday Planner</h1>
 
+      {/* ───────── Step 1 ───────── */}
       {!selectedMonth && (
         <>
           <h2>Step 1 – Choose Month</h2>
           {MONTHS.map((m) => (
-            <button key={m} onClick={() => handleMonthSelect(m)} style={{ margin: 4 }}>{m}</button>
+            <button key={m} onClick={() => handleMonthSelect(m)} style={{ margin: 4 }}>
+              {m}
+            </button>
           ))}
           <br />
           <label style={{ marginTop: 12, display: "inline-block" }}>
-            Year: <input value={year} onChange={(e) => setYear(e.target.value)} style={{ width: 80 }} />
+            Year:{" "}
+            <input
+              value={year}
+              onChange={(e) => setYear(e.target.value)}
+              style={{ width: 80 }}
+            />
           </label>
         </>
       )}
 
-      {selectedMonth && availableCountries.length > 0 && selectedCountries.length === 0 && (
+      {/* ───────── Step 2 ───────── */}
+      {selectedMonth && availableCountries.length > 0 && weekData.length === 0 && (
         <>
           <h2>Step 2 – Select Countries with Holidays</h2>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-            {availableCountries.map((c) => (
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {availableCountries.map((name) => (
               <button
-                key={c}
-                onClick={() => handleCountrySelect(c)}
+                key={name}
+                onClick={() => toggleCountry(name)}
+                aria-pressed={selectedCountries.includes(name)}
                 style={{
                   padding: "6px 10px",
                   border: "1px solid #333",
-                  background: selectedCountries.includes(c) ? "#90cdf4" : "#fff",
+                  background: selectedCountries.includes(name) ? "#90cdf4" : "#fff",
                 }}
               >
-                {c}
+                {name}
               </button>
             ))}
           </div>
-          <button onClick={generateLessonPlan} style={{ marginTop: 16 }}>Generate Lesson Plan</button>
+
+          {selectedCountries.length > 0 && (
+            <button onClick={generateLessonPlan} style={{ marginTop: 16 }}>
+              Generate Lesson Plan
+            </button>
+          )}
         </>
       )}
 
-      {selectedMonth && weekData.length > 0 && (
+      {/* ───────── Step 3 ───────── */}
+      {weekData.length > 0 && (
         <>
-          <h2>{selectedMonth} {year} – Lesson Plan</h2>
+          <h2>
+            {selectedMonth} {year} – Lesson Plan
+          </h2>
           <table className="lesson-plan">
             <thead>
               <tr>
@@ -179,11 +228,13 @@ const App: React.FC = () => {
               {weekData.map((row, i) => (
                 <tr key={row.week}>
                   <td>{row.week}</td>
-                  {(["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"] as const).map((field) => (
+                  {(
+                    ["lessons","concepts","holidayIntegrations","assessment","importantDates"] as const
+                  ).map((field) => (
                     <td key={field}>
                       <textarea
-                        value={row[field] as string}
-                        onChange={(e) => onCellChange(i, field, e.target.value)}
+                        value={row[field]}
+                        onChange={(e) => updateCell(i, field, e.target.value)}
                       />
                     </td>
                   ))}
@@ -192,7 +243,9 @@ const App: React.FC = () => {
             </tbody>
           </table>
 
-          <button onClick={() => window.print()} style={{ marginTop: 16 }}>Print</button>
+          <button onClick={() => window.print()} style={{ marginTop: 16 }}>
+            Print
+          </button>
         </>
       )}
     </div>
