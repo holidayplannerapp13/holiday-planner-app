@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "types": ["node"],
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true, // 🔧 ADD THIS
+    "baseUrl": "./",                      // 🔧 Optional: supports path aliases if needed later
+    "paths": {
+      "@/*": ["src/*"]                    // 🔧 Optional alias if you want to clean up imports
+    }
+  },
+  "include": ["src"]
+}

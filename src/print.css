@@ -1,0 +1,12 @@
+@media print {
+  body {
+    font-size: 12pt;
+  }
+  button {
+    display: none;   /* hide the blue Print button */
+  }
+  table {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
