@@ -8,18 +8,89 @@
 .env
 .env.local
 .env.*.local
+.env.production
 
 # logs
+logs
+*.log
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 
-# IDE settings
+# Diagnostic reports
+report.*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage
+*.lcov
+.nyc_output
+
+# Cache and build
+.cache
+.parcel-cache
+.vitepress
+.vitepress/dist
+.vitepress/cache
+.svelte-kit/
+.vuepress/dist
+.temp
+.nuxt
+.next
+out
+dist
+
+# TypeScript
+*.tsbuildinfo
+
+# Misc build
+lib-cov
+build/Release
+web_modules/
+jspm_packages/
+bower_components
+.lock-wscript
+
+# Lint cache
+.eslintcache
+.stylelintcache
+
+# REPL history
+.node_repl_history
+
+# VSCode and IDEs
 .vscode
 .idea
 .DS_Store
 
-# Optional
-*.log
-*.tsbuildinfo
+# Serverless and Frameworks
+.serverless/
+.docusaurus
+.fusebox/
+.dynamodb/
+.firebase/
+
+# Yarn
+.yarn/*
+.pnp.*
+.yarn-integrity
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Other
+*.tgz
+.vscode-test
+
+# Vite logs
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
