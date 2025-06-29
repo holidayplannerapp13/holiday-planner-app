@@ -1,4 +1,4 @@
-// src/App.tsx
+// src/App.tsx – Revised: Lesson Plan Format Output
 import { useEffect, useState } from "react";
 import { getCalendarificHolidays } from "./utils/fetchCalendarificHolidays";
 import type { Holiday } from "./types";
@@ -9,8 +9,10 @@ const MONTHS = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
 ];
+
 const CURRENT_YEAR = new Date().getFullYear();
-type ByWeek = Record<number, Holiday[]>;
+
+type ByWeek = Record<string, Holiday[]>;
 
 export default function App() {
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
@@ -73,22 +75,19 @@ export default function App() {
     for (const h of all) {
       const d = new Date(h.date);
       const wk = Math.floor((d.getDate() - 1) / 7) + 1;
-      (byWeek[wk] ??= []).push(h);
+      const key = `${MONTHS[d.getMonth()]} – Week ${wk}`;
+      (byWeek[key] ??= []).push(h);
     }
 
     setHolidaysByWeek(byWeek);
     setLoading(false);
   }
 
-  function handlePrint() {
-    window.print();
-  }
-
   return (
     <div style={{ padding: 24, fontFamily: "sans-serif" }}>
       <h1>Holiday Planner</h1>
 
-      {/* Step 1 – Month & Year */}
+      {/* Month Picker */}
       <section style={{ marginBottom: 24 }}>
         <h2>Choose Month</h2>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
@@ -117,7 +116,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Step 2 – Countries */}
+      {/* Country Selector */}
       {month && (
         <section style={{ marginBottom: 24 }}>
           <h2>Select Countries for {month} {year}</h2>
@@ -156,50 +155,56 @@ export default function App() {
         </section>
       )}
 
-      {/* Step 3 – Results in lesson plan format */}
+      {/* Results – CSV Layout */}
       {Object.keys(holidaysByWeek).length > 0 && (
-        <>
-          <h2>Lesson Plan Output: {month} {year}</h2>
-          <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 20 }} border={1}>
-            <thead>
+        <section>
+          <h2>{month} {year} – Lesson Plan</h2>
+          <table border={1} cellPadding={6} style={{ borderCollapse: "collapse", width: "100%" }}>
+            <thead style={{ background: "#f0f0f0" }}>
               <tr>
-                <th style={{ width: "8%" }}>Week</th>
-                <th style={{ width: "15%" }}>Important dates</th>
-                <th>Semester 1 - 5 "Art as Culture"</th>
-                <th>Lessons</th>
-                <th>Concepts</th>
-                <th>Holiday Integrations</th>
-                <th>Assessment</th>
+                <th style={{ width: 150 }}>Week</th>
+                <th style={{ width: 180 }}>Important Data</th>
+                <th>Musicianship</th>
+                <th>Repertoire</th>
+                <th>Movement</th>
+                <th>Instrument</th>
+                <th>Listening</th>
+                <th>Other</th>
               </tr>
             </thead>
             <tbody>
               {Array.from({ length: 5 }).map((_, i) => {
-                const week = i + 1;
-                const holidays = holidaysByWeek[week] || [];
+                const wk = `${month} – Week ${i + 1}`;
+                const holidays = holidaysByWeek[wk] ?? [];
                 return (
-                  <tr key={week}>
-                    <td>Week {week}</td>
+                  <tr key={wk}>
+                    <td>{wk}</td>
                     <td>
-                      <textarea
-                        defaultValue={holidays.map(h => `${h.date} – ${h.localName} (${h.country})`).join("\n")}
-                        style={{ width: "100%", minHeight: 60 }}
-                      />
+                      {holidays.map((h, idx) => (
+                        <div key={idx}>
+                          {h.date} — {h.localName} ({h.country})
+                        </div>
+                      ))}
                     </td>
-                    <td><textarea style={{ width: "100%" }} /></td>
-                    <td><textarea style={{ width: "100%" }} /></td>
-                    <td><textarea style={{ width: "100%" }} /></td>
-                    <td><textarea style={{ width: "100%" }} /></td>
-                    <td><textarea style={{ width: "100%" }} /></td>
+                    <td contentEditable></td>
+                    <td contentEditable></td>
+                    <td contentEditable></td>
+                    <td contentEditable></td>
+                    <td contentEditable></td>
+                    <td contentEditable></td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
 
-          <button onClick={handlePrint} style={{ padding: "8px 16px" }}>
+          <button
+            onClick={() => window.print()}
+            style={{ marginTop: 24, padding: "6px 12px" }}
+          >
             Print
           </button>
-        </>
+        </section>
       )}
     </div>
   );
