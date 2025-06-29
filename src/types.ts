@@ -1,8 +1,11 @@
 export interface Holiday {
   date: string;
+  endDate?: string; // optional, for multi-day holidays
   name: string;
   localName: string;
   country: string;
-  month?: string; // cultural only
-  week?: number;  // cultural only
+  description?: string; // optional, cultural only
+  type?: string[];      // optional, calendarific only
+  month?: string;       // optional, cultural only
+  week?: number;        // optional, cultural only
 }

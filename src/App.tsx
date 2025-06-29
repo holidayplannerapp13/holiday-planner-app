@@ -37,10 +37,6 @@ const App: React.FC = () => {
     const cursor = new Date(+year, monthIdx, 1);
     let wk = 1;
     while (cursor.getMonth() === monthIdx) {
-      const start = new Date(cursor);
-      const end = new Date(start);
-      end.setDate(end.getDate() + 6);
-
       rows.push({
         week: `${MONTHS[monthIdx]} – Week ${wk}`,
         lessons: "",
@@ -49,14 +45,13 @@ const App: React.FC = () => {
         assessment: "",
         importantDates: "",
       });
-
       cursor.setDate(cursor.getDate() + 7);
       wk++;
     }
     return rows;
   };
 
-  const handleMonthSelect = async (monthLabel: string) => {
+  const handleMonthSelect = (monthLabel: string) => {
     const monthIdx = MONTHS.indexOf(monthLabel);
     setSelectedMonth(monthLabel);
     setSelectedCountries([]);
@@ -96,11 +91,12 @@ const App: React.FC = () => {
     const rows = generateWeeks(monthIdx).map((row, i) => {
       const wkStart = new Date(+year, monthIdx, 1 + i * 7);
       const wkEnd = new Date(wkStart);
-      wkEnd.setDate(wkStart.getDate() + 6);
+      wkEnd.setDate(wkStart.getDate() + 6); // Full Sunday–Saturday week
 
       const weekHolidays = filtered.filter((h) => {
-        const d = new Date(h.date);
-        return d >= wkStart && d <= wkEnd;
+        const startDate = new Date(h.date);
+        const endDate = h.endDate ? new Date(h.endDate) : startDate;
+        return endDate >= wkStart && startDate <= wkEnd;
       });
 
       return {
@@ -136,7 +132,12 @@ const App: React.FC = () => {
           ))}
           <br />
           <label style={{ marginTop: 12, display: "inline-block" }}>
-            Year: <input value={year} onChange={(e) => setYear(e.target.value)} style={{ width: 80 }} />
+            Year:{" "}
+            <input
+              value={year}
+              onChange={(e) => setYear(e.target.value)}
+              style={{ width: 80 }}
+            />
           </label>
         </>
       )}
