@@ -1,4 +1,4 @@
-// src/App.tsx — Calendarific + cultural holidays, normalized country names
+// App.tsx — Calendarific + cultural holidays with country normalization
 import React, { useState } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
 import countryTable from "./data/countryTable.json";
@@ -6,19 +6,15 @@ import { getCalendarificHolidays } from "./utils/fetchCalendarificHolidays";
 import type { Holiday } from "./types";
 import "./styles.css";
 
-/* ---------- helpers ---------- */
-
-// quick lookup tables
+// Lookup maps for normalization
 const codeToName = new Map<string, string>();
-const nameToCode = new Map<string, string>();
 countryTable.countries.forEach((c: { code: string; name: string }) => {
   codeToName.set(c.code.toUpperCase(), c.name);
-  nameToCode.set(c.name, c.code.toUpperCase());
 });
 
 const MONTHS = [
   "January","February","March","April","May","June",
-  "July","August","September","October","November","December",
+  "July","August","September","October","November","December"
 ];
 
 interface WeekRow {
@@ -30,25 +26,18 @@ interface WeekRow {
   importantDates: string;
 }
 
-/* ---------- component ---------- */
-
 const App: React.FC = () => {
   const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
   const [year, setYear] = useState("2025");
-
   const [allHolidays, setAllHolidays] = useState<Holiday[]>([]);
-  const [availableCountries, setAvailableCountries] = useState<string[]>([]);   // full names
-  const [selectedCountries, setSelectedCountries] = useState<string[]>([]);     // full names
-
+  const [availableCountries, setAvailableCountries] = useState<string[]>([]);
+  const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
   const [weekData, setWeekData] = useState<WeekRow[]>([]);
-
-  /* ---- utils ---- */
 
   const generateWeeks = (monthIdx: number): WeekRow[] => {
     const rows: WeekRow[] = [];
     let wk = 1;
     const cursor = new Date(+year, monthIdx, 1);
-
     while (cursor.getMonth() === monthIdx) {
       rows.push({
         week: `${MONTHS[monthIdx]} – Week ${wk}`,
@@ -64,62 +53,55 @@ const App: React.FC = () => {
     return rows;
   };
 
-  /* ---- step 1 ---- */
-
   const handleMonthSelect = async (monthLabel: string) => {
     const monthIdx = MONTHS.indexOf(monthLabel);
     setSelectedMonth(monthLabel);
     setSelectedCountries([]);
     setWeekData([]);
 
-    /* Calendarific slice */
-    const calendarificISO = countryTable.countries.map((c: any) => c.code);
+    // Calendarific holidays
+    const calendarificISO = countryTable.countries.map(c => c.code);
     const calResults = await Promise.all(
       calendarificISO.map(async (code) => {
         try {
-          const list = await getCalendarificHolidays(code);
-          return list.filter((h) => {
+          const holidays = await getCalendarificHolidays(code);
+          return holidays.filter((h) => {
             const d = new Date(h.date);
             return d.getFullYear() === +year && d.getMonth() === monthIdx;
           });
-        } catch { return []; }
-      }),
+        } catch {
+          return [];
+        }
+      })
     );
     const calendarificHolidays = calResults.flat();
 
-    /* Cultural slice */
-    const culturalHolidays: Holiday[] = (culturalHolidayData as Holiday[]).filter((h) => {
+    // Cultural holidays
+    const culturalHolidays = (culturalHolidayData as Holiday[]).filter((h) => {
       const d = new Date(h.date);
       return d.getFullYear() === +year && d.getMonth() === monthIdx;
     });
 
-    const merged = [...calendarificHolidays, ...culturalHolidays];
-
-    /* Normalise country names */
-    const mergedWithNames = merged.map((h) => {
-      const fullName = codeToName.get(h.country) ?? h.country;
-      return { ...h, country: fullName };           // overwrite country with full name
+    // Merge and normalize
+    const merged = [...calendarificHolidays, ...culturalHolidays].map((h) => {
+      const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
+      return { ...h, country: fullName };
     });
 
-    setAllHolidays(mergedWithNames);
-
-    const names = Array.from(new Set(mergedWithNames.map((h) => h.country))).sort();
+    setAllHolidays(merged);
+    const names = Array.from(new Set(merged.map((h) => h.country))).sort();
     setAvailableCountries(names);
   };
 
-  /* ---- step 2 ---- */
-
-  const toggleCountry = (name: string) =>
+  const toggleCountry = (name: string) => {
     setSelectedCountries((prev) =>
-      prev.includes(name) ? prev.filter((c) => c !== name) : [...prev, name],
+      prev.includes(name) ? prev.filter((c) => c !== name) : [...prev, name]
     );
-
-  /* ---- step 3 ---- */
+  };
 
   const generateLessonPlan = () => {
     if (!selectedMonth) return;
     const monthIdx = MONTHS.indexOf(selectedMonth);
-
     const filtered = allHolidays.filter((h) => selectedCountries.includes(h.country));
 
     const rows = generateWeeks(monthIdx).map((row) => {
@@ -128,14 +110,14 @@ const App: React.FC = () => {
       const wkEnd = new Date(wkStart);
       wkEnd.setDate(wkEnd.getDate() + 6);
 
-      const weekHol = filtered.filter((h) => {
+      const weekHolidays = filtered.filter((h) => {
         const d = new Date(h.date);
         return d >= wkStart && d <= wkEnd;
       });
 
       return {
         ...row,
-        importantDates: weekHol
+        importantDates: weekHolidays
           .map((h) => `${h.date} — ${h.localName || h.name} (${h.country})`)
           .join("\n"),
       };
@@ -144,20 +126,19 @@ const App: React.FC = () => {
     setWeekData(rows);
   };
 
-  const updateCell = (idx: number, field: keyof WeekRow, val: string) =>
+  const updateCell = (idx: number, field: keyof WeekRow, val: string) => {
     setWeekData((prev) => {
       const copy = [...prev];
       copy[idx] = { ...copy[idx], [field]: val };
       return copy;
     });
-
-  /* ---------- render ---------- */
+  };
 
   return (
     <div className="app">
       <h1>Holiday Planner</h1>
 
-      {/* ───────── Step 1 ───────── */}
+      {/* Step 1 */}
       {!selectedMonth && (
         <>
           <h2>Step 1 – Choose Month</h2>
@@ -178,7 +159,7 @@ const App: React.FC = () => {
         </>
       )}
 
-      {/* ───────── Step 2 ───────── */}
+      {/* Step 2 */}
       {selectedMonth && availableCountries.length > 0 && weekData.length === 0 && (
         <>
           <h2>Step 2 – Select Countries with Holidays</h2>
@@ -207,7 +188,7 @@ const App: React.FC = () => {
         </>
       )}
 
-      {/* ───────── Step 3 ───────── */}
+      {/* Step 3 */}
       {weekData.length > 0 && (
         <>
           <h2>

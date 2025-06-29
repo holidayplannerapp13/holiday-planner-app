@@ -1,8 +1,8 @@
-// src/types.ts
-
 export interface Holiday {
   date: string;
-  country: string;
-  name?: string;
+  name: string;
   localName: string;
+  country: string;
+  month?: string; // cultural only
+  week?: number;  // cultural only
 }
