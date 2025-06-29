@@ -99,12 +99,9 @@ const App: React.FC = () => {
       wkEnd.setDate(wkStart.getDate() + 6);
 
       const weekHolidays = filtered.filter((h) => {
-        const d = new Date(h.date);
-        const match = d >= wkStart && d <= wkEnd;
-        if (match) {
-          console.log(`✅ Matched holiday: ${h.localName || h.name} (${h.country}) on ${h.date} → week ${row.week}`);
-        }
-        return match;
+        const [y, m, d] = h.date.split("-").map(Number);
+        const holidayDate = new Date(y, m - 1, d); // Local date parsing
+        return holidayDate >= wkStart && holidayDate <= wkEnd;
       });
 
       return {
@@ -193,17 +190,13 @@ const App: React.FC = () => {
               {weekData.map((row, i) => (
                 <tr key={row.week}>
                   <td>{row.week}</td>
-                  {[
-                    "lessons",
-                    "concepts",
-                    "holidayIntegrations",
-                    "assessment",
-                    "importantDates",
-                  ].map((field) => (
+                  {(
+                    ["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"] as const
+                  ).map((field) => (
                     <td key={field}>
                       <textarea
-                        value={row[field as keyof WeekRow]}
-                        onChange={(e) => updateCell(i, field as keyof WeekRow, e.target.value)}
+                        value={row[field]}
+                        onChange={(e) => updateCell(i, field, e.target.value)}
                       />
                     </td>
                   ))}
