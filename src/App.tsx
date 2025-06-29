@@ -1,7 +1,7 @@
 // App.tsx — Calendarific + cultural holidays with country normalization
 import React, { useState } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
-import calendarificData from "./data/calendarific-holidays.json";
+import calendarificHolidayData from "./data/calendarific-holidays.json";
 import countryTable from "./data/countryTable.json";
 import type { Holiday } from "./types";
 import "./styles.css";
@@ -59,19 +59,17 @@ const App: React.FC = () => {
     setSelectedCountries([]);
     setWeekData([]);
 
-    // Calendarific holidays (local file only)
-    const calendarificHolidays = (calendarificData as Holiday[]).filter((h) => {
+    // Filter holidays from static JSON instead of API
+    const calendarificHolidays = (calendarificHolidayData as Holiday[]).filter((h) => {
       const d = new Date(h.date);
       return d.getFullYear() === +year && d.getMonth() === monthIdx;
     });
 
-    // Cultural holidays
     const culturalHolidays = (culturalHolidayData as Holiday[]).filter((h) => {
       const d = new Date(h.date);
       return d.getFullYear() === +year && d.getMonth() === monthIdx;
     });
 
-    // Merge and normalize
     const merged = [...calendarificHolidays, ...culturalHolidays].map((h) => {
       const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
       return { ...h, country: fullName };
@@ -95,9 +93,13 @@ const App: React.FC = () => {
 
     const rows = generateWeeks(monthIdx).map((row) => {
       const wkNum = parseInt(row.week.split(" ")[2]) - 1;
-      const wkStart = new Date(+year, monthIdx, 1 + wkNum * 7);
+      const startOfWeek = new Date(+year, monthIdx, 1 + wkNum * 7);
+      const wkStart = new Date(startOfWeek);
+      const dayOfWeek = wkStart.getDay(); // 0 (Sun) - 6 (Sat)
+      wkStart.setDate(wkStart.getDate() - dayOfWeek); // shift to Sunday
+
       const wkEnd = new Date(wkStart);
-      wkEnd.setDate(wkEnd.getDate() + 6);
+      wkEnd.setDate(wkStart.getDate() + 6); // extend to Saturday
 
       const weekHolidays = filtered.filter((h) => {
         const d = new Date(h.date);
@@ -199,7 +201,7 @@ const App: React.FC = () => {
                 <tr key={row.week}>
                   <td>{row.week}</td>
                   {(
-                    ["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"] as const
+                    ["lessons","concepts","holidayIntegrations","assessment","importantDates"] as const
                   ).map((field) => (
                     <td key={field}>
                       <textarea
