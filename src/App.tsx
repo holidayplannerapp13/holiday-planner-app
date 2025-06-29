@@ -37,6 +37,10 @@ const App: React.FC = () => {
     const cursor = new Date(+year, monthIdx, 1);
     let wk = 1;
     while (cursor.getMonth() === monthIdx) {
+      const start = new Date(cursor);
+      const end = new Date(start);
+      end.setDate(end.getDate() + 6);
+
       rows.push({
         week: `${MONTHS[monthIdx]} – Week ${wk}`,
         lessons: "",
@@ -45,13 +49,14 @@ const App: React.FC = () => {
         assessment: "",
         importantDates: "",
       });
+
       cursor.setDate(cursor.getDate() + 7);
       wk++;
     }
     return rows;
   };
 
-  const handleMonthSelect = (monthLabel: string) => {
+  const handleMonthSelect = async (monthLabel: string) => {
     const monthIdx = MONTHS.indexOf(monthLabel);
     setSelectedMonth(monthLabel);
     setSelectedCountries([]);
@@ -68,13 +73,9 @@ const App: React.FC = () => {
     });
 
     const merged = [...calendarificHolidays, ...culturalHolidays].map((h) => {
-  const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
-  return {
-    ...h,
-    country: fullName,
-    localName: h.localName || h.name, // <- Ensure this always exists
-  };
-});
+      const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
+      return { ...h, country: fullName };
+    });
 
     setAllHolidays(merged);
     const names = Array.from(new Set(merged.map((h) => h.country))).sort();
@@ -95,12 +96,15 @@ const App: React.FC = () => {
     const rows = generateWeeks(monthIdx).map((row, i) => {
       const wkStart = new Date(+year, monthIdx, 1 + i * 7);
       const wkEnd = new Date(wkStart);
-      wkEnd.setDate(wkStart.getDate() + 6); // Full Sunday–Saturday week
+      wkEnd.setDate(wkStart.getDate() + 6);
 
       const weekHolidays = filtered.filter((h) => {
-        const startDate = new Date(h.date);
-        const endDate = h.endDate ? new Date(h.endDate) : startDate;
-        return endDate >= wkStart && startDate <= wkEnd;
+        const d = new Date(h.date);
+        const match = d >= wkStart && d <= wkEnd;
+        if (match) {
+          console.log(`✅ Matched holiday: ${h.localName || h.name} (${h.country}) on ${h.date} → week ${row.week}`);
+        }
+        return match;
       });
 
       return {
@@ -136,12 +140,7 @@ const App: React.FC = () => {
           ))}
           <br />
           <label style={{ marginTop: 12, display: "inline-block" }}>
-            Year:{" "}
-            <input
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-              style={{ width: 80 }}
-            />
+            Year: <input value={year} onChange={(e) => setYear(e.target.value)} style={{ width: 80 }} />
           </label>
         </>
       )}
@@ -194,13 +193,17 @@ const App: React.FC = () => {
               {weekData.map((row, i) => (
                 <tr key={row.week}>
                   <td>{row.week}</td>
-                  {(
-                    ["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"] as const
-                  ).map((field) => (
+                  {[
+                    "lessons",
+                    "concepts",
+                    "holidayIntegrations",
+                    "assessment",
+                    "importantDates",
+                  ].map((field) => (
                     <td key={field}>
                       <textarea
-                        value={row[field]}
-                        onChange={(e) => updateCell(i, field, e.target.value)}
+                        value={row[field as keyof WeekRow]}
+                        onChange={(e) => updateCell(i, field as keyof WeekRow, e.target.value)}
                       />
                     </td>
                   ))}
