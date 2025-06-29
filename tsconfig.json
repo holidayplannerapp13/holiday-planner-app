@@ -18,5 +18,6 @@
       "@/*": ["src/*"]                    // 🔧 Optional alias if you want to clean up imports
     }
   },
-  "include": ["src"]
+  "include": ["src", "src/json-modules.d.ts"]
+  
 }

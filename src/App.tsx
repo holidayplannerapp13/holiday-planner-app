@@ -1,180 +1,202 @@
-// Updated App.tsx to match step-by-step layout flow and CSV-style lesson plan output
-
-import { useState, useMemo } from "react";
+// App.tsx — Calendarific + Cultural holidays, filtered by country + editable planner
+import React, { useState } from "react";
+import culturalHolidayData from "./data/cultural-holidays.json";
+import countryTable from "./data/countryTable.json";
 import { getCalendarificHolidays } from "./utils/fetchCalendarificHolidays";
 import type { Holiday } from "./types";
-import countryTable from "./data/countryTable.json";
-import culturalHolidays from "./data/cultural-holidays.json";
+import "./styles.css";
+
+interface WeekRow {
+  week: string;
+  lessons: string;
+  concepts: string;
+  holidayIntegrations: string;
+  assessment: string;
+  importantDates: string;
+}
 
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December",
+  "July", "August", "September", "October", "November", "December"
 ];
-const CURRENT_YEAR = new Date().getFullYear();
-type ByWeek = Record<string, Holiday[]>;
 
-export default function App() {
-  const [month, setMonth] = useState<string>("");
-  const [year, setYear] = useState<number>(CURRENT_YEAR);
-  const [holidaysByWeek, setHolidaysByWeek] = useState<ByWeek>({});
+const App: React.FC = () => {
+  const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
+  const [year, setYear] = useState("2025");
+  const [weekData, setWeekData] = useState<WeekRow[]>([]);
+  const [allHolidays, setAllHolidays] = useState<Holiday[]>([]);
+  const [availableCountries, setAvailableCountries] = useState<string[]>([]);
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
-  const [loading, setLoading] = useState(false);
 
-  const availableCountryCodes = useMemo(() => {
-    const set = new Set<string>();
-    for (const { code } of countryTable.countries as any[]) {
-      set.add(code.toUpperCase());
+  const generateWeeks = (monthIndex: number): WeekRow[] => {
+    const d = new Date(parseInt(year), monthIndex, 1);
+    const rows: WeekRow[] = [];
+    let wk = 1;
+    while (d.getMonth() === monthIndex) {
+      rows.push({
+        week: `${MONTHS[monthIndex]} – Week ${wk}`,
+        lessons: "",
+        concepts: "",
+        holidayIntegrations: "",
+        assessment: "",
+        importantDates: ""
+      });
+      d.setDate(d.getDate() + 7);
+      wk++;
     }
-    return Array.from(set);
-  }, []);
+    return rows;
+  };
 
-  const countriesWithHolidays = useMemo(() => {
-    const nameToCode = new Map<string, string>();
-    for (const { name, code } of countryTable.countries as any[]) {
-      nameToCode.set(name.toLowerCase(), code.toUpperCase());
-    }
-    const idx = MONTHS.indexOf(month);
-    const holidays = (culturalHolidays as Holiday[]).filter((h) => {
-      const d = new Date(h.date);
-      const iso = nameToCode.get((h.country ?? "").toLowerCase());
-      return d.getFullYear() === year && d.getMonth() === idx && iso;
-    });
-    return Array.from(new Set(holidays.map((h) => nameToCode.get((h.country ?? "").toLowerCase())!)));
-  }, [month, year]);
+  const handleMonthSelect = async (monthLabel: string) => {
+    const monthIdx = MONTHS.indexOf(monthLabel);
+    setSelectedMonth(monthLabel);
+    setSelectedCountries([]);
 
-  async function handleFetch() {
-    if (!month || !countriesWithHolidays.length) return;
-    setLoading(true);
-    const idx = MONTHS.indexOf(month);
-    const fetched: Holiday[] = [];
-
-    for (const code of countriesWithHolidays) {
-      try {
-        const list = await getCalendarificHolidays(code);
-        fetched.push(
-          ...list.filter((h) => {
+    const calendarificCountries = countryTable.countries.map(c => c.code);
+    const calendarificResults = await Promise.all(
+      calendarificCountries.map(async (code) => {
+        try {
+          const res = await getCalendarificHolidays(code);
+          return res.filter((h) => {
             const d = new Date(h.date);
-            return d.getFullYear() === year && d.getMonth() === idx;
-          })
-        );
-      } catch (err) {
-        console.error("Calendarific fetch failed", code, err);
-      }
-    }
+            return d.getFullYear() === parseInt(year) && d.getMonth() === monthIdx;
+          });
+        } catch {
+          return [];
+        }
+      })
+    );
+    const calendarificHolidays = calendarificResults.flat();
 
-    const nameToCode = new Map<string, string>();
-    for (const { name, code } of countryTable.countries as any[]) {
-      nameToCode.set(name.toLowerCase(), code.toUpperCase());
-    }
-
-    const cultural = (culturalHolidays as Holiday[]).filter((h) => {
+    const culturalHolidays: Holiday[] = (culturalHolidayData as Holiday[]).filter((h) => {
       const d = new Date(h.date);
-      const iso = nameToCode.get((h.country ?? "").toLowerCase());
-      return d.getFullYear() === year && d.getMonth() === idx && iso && countriesWithHolidays.includes(iso);
+      return d.getFullYear() === parseInt(year) && d.getMonth() === monthIdx;
     });
 
-    const all = [...fetched, ...cultural];
-    const byWeek: ByWeek = {};
-    for (const h of all) {
-      const d = new Date(h.date);
-      const wk = Math.floor((d.getDate() - 1) / 7) + 1;
-      const key = `${MONTHS[d.getMonth()]} – Week ${wk}`;
-      (byWeek[key] ??= []).push(h);
-    }
-    setHolidaysByWeek(byWeek);
-    setSelectedCountries(countriesWithHolidays);
-    setLoading(false);
-  }
+    const merged = [...calendarificHolidays, ...culturalHolidays];
+    setAllHolidays(merged);
+
+    const countries = Array.from(new Set(merged.map((h) => h.country))).sort();
+    setAvailableCountries(countries);
+  };
+
+  const handleCountrySelect = (code: string) => {
+    setSelectedCountries((prev) =>
+      prev.includes(code) ? prev.filter((c) => c !== code) : [...prev, code]
+    );
+  };
+
+  const generateLessonPlan = () => {
+    if (!selectedMonth) return;
+    const monthIdx = MONTHS.indexOf(selectedMonth);
+
+    const filteredHolidays = allHolidays.filter((h) => selectedCountries.includes(h.country));
+
+    const rows = generateWeeks(monthIdx).map((row) => {
+      const wkNum = parseInt(row.week.split(" ")[2]) - 1;
+      const weekStart = new Date(parseInt(year), monthIdx, 1 + wkNum * 7);
+      const weekEnd = new Date(weekStart);
+      weekEnd.setDate(weekEnd.getDate() + 6);
+
+      const weekHolidays = filteredHolidays.filter((h) => {
+        const hd = new Date(h.date);
+        return hd >= weekStart && hd <= weekEnd;
+      });
+
+      return {
+        ...row,
+        importantDates: weekHolidays
+          .map((h) => `${h.date} — ${h.localName || h.name} (${h.country})`)
+          .join("\n")
+      };
+    });
+
+    setWeekData(rows);
+  };
+
+  const onCellChange = (idx: number, field: keyof WeekRow, val: string) => {
+    setWeekData((prev) => {
+      const copy = [...prev];
+      copy[idx] = { ...copy[idx], [field]: val };
+      return copy;
+    });
+  };
 
   return (
-    <div style={{ padding: 24, fontFamily: "sans-serif" }}>
+    <div className="app">
       <h1>Holiday Planner</h1>
 
-      {!month ? (
-        <section>
-          <h2>Choose Month</h2>
+      {!selectedMonth && (
+        <>
+          <h2>Step 1 – Choose Month</h2>
+          {MONTHS.map((m) => (
+            <button key={m} onClick={() => handleMonthSelect(m)} style={{ margin: 4 }}>{m}</button>
+          ))}
+          <br />
+          <label style={{ marginTop: 12, display: "inline-block" }}>
+            Year: <input value={year} onChange={(e) => setYear(e.target.value)} style={{ width: 80 }} />
+          </label>
+        </>
+      )}
+
+      {selectedMonth && availableCountries.length > 0 && selectedCountries.length === 0 && (
+        <>
+          <h2>Step 2 – Select Countries with Holidays</h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-            {MONTHS.map((m) => (
+            {availableCountries.map((c) => (
               <button
-                key={m}
-                onClick={() => {
-                  setMonth(m);
-                  setHolidaysByWeek({});
+                key={c}
+                onClick={() => handleCountrySelect(c)}
+                style={{
+                  padding: "6px 10px",
+                  border: "1px solid #333",
+                  background: selectedCountries.includes(c) ? "#90cdf4" : "#fff",
                 }}
-                style={{ padding: "6px 10px", border: "1px solid #333" }}
               >
-                {m}
+                {c}
               </button>
             ))}
           </div>
-          <div style={{ marginTop: 12 }}>
-            <label>Year: </label>
-            <input
-              type="number"
-              value={year}
-              onChange={(e) => setYear(Number(e.target.value))}
-              style={{ width: 90 }}
-            />
-          </div>
-        </section>
-      ) : !Object.keys(holidaysByWeek).length ? (
-        <section>
-          <h2>Fetching Holidays in {month} {year}</h2>
-          <p>{countriesWithHolidays.length} countries with holidays found.</p>
-          <button disabled={loading} onClick={handleFetch}>
-            {loading ? "Loading…" : "View Lesson Plan"}
-          </button>
-        </section>
-      ) : (
-        <section>
-          <h2>{month} {year} – Lesson Plan</h2>
-          <table border={1} cellPadding={6} style={{ borderCollapse: "collapse", width: "100%" }}>
-            <thead style={{ background: "#f0f0f0" }}>
+          <button onClick={generateLessonPlan} style={{ marginTop: 16 }}>Generate Lesson Plan</button>
+        </>
+      )}
+
+      {selectedMonth && weekData.length > 0 && (
+        <>
+          <h2>{selectedMonth} {year} – Lesson Plan</h2>
+          <table className="lesson-plan">
+            <thead>
               <tr>
-                <th style={{ width: 150 }}>Week</th>
-                <th style={{ width: 200 }}>Important Data</th>
-                <th>Musicianship</th>
-                <th>Repertoire</th>
-                <th>Movement</th>
-                <th>Instrument</th>
-                <th>Listening</th>
-                <th>Other</th>
+                <th>Week</th>
+                <th>Lessons</th>
+                <th>Concepts</th>
+                <th>Holiday Integrations</th>
+                <th>Assessment</th>
+                <th>Important Dates</th>
               </tr>
             </thead>
             <tbody>
-              {Array.from({ length: 5 }).map((_, i) => {
-                const wk = `${month} – Week ${i + 1}`;
-                const holidays = holidaysByWeek[wk] ?? [];
-                return (
-                  <tr key={wk}>
-                    <td>{wk}</td>
-                    <td>
-                      {holidays.map((h, idx) => (
-                        <div key={idx}>
-                          {new Date(h.date).toISOString().split("T")[0]} — {h.localName} ({h.country})
-                        </div>
-                      ))}
+              {weekData.map((row, i) => (
+                <tr key={row.week}>
+                  <td>{row.week}</td>
+                  {(["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"] as const).map((field) => (
+                    <td key={field}>
+                      <textarea
+                        value={row[field] as string}
+                        onChange={(e) => onCellChange(i, field, e.target.value)}
+                      />
                     </td>
-                    <td contentEditable></td>
-                    <td contentEditable></td>
-                    <td contentEditable></td>
-                    <td contentEditable></td>
-                    <td contentEditable></td>
-                    <td contentEditable></td>
-                  </tr>
-                );
-              })}
+                  ))}
+                </tr>
+              ))}
             </tbody>
           </table>
 
-          <button
-            onClick={() => window.print()}
-            style={{ marginTop: 24, padding: "6px 12px" }}
-          >
-            Print
-          </button>
-        </section>
+          <button onClick={() => window.print()} style={{ marginTop: 16 }}>Print</button>
+        </>
       )}
     </div>
   );
-}
+};
+
+export default App;
