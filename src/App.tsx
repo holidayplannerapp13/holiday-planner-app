@@ -68,9 +68,13 @@ const App: React.FC = () => {
     });
 
     const merged = [...calendarificHolidays, ...culturalHolidays].map((h) => {
-      const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
-      return { ...h, country: fullName };
-    });
+  const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
+  return {
+    ...h,
+    country: fullName,
+    localName: h.localName || h.name, // <- Ensure this always exists
+  };
+});
 
     setAllHolidays(merged);
     const names = Array.from(new Set(merged.map((h) => h.country))).sort();
