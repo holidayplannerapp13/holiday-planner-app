@@ -15,6 +15,8 @@ const MONTHS = [
   "July", "August", "September", "October", "November", "December"
 ];
 
+const GRADES = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+
 interface WeekRow {
   week: string;
   lessons: string;
@@ -36,6 +38,7 @@ const App: React.FC = () => {
   const [allHolidays, setAllHolidays] = useState<Holiday[]>([]);
   const [availableCountries, setAvailableCountries] = useState<string[]>([]);
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
+  const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
   const [weekDataSets, setWeekDataSets] = useState<Record<string, WeekRow[]>>({});
 
   const [semester1, setSemester1] = useState<Timeframe>({ label: "Semester 1", start: "", end: "" });
@@ -44,14 +47,11 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const holidays = [...calendarificHolidayData, ...culturalHolidayData]
-      .filter((h: Holiday) => {
-        const d = new Date(h.date);
-        return d.getFullYear() === +year;
-      })
-      .map((h: Holiday) => {
-        const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
-        return { ...h, country: fullName };
-      });
+      .filter((h: Holiday) => new Date(h.date).getFullYear() === +year)
+      .map((h: Holiday) => ({
+        ...h,
+        country: codeToName.get(h.country.toUpperCase()) ?? h.country
+      }));
     setAllHolidays(holidays);
   }, [year]);
 
@@ -85,19 +85,21 @@ const App: React.FC = () => {
     return rows;
   };
 
-  const handleMonthSelect = async (monthLabel: string) => {
+  const handleMonthSelect = (monthLabel: string) => {
     const monthIdx = MONTHS.indexOf(monthLabel);
     setSelectedMonth(monthLabel);
     setSelectedCountries([]);
     setWeekDataSets({});
 
-    const holidays = [...calendarificHolidayData, ...culturalHolidayData].filter((h: Holiday) => {
-      const d = new Date(h.date);
-      return d.getFullYear() === +year && d.getMonth() === monthIdx;
-    }).map((h: Holiday) => {
-      const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
-      return { ...h, country: fullName };
-    });
+    const holidays = [...calendarificHolidayData, ...culturalHolidayData]
+      .filter((h: Holiday) => {
+        const d = new Date(h.date);
+        return d.getFullYear() === +year && d.getMonth() === monthIdx;
+      })
+      .map((h: Holiday) => ({
+        ...h,
+        country: codeToName.get(h.country.toUpperCase()) ?? h.country
+      }));
 
     setAllHolidays(holidays);
     const names = Array.from(new Set(holidays.map((h) => h.country))).sort();
@@ -110,37 +112,49 @@ const App: React.FC = () => {
     );
   };
 
+  const toggleGrade = (grade: string) => {
+    setSelectedGrades((prev) =>
+      prev.includes(grade) ? prev.filter((g) => g !== grade) : [...prev, grade]
+    );
+  };
+
   const generateLessonPlan = () => {
     const filtered = allHolidays.filter((h) => selectedCountries.includes(h.country));
     const result: Record<string, WeekRow[]> = {};
 
-    const processTimeframe = (t: Timeframe) => {
-      if (!t.start || !t.end) return;
-      const start = new Date(t.start);
-      const end = new Date(t.end);
+    const timeframes = [semester1, semester2, summer];
+    const grades = selectedGrades.length > 0 ? selectedGrades : [""];
 
-      const weeks = generateWeeks(start, end, t.label).map((row, i) => {
-        const wkStart = new Date(start);
-        wkStart.setDate(start.getDate() + i * 7);
-        const wkEnd = new Date(wkStart);
-        wkEnd.setDate(wkStart.getDate() + 6);
+    grades.forEach((grade) => {
+      timeframes.forEach((t) => {
+        if (!t.start || !t.end) return;
+        const start = new Date(t.start);
+        const end = new Date(t.end);
 
-        const weekHolidays = filtered.filter((h) => {
-          const d = new Date(h.date);
-          return d >= wkStart && d <= wkEnd;
+        const weeks = generateWeeks(start, end, t.label).map((row, i) => {
+          const wkStart = new Date(start);
+          wkStart.setDate(start.getDate() + i * 7);
+          const wkEnd = new Date(wkStart);
+          wkEnd.setDate(wkStart.getDate() + 6);
+
+          const weekHolidays = filtered.filter((h) => {
+            const d = new Date(h.date);
+            return d >= wkStart && d <= wkEnd;
+          });
+
+          return {
+            ...row,
+            importantDates: weekHolidays
+              .map((h) => `${h.date} — ${h.localName || h.name} (${h.country})`)
+              .join("\n"),
+          };
         });
 
-        return {
-          ...row,
-          importantDates: weekHolidays
-            .map((h) => `${h.date} — ${h.localName || h.name} (${h.country})`)
-            .join("\n"),
-        };
+        const label = grade ? `${t.label} – Grade ${grade}` : t.label;
+        result[label] = weeks;
       });
-      result[t.label] = weeks;
-    };
+    });
 
-    [semester1, semester2, summer].forEach(processTimeframe);
     setWeekDataSets(result);
   };
 
@@ -160,12 +174,31 @@ const App: React.FC = () => {
         <>
           <h2>Step 1 – Choose Month or Define Timeframe</h2>
           {MONTHS.map((m) => (
-            <button key={m} onClick={() => handleMonthSelect(m)} style={{ margin: 4 }}>{m}</button>
+            <button key={m} onClick={() => handleMonthSelect(m)} style={{ margin: 4 }}>
+              {m}
+            </button>
           ))}
           <br />
           <label style={{ display: "block", marginTop: 12 }}>
             Year: <input value={year} onChange={(e) => setYear(e.target.value)} style={{ width: 80 }} />
           </label>
+
+          <div style={{ marginTop: 14 }}>
+            <strong>Grades:</strong>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 6 }}>
+              {GRADES.map((g) => (
+                <label key={g} style={{ display: "flex", alignItems: "center" }}>
+                  <input
+                    type="checkbox"
+                    checked={selectedGrades.includes(g)}
+                    onChange={() => toggleGrade(g)}
+                    style={{ marginRight: 4 }}
+                  />
+                  {g}
+                </label>
+              ))}
+            </div>
+          </div>
 
           <div className="timeframes">
             {[semester1, semester2, summer].map((t, i) => (
@@ -211,12 +244,12 @@ const App: React.FC = () => {
                   {weeks.map((row, i) => (
                     <tr key={row.week}>
                       <td>{row.week}</td>
-                      {["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"].map(
+                      {(["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"] as const).map(
                         (field) => (
                           <td key={field}>
                             <textarea
-                              value={row[field as keyof WeekRow]}
-                              onChange={(e) => updateCell(label, i, field as keyof WeekRow, e.target.value)}
+                              value={row[field]}
+                              onChange={(e) => updateCell(label, i, field, e.target.value)}
                             />
                           </td>
                         )
@@ -228,7 +261,9 @@ const App: React.FC = () => {
             </div>
           ))}
 
-          <button onClick={() => window.print()} style={{ marginTop: 16 }}>Print</button>
+          <button onClick={() => window.print()} style={{ marginTop: 16 }}>
+            Print
+          </button>
         </>
       )}
     </div>
