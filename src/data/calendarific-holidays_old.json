@@ -3280,6 +3280,16 @@
     ]
   },
   {
+    "name": "Christmas Eve",
+    "localName": "Christmas Eve",
+    "date": "2025-12-23",
+    "country": "MY",
+    "description": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
+    "type": [
+      "Observance"
+    ]
+  },
+  {
     "name": "Christmas Day",
     "localName": "Christmas Day",
     "date": "2025-12-24",
@@ -3577,6 +3587,16 @@
     "description": "Hari Raya Haji (Day 2) is a federal public holiday in Malaysia",
     "type": [
       "National holiday"
+    ]
+  },
+  {
+    "name": "Hari Raya Haji (Day 2)",
+    "localName": "Hari Raya Haji (Day 2)",
+    "date": "2026-05-27",
+    "country": "MY",
+    "description": "Hari Raya Haji (Day 2) is a state holiday in Malaysia",
+    "type": [
+      "Local holiday"
     ]
   },
   {
@@ -9651,6 +9671,16 @@
     ]
   },
   {
+    "name": "San Jose",
+    "localName": "San Jose",
+    "date": "2026-03-18",
+    "country": "ES",
+    "description": "Saint Joseph's Day honors St Joseph, the Virgin Mary's spouse. It is a public holiday in some parts of Spain on March 19 each year.",
+    "type": [
+      "Local holiday"
+    ]
+  },
+  {
     "name": "Eid al-Fitr",
     "localName": "Eid al-Fitr",
     "date": "2026-03-19",
@@ -9658,6 +9688,16 @@
     "description": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
     "type": [
       "Observance"
+    ]
+  },
+  {
+    "name": "Eid al-Fitr",
+    "localName": "Eid al-Fitr",
+    "date": "2026-03-19",
+    "country": "ES",
+    "description": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
+    "type": [
+      "Local holiday"
     ]
   },
   {
@@ -9701,6 +9741,16 @@
     ]
   },
   {
+    "name": "Maundy Thursday",
+    "localName": "Maundy Thursday",
+    "date": "2026-04-01",
+    "country": "ES",
+    "description": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
+    "type": [
+      "Local holiday"
+    ]
+  },
+  {
     "name": "Good Friday",
     "localName": "Good Friday",
     "date": "2026-04-02",
@@ -9738,6 +9788,16 @@
     "description": "Easter Monday is the day after Easter Sunday.",
     "type": [
       "Observance"
+    ]
+  },
+  {
+    "name": "Easter Monday",
+    "localName": "Easter Monday",
+    "date": "2026-04-05",
+    "country": "ES",
+    "description": "Easter Monday is the day after Easter Sunday.",
+    "type": [
+      "Local holiday"
     ]
   },
   {
@@ -9871,6 +9931,16 @@
     ]
   },
   {
+    "name": "Corpus Christi",
+    "localName": "Corpus Christi",
+    "date": "2026-06-03",
+    "country": "ES",
+    "description": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
+    "type": [
+      "Observance"
+    ]
+  },
+  {
     "name": "Day of Murcia",
     "localName": "Day of Murcia",
     "date": "2026-06-08",
@@ -9921,6 +9991,16 @@
     ]
   },
   {
+    "name": "Saint John the Baptist Day",
+    "localName": "Saint John the Baptist Day",
+    "date": "2026-06-23",
+    "country": "ES",
+    "description": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
+    "type": [
+      "Observance"
+    ]
+  },
+  {
     "name": "Feast of Saint James the Apostle",
     "localName": "Feast of Saint James the Apostle",
     "date": "2026-07-24",
@@ -9928,6 +10008,16 @@
     "description": "Saint James' Day is an occasion to honor the life and deeds of one of Jesus' disciples. It is a public holiday in the autonomous communities of the Basque Country and Galicia in Spain on July 25.",
     "type": [
       "Local holiday"
+    ]
+  },
+  {
+    "name": "Feast of Saint James the Apostle",
+    "localName": "Feast of Saint James the Apostle",
+    "date": "2026-07-24",
+    "country": "ES",
+    "description": "Saint James' Day is an occasion to honor the life and deeds of one of Jesus' disciples. It is a public holiday in the autonomous communities of the Basque Country and Galicia in Spain on July 25.",
+    "type": [
+      "Observance"
     ]
   },
   {
@@ -11242,6 +11332,17 @@
     "type": [
       "Local observance",
       "Christian"
+    ]
+  },
+  {
+    "name": "Easter Monday",
+    "localName": "Easter Monday",
+    "date": "2026-04-05",
+    "country": "GB",
+    "description": "Easter Monday is the day after Easter Sunday. It is a bank holiday in England, Wales and Northern Ireland but not in Scotland.",
+    "type": [
+      "Christian",
+      "Common local holiday"
     ]
   },
   {
@@ -14735,6 +14836,16 @@
     ]
   },
   {
+    "name": "German World Children's Day",
+    "localName": "German World Children's Day",
+    "date": "2025-09-19",
+    "country": "DE",
+    "description": "German World Children's Day is a observance in Germany",
+    "type": [
+      "Observance"
+    ]
+  },
+  {
     "name": "First day of Wiesn (Oktoberfest)",
     "localName": "First day of Wiesn (Oktoberfest)",
     "date": "2025-09-19",
@@ -14925,6 +15036,16 @@
     ]
   },
   {
+    "name": "Reformation Day",
+    "localName": "Reformation Day",
+    "date": "2025-10-30",
+    "country": "DE",
+    "description": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
+    "type": [
+      "Common local holiday"
+    ]
+  },
+  {
     "name": "Halloween",
     "localName": "Halloween",
     "date": "2025-10-30",
@@ -14943,6 +15064,17 @@
     "type": [
       "Christian",
       "Common local holiday"
+    ]
+  },
+  {
+    "name": "All Saints' Day",
+    "localName": "All Saints' Day",
+    "date": "2025-10-31",
+    "country": "DE",
+    "description": "All Saints' Day is an annual public holiday in five German states to remember all Christian saints on November 1.",
+    "type": [
+      "Observance",
+      "Christian"
     ]
   },
   {
@@ -15015,6 +15147,28 @@
     "description": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
     "type": [
       "Observance"
+    ]
+  },
+  {
+    "name": "Repentance Day",
+    "localName": "Repentance Day",
+    "date": "2025-11-18",
+    "country": "DE",
+    "description": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
+    "type": [
+      "Observance",
+      "Christian"
+    ]
+  },
+  {
+    "name": "Repentance Day",
+    "localName": "Repentance Day",
+    "date": "2025-11-18",
+    "country": "DE",
+    "description": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
+    "type": [
+      "Christian",
+      "Common local holiday"
     ]
   },
   {
@@ -15178,6 +15332,16 @@
     ]
   },
   {
+    "name": "Epiphany",
+    "localName": "Epiphany",
+    "date": "2026-01-05",
+    "country": "DE",
+    "description": "Epiphany on January 6 is a public holiday in 3 German states  and commemorates the Bible story of  the Magi's visit to baby Jesus.",
+    "type": [
+      "Common local holiday"
+    ]
+  },
+  {
     "name": "Franco-German Day",
     "localName": "Franco-German Day",
     "date": "2026-01-21",
@@ -15258,6 +15422,26 @@
     "description": "International Women's Day is a observance in Germany",
     "type": [
       "Observance"
+    ]
+  },
+  {
+    "name": "International Women's Day",
+    "localName": "International Women's Day",
+    "date": "2026-03-07",
+    "country": "DE",
+    "description": "International Women's Day is a observance in Germany",
+    "type": [
+      "Observance"
+    ]
+  },
+  {
+    "name": "International Women's Day",
+    "localName": "International Women's Day",
+    "date": "2026-03-07",
+    "country": "DE",
+    "description": "International Women's Day is a common local holiday in Germany",
+    "type": [
+      "Common local holiday"
     ]
   },
   {
@@ -15346,6 +15530,17 @@
     ]
   },
   {
+    "name": "Maundy Thursday",
+    "localName": "Maundy Thursday",
+    "date": "2026-04-01",
+    "country": "DE",
+    "description": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
+    "type": [
+      "Observance",
+      "Christian"
+    ]
+  },
+  {
     "name": "First Day of Passover",
     "localName": "First Day of Passover",
     "date": "2026-04-01",
@@ -15398,6 +15593,17 @@
     "type": [
       "Observance",
       "Christian"
+    ]
+  },
+  {
+    "name": "Easter Sunday",
+    "localName": "Easter Sunday",
+    "date": "2026-04-04",
+    "country": "DE",
+    "description": "Easter Sunday is a holiday in Germany to celebrate the Jesus Christ's resurrection, according to the Christian Bible.",
+    "type": [
+      "Christian",
+      "Common local holiday"
     ]
   },
   {
@@ -15575,6 +15781,17 @@
     "type": [
       "Christian",
       "Common local holiday"
+    ]
+  },
+  {
+    "name": "Whit Sunday",
+    "localName": "Whit Sunday",
+    "date": "2026-05-23",
+    "country": "DE",
+    "description": "Pentecost is a Christian holiday to remember the Holy Spirit's descent onto Jesus' followers.",
+    "type": [
+      "Observance",
+      "Christian"
     ]
   },
   {
@@ -18791,6 +19008,16 @@
     ]
   },
   {
+    "name": "National Day for Truth and Reconciliation",
+    "localName": "National Day for Truth and Reconciliation",
+    "date": "2025-09-29",
+    "country": "CA",
+    "description": "National Day for Truth and Reconciliation is a federal employees holiday in Canada",
+    "type": [
+      "National holiday"
+    ]
+  },
+  {
     "name": "Yom Kippur",
     "localName": "Yom Kippur",
     "date": "2025-10-01",
@@ -18838,6 +19065,26 @@
     "description": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
     "type": [
       "National holiday"
+    ]
+  },
+  {
+    "name": "Thanksgiving Day",
+    "localName": "Thanksgiving Day",
+    "date": "2025-10-12",
+    "country": "CA",
+    "description": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
+    "type": [
+      "Common local holiday"
+    ]
+  },
+  {
+    "name": "Thanksgiving Day",
+    "localName": "Thanksgiving Day",
+    "date": "2025-10-12",
+    "country": "CA",
+    "description": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
+    "type": [
+      "Observance"
     ]
   },
   {
@@ -18943,6 +19190,26 @@
     ]
   },
   {
+    "name": "Remembrance Day",
+    "localName": "Remembrance Day",
+    "date": "2025-11-10",
+    "country": "CA",
+    "description": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
+    "type": [
+      "Local holiday"
+    ]
+  },
+  {
+    "name": "Remembrance Day",
+    "localName": "Remembrance Day",
+    "date": "2025-11-10",
+    "country": "CA",
+    "description": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
+    "type": [
+      "National holiday"
+    ]
+  },
+  {
     "name": "First Sunday of Advent",
     "localName": "First Sunday of Advent",
     "date": "2025-11-29",
@@ -19013,6 +19280,16 @@
     ]
   },
   {
+    "name": "Christmas Eve",
+    "localName": "Christmas Eve",
+    "date": "2025-12-23",
+    "country": "CA",
+    "description": "Christmas Eve in Canada is the day before Christmas Day and always falls on December 24 according to the Gregorian calendar.",
+    "type": [
+      "Observance"
+    ]
+  },
+  {
     "name": "Christmas Day",
     "localName": "Christmas Day",
     "date": "2025-12-24",
@@ -19041,6 +19318,46 @@
     "description": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
     "type": [
       "National holiday"
+    ]
+  },
+  {
+    "name": "Boxing Day",
+    "localName": "Boxing Day",
+    "date": "2025-12-25",
+    "country": "CA",
+    "description": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
+    "type": [
+      "Common local holiday"
+    ]
+  },
+  {
+    "name": "Boxing Day",
+    "localName": "Boxing Day",
+    "date": "2025-12-25",
+    "country": "CA",
+    "description": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
+    "type": [
+      "Optional holiday"
+    ]
+  },
+  {
+    "name": "Boxing Day",
+    "localName": "Boxing Day",
+    "date": "2025-12-25",
+    "country": "CA",
+    "description": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
+    "type": [
+      "Local holiday"
+    ]
+  },
+  {
+    "name": "Boxing Day",
+    "localName": "Boxing Day",
+    "date": "2025-12-25",
+    "country": "CA",
+    "description": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
+    "type": [
+      "De facto holiday"
     ]
   },
   {
@@ -19170,6 +19487,16 @@
     "date": "2026-02-15",
     "country": "CA",
     "description": "Islander Day is a day off for many people in the province of Prince Edward Island in Canada.",
+    "type": [
+      "Local holiday"
+    ]
+  },
+  {
+    "name": "Family Day",
+    "localName": "Family Day",
+    "date": "2026-02-15",
+    "country": "CA",
+    "description": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
     "type": [
       "Local holiday"
     ]
@@ -19386,6 +19713,27 @@
     ]
   },
   {
+    "name": "Easter Sunday",
+    "localName": "Easter Sunday",
+    "date": "2026-04-04",
+    "country": "CA",
+    "description": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
+    "type": [
+      "Common local holiday"
+    ]
+  },
+  {
+    "name": "Easter Sunday",
+    "localName": "Easter Sunday",
+    "date": "2026-04-04",
+    "country": "CA",
+    "description": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
+    "type": [
+      "Observance",
+      "Christian"
+    ]
+  },
+  {
     "name": "Easter Monday",
     "localName": "Easter Monday",
     "date": "2026-04-05",
@@ -19393,6 +19741,46 @@
     "description": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
     "type": [
       "Local holiday"
+    ]
+  },
+  {
+    "name": "Easter Monday",
+    "localName": "Easter Monday",
+    "date": "2026-04-05",
+    "country": "CA",
+    "description": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
+    "type": [
+      "National holiday"
+    ]
+  },
+  {
+    "name": "Easter Monday",
+    "localName": "Easter Monday",
+    "date": "2026-04-05",
+    "country": "CA",
+    "description": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
+    "type": [
+      "Local holiday"
+    ]
+  },
+  {
+    "name": "Easter Monday",
+    "localName": "Easter Monday",
+    "date": "2026-04-05",
+    "country": "CA",
+    "description": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
+    "type": [
+      "Optional holiday"
+    ]
+  },
+  {
+    "name": "Easter Monday",
+    "localName": "Easter Monday",
+    "date": "2026-04-05",
+    "country": "CA",
+    "description": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
+    "type": [
+      "De facto holiday"
     ]
   },
   {
@@ -19633,6 +20021,16 @@
     "description": "National Indigenous Peoples Day celebrates Canada’s Indigenous culture and the achievements made by the country’s indigenous peoples.",
     "type": [
       "Observance"
+    ]
+  },
+  {
+    "name": "National Indigenous Peoples Day",
+    "localName": "National Indigenous Peoples Day",
+    "date": "2026-06-20",
+    "country": "CA",
+    "description": "National Indigenous Peoples Day celebrates Canada’s Indigenous culture and the achievements made by the country’s indigenous peoples.",
+    "type": [
+      "Local holiday"
     ]
   },
   {

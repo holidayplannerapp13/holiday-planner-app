@@ -2390,6 +2390,7 @@
   },
   {
     "date": "2025-05-25",
+    "endDate": "2025-06-06",
     "country": "ZZ",
     "name": "Eid al-Adha (Islamic, عيد الأضحى),",
     "localName": "Eid al-Adha (Islamic, عيد الأضحى),"
@@ -2453,12 +2454,6 @@
     "country": "ZZ",
     "name": "D-Day",
     "localName": "D-Day"
-  },
-  {
-    "date": "2025-06-06",
-    "country": "ZZ",
-    "name": "Eid al-Adha (Islamic, عيد الأضحى),",
-    "localName": "Eid al-Adha (Islamic, عيد الأضحى),"
   },
   {
     "date": "2025-06-09",
