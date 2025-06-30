@@ -1,4 +1,4 @@
-// App.tsx – Fully Patched with Timezone-Safe Holiday Range Checking
+// App.tsx – Updated with Separate Steps: Grades → Timeframe → Countries → Lesson Plan
 
 import React, { useState, useEffect } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
@@ -142,7 +142,7 @@ const App: React.FC = () => {
     });
 
     setWeekDataSets(result);
-    setStep(2);
+    setStep(4);
   };
 
   return (
@@ -150,6 +150,22 @@ const App: React.FC = () => {
       <h1>Holiday Planner</h1>
 
       {step === 1 && (
+        <>
+          <h2>Select Grades</h2>
+          {GRADES.map((g) => (
+            <label key={g}>
+              <input
+                type="checkbox"
+                checked={selectedGrades.includes(g)}
+                onChange={() => toggleGrade(g)}
+              /> {g}
+            </label>
+          ))}
+          <button onClick={() => setStep(2)}>Next: Choose Timeframe</button>
+        </>
+      )}
+
+      {step === 2 && (
         <>
           <h2>Choose Month or Define Timeframe</h2>
           {MONTHS.map((m) => (
@@ -159,18 +175,6 @@ const App: React.FC = () => {
             <label>
               Year: <input value={year} onChange={(e) => setYear(e.target.value)} />
             </label>
-          </div>
-          <div>
-            <h3>Grades:</h3>
-            {GRADES.map((g) => (
-              <label key={g}>
-                <input
-                  type="checkbox"
-                  checked={selectedGrades.includes(g)}
-                  onChange={() => toggleGrade(g)}
-                /> {g}
-              </label>
-            ))}
           </div>
           <div>
             <h3>Custom Timeframes</h3>
@@ -200,23 +204,29 @@ const App: React.FC = () => {
               </div>
             ))}
           </div>
-          <div>
-            <h3>Select Countries</h3>
-            {availableCountries.map((name) => (
-              <label key={name}>
-                <input
-                  type="checkbox"
-                  checked={selectedCountries.includes(name)}
-                  onChange={() => toggleCountry(name)}
-                /> {name}
-              </label>
-            ))}
-          </div>
-          <button onClick={generateLessonPlan}>Generate Lesson Plan</button>
+          <button onClick={() => setStep(3)}>Next: Choose Countries</button>
         </>
       )}
 
-      {step === 2 && (
+      {step === 3 && (
+        <>
+          <h2>Select Relevant Countries</h2>
+          <div>
+            {availableCountries.map((name) => (
+              <button
+                key={name}
+                className={selectedCountries.includes(name) ? "selected" : ""}
+                onClick={() => toggleCountry(name)}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+          <button onClick={generateLessonPlan}>Next: Generate Lesson Plan</button>
+        </>
+      )}
+
+      {step === 4 && (
         <>
           <h2>Lesson Plans</h2>
           {Object.entries(weekDataSets).map(([label, weeks]) => (
