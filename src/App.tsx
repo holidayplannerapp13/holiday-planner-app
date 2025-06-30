@@ -1,4 +1,4 @@
-// App.tsx – Updated with fixes for Semester 2 & Summer holidays, consistent buttons, layout polish
+// App.tsx – Updated for grade selection styling and clarity
 
 import React, { useState, useEffect } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
@@ -152,11 +152,11 @@ const App: React.FC = () => {
       {step === 1 && (
         <>
           <h2>Select Grades</h2>
-          <div className="button-grid">
+          <div className="button-grid grades">
             {GRADES.map((g) => (
               <button
                 key={g}
-                className={selectedGrades.includes(g) ? "selected" : ""}
+                className={`grade-button ${selectedGrades.includes(g) ? "selected" : ""}`}
                 onClick={() => toggleGrade(g)}
               >
                 {g}
