@@ -1,4 +1,4 @@
-// App.tsx – Updated with Separate Steps: Grades → Timeframe → Countries → Lesson Plan
+// App.tsx – Updated with fixes for Semester 2 & Summer holidays, consistent buttons, layout polish
 
 import React, { useState, useEffect } from "react";
 import culturalHolidayData from "./data/cultural-holidays.json";
@@ -83,9 +83,9 @@ const App: React.FC = () => {
     const cursor = new Date(startDate);
     let wk = 1;
     while (cursor <= endDate) {
-      const start = new Date(cursor);
-      const end = new Date(start);
-      end.setDate(end.getDate() + 6);
+      const weekStart = new Date(cursor);
+      const weekEnd = new Date(weekStart);
+      weekEnd.setDate(weekEnd.getDate() + 6);
       rows.push({
         week: `${label} – Week ${wk}`,
         lessons: "",
@@ -152,15 +152,17 @@ const App: React.FC = () => {
       {step === 1 && (
         <>
           <h2>Select Grades</h2>
-          {GRADES.map((g) => (
-            <label key={g}>
-              <input
-                type="checkbox"
-                checked={selectedGrades.includes(g)}
-                onChange={() => toggleGrade(g)}
-              /> {g}
-            </label>
-          ))}
+          <div className="button-grid">
+            {GRADES.map((g) => (
+              <button
+                key={g}
+                className={selectedGrades.includes(g) ? "selected" : ""}
+                onClick={() => toggleGrade(g)}
+              >
+                {g}
+              </button>
+            ))}
+          </div>
           <button onClick={() => setStep(2)}>Next: Choose Timeframe</button>
         </>
       )}
@@ -168,9 +170,17 @@ const App: React.FC = () => {
       {step === 2 && (
         <>
           <h2>Choose Month or Define Timeframe</h2>
-          {MONTHS.map((m) => (
-            <button key={m} onClick={() => setSelectedMonth(m)}>{m}</button>
-          ))}
+          <div className="button-grid">
+            {MONTHS.map((m) => (
+              <button
+                key={m}
+                className={selectedMonth === m ? "selected" : ""}
+                onClick={() => setSelectedMonth(m)}
+              >
+                {m}
+              </button>
+            ))}
+          </div>
           <div>
             <label>
               Year: <input value={year} onChange={(e) => setYear(e.target.value)} />
@@ -211,7 +221,7 @@ const App: React.FC = () => {
       {step === 3 && (
         <>
           <h2>Select Relevant Countries</h2>
-          <div>
+          <div className="button-grid">
             {availableCountries.map((name) => (
               <button
                 key={name}
@@ -222,7 +232,9 @@ const App: React.FC = () => {
               </button>
             ))}
           </div>
-          <button onClick={generateLessonPlan}>Next: Generate Lesson Plan</button>
+          <div style={{ marginTop: "1rem" }}>
+            <button onClick={generateLessonPlan}>Next: Generate Lesson Plan</button>
+          </div>
         </>
       )}
 
