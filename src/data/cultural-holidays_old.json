@@ -559,13 +559,13 @@
   },
   {
     "date": "2025-10-28",
-    "country": "TR",
+    "country": "ZZ",
     "name": "Republic Day (Turkey)",
     "localName": "Republic Day (Turkey)"
   },
   {
     "date": "2025-10-29",
-    "country": "US",
+    "country": "ZZ",
     "name": "Mischief Night",
     "localName": "Mischief Night"
   },
@@ -577,31 +577,31 @@
   },
   {
     "date": "2025-10-31",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Samhain",
     "localName": "Samhain"
   },
   {
     "date": "2025-10-31",
-    "country": "GB",
+    "country": "ZZ",
     "name": "All Saints Day",
     "localName": "All Saints Day"
   },
   {
     "date": "2025-10-31",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Calan Gaeaf",
     "localName": "Calan Gaeaf"
   },
   {
     "date": "2025-10-31",
-    "country": "AG",
+    "country": "ZZ",
     "name": "Antigua Independence Day",
     "localName": "Antigua Independence Day"
   },
   {
     "date": "2025-10-31",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Satowan Day (Chuuk)",
     "localName": "Satowan Day (Chuuk)"
   },
@@ -631,13 +631,13 @@
   },
   {
     "date": "2025-11-02",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Federated States of Micronesia (FSM) Independence Day",
     "localName": "Federated States of Micronesia (FSM) Independence Day"
   },
   {
     "date": "2025-11-03",
-    "country": "RU",
+    "country": "ZZ",
     "name": "Russia's Day of Unity (День народного единства)",
     "localName": "Russia's Day of Unity (День народного единства)"
   },
@@ -661,7 +661,7 @@
   },
   {
     "date": "2025-11-07",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Constitution Day (Pohnpei)",
     "localName": "Constitution Day (Pohnpei)"
   },
@@ -685,7 +685,7 @@
   },
   {
     "date": "2025-11-10",
-    "country": "US",
+    "country": "ZZ",
     "name": "Veterans Day (USA)",
     "localName": "Veterans Day (USA)"
   },
@@ -703,7 +703,7 @@
   },
   {
     "date": "2025-11-16",
-    "country": "MH",
+    "country": "ZZ",
     "name": "President's Day (RMI)",
     "localName": "President's Day (RMI)"
   },
@@ -721,7 +721,7 @@
   },
   {
     "date": "2025-11-19",
-    "country": "US",
+    "country": "ZZ",
     "name": "Transgender Day of Rememberance",
     "localName": "Transgender Day of Rememberance"
   },
@@ -739,13 +739,13 @@
   },
   {
     "date": "2025-11-22",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Presidents Day (FSM)",
     "localName": "Presidents Day (FSM)"
   },
   {
     "date": "2025-11-24",
-    "country": "BA",
+    "country": "ZZ",
     "name": "National Day of Bosnia and Herzigovina",
     "localName": "National Day of Bosnia and Herzigovina"
   },
@@ -757,13 +757,13 @@
   },
   {
     "date": "2025-11-26",
-    "country": "US",
+    "country": "ZZ",
     "name": "Thanksgiving",
     "localName": "Thanksgiving"
   },
   {
     "date": "2025-11-27",
-    "country": "US",
+    "country": "ZZ",
     "name": "Native American Heritage Day (USA)",
     "localName": "Native American Heritage Day (USA)"
   },
@@ -781,7 +781,7 @@
   },
   {
     "date": "2025-11-28",
-    "country": "UN",
+    "country": "ZZ",
     "name": "International Day of Solidarity with the Palestinian People",
     "localName": "International Day of Solidarity with the Palestinian People"
   },
@@ -805,7 +805,7 @@
   },
   {
     "date": "2025-11-29",
-    "country": "GB",
+    "country": "ZZ",
     "name": "St. Andrew's Day (Scotland)",
     "localName": "St. Andrew's Day (Scotland)"
   },
@@ -817,7 +817,7 @@
   },
   {
     "date": "2025-11-30",
-    "country": "US",
+    "country": "ZZ",
     "name": "Rosa Parks Day",
     "localName": "Rosa Parks Day"
   },
@@ -829,9 +829,9 @@
   },
   {
     "date": "2025-11-30",
-    "country": "KZ",
-    "name": "Kazakhstan's First President's Day",
-    "localName": "Kazakhstan's First President's Day"
+    "country": "ZZ",
+    "name": "Kakakhstan's First President's Day",
+    "localName": "Kakakhstan's First President's Day"
   },
   {
     "date": "2025-11-30",
@@ -847,19 +847,19 @@
   },
   {
     "date": "2025-12-01",
-    "country": "LA",
+    "country": "ZZ",
     "name": "Lao National Day (ວັນຊາດ)",
     "localName": "Lao National Day (ວັນຊາດ)"
   },
   {
     "date": "2025-12-01",
-    "country": "AE",
+    "country": "ZZ",
     "name": "UAE National Day",
     "localName": "UAE National Day"
   },
   {
     "date": "2025-12-02",
-    "country": "BQ",
+    "country": "ZZ",
     "name": "Saba Day (Saba)",
     "localName": "Saba Day (Saba)"
   },
@@ -877,7 +877,7 @@
   },
   {
     "date": "2025-12-04",
-    "country": "RM",
+    "country": "ZZ",
     "name": "Gospel Day (RMI)",
     "localName": "Gospel Day (RMI)"
   },
@@ -907,7 +907,7 @@
   },
   {
     "date": "2025-12-07",
-    "country": "JP",
+    "country": "ZZ",
     "name": "Rōhatsu (臘八)/Bodhi day (Buddhist)",
     "localName": "Rōhatsu (臘八)/Bodhi day (Buddhist)"
   },
@@ -931,7 +931,7 @@
   },
   {
     "date": "2025-12-08",
-    "country": "TZ",
+    "country": "ZZ",
     "name": "Tanzania Independence Day",
     "localName": "Tanzania Independence Day"
   },
@@ -1003,7 +1003,7 @@
   },
   {
     "date": "2025-12-17",
-    "country": "US",
+    "country": "ZZ",
     "name": "Arabic Language Day",
     "localName": "Arabic Language Day"
   },
@@ -1021,13 +1021,13 @@
   },
   {
     "date": "2025-12-18",
-    "country": "IN",
+    "country": "ZZ",
     "name": "Goa Liberation Day",
     "localName": "Goa Liberation Day"
   },
   {
     "date": "2025-12-19",
-    "country": "US",
+    "country": "ZZ",
     "name": "Sacagawea Day",
     "localName": "Sacagawea Day"
   },
@@ -1039,7 +1039,7 @@
   },
   {
     "date": "2025-12-20",
-    "country": "CN",
+    "country": "ZZ",
     "name": "Dongzhi (China, 冬至)",
     "localName": "Dongzhi (China, 冬至)"
   },
@@ -1057,7 +1057,7 @@
   },
   {
     "date": "2025-12-20",
-    "country": "ST",
+    "country": "ZZ",
     "name": "São Tomé Day",
     "localName": "São Tomé Day"
   },
@@ -1087,7 +1087,7 @@
   },
   {
     "date": "2025-12-23",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Constitution Day (Yap)",
     "localName": "Constitution Day (Yap)"
   },
@@ -1129,7 +1129,7 @@
   },
   {
     "date": "2025-12-25",
-    "country": "CA",
+    "country": "ZZ",
     "name": "Boxing Day",
     "localName": "Boxing Day"
   },
@@ -1147,13 +1147,13 @@
   },
   {
     "date": "2025-12-28",
-    "country": "MN",
+    "country": "ZZ",
     "name": "Mogolia Independence Day",
     "localName": "Mogolia Independence Day"
   },
   {
     "date": "2025-12-30",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Hogmanay",
     "localName": "Hogmanay"
   },
@@ -1207,13 +1207,13 @@
   },
   {
     "date": "2025-01-03",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Hansel Monday (Scotland)",
     "localName": "Hansel Monday (Scotland)"
   },
   {
     "date": "2025-01-03",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Twelfth Night",
     "localName": "Twelfth Night"
   },
@@ -1237,13 +1237,13 @@
   },
   {
     "date": "2025-01-10",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Kosrae Constitution Day",
     "localName": "Kosrae Constitution Day"
   },
   {
     "date": "2025-01-12",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Calennig (Welsh)",
     "localName": "Calennig (Welsh)"
   },
@@ -1261,7 +1261,7 @@
   },
   {
     "date": "2025-01-12",
-    "country": "RU",
+    "country": "ZZ",
     "name": "Novy God (Russia, Новый Год)",
     "localName": "Novy God (Russia, Новый Год)"
   },
@@ -1285,19 +1285,19 @@
   },
   {
     "date": "2025-01-18",
-    "country": "US",
+    "country": "ZZ",
     "name": "Civil Rights Day (USA)",
     "localName": "Civil Rights Day (USA)"
   },
   {
     "date": "2025-01-19",
-    "country": "US",
+    "country": "ZZ",
     "name": "Innauguration Day",
     "localName": "Innauguration Day"
   },
   {
     "date": "2025-01-19",
-    "country": "US",
+    "country": "ZZ",
     "name": "Martin Luther King Jr. Day",
     "localName": "Martin Luther King Jr. Day"
   },
@@ -1315,7 +1315,7 @@
   },
   {
     "date": "2025-01-22",
-    "country": "PH",
+    "country": "ZZ",
     "name": "First Philippine Republic Day",
     "localName": "First Philippine Republic Day"
   },
@@ -1327,13 +1327,13 @@
   },
   {
     "date": "2025-01-24",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Burns Night (Scotland)",
     "localName": "Burns Night (Scotland)"
   },
   {
     "date": "2025-01-24",
-    "country": "GB",
+    "country": "ZZ",
     "name": "St. Dwynwen's Day (Wales)",
     "localName": "St. Dwynwen's Day (Wales)"
   },
@@ -1345,13 +1345,13 @@
   },
   {
     "date": "2025-01-26",
-    "country": "US",
+    "country": "ZZ",
     "name": "Holocaust Memorial Day",
     "localName": "Holocaust Memorial Day"
   },
   {
     "date": "2025-01-31",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Imbolc",
     "localName": "Imbolc"
   },
@@ -1417,13 +1417,13 @@
   },
   {
     "date": "2025-02-05",
-    "country": "WS",
+    "country": "ZZ",
     "name": "Sami National Day (Sami)",
     "localName": "Sami National Day (Sami)"
   },
   {
     "date": "2025-02-05",
-    "country": "NZ",
+    "country": "ZZ",
     "name": "Waitangi Day (Aotearoa)",
     "localName": "Waitangi Day (Aotearoa)"
   },
@@ -1471,7 +1471,7 @@
   },
   {
     "date": "2025-02-14",
-    "country": "US",
+    "country": "ZZ",
     "name": "Susan B Anthony Day (USA)",
     "localName": "Susan B Anthony Day (USA)"
   },
@@ -1489,13 +1489,13 @@
   },
   {
     "date": "2025-02-15",
-    "country": "US",
+    "country": "ZZ",
     "name": "President's Day",
     "localName": "President's Day"
   },
   {
     "date": "2025-02-16",
-    "country": "US",
+    "country": "ZZ",
     "name": "Fat Tuesday",
     "localName": "Fat Tuesday"
   },
@@ -1531,7 +1531,7 @@
   },
   {
     "date": "2025-02-17",
-    "country": "GM",
+    "country": "ZZ",
     "name": "Gambia Independence Day",
     "localName": "Gambia Independence Day"
   },
@@ -1543,7 +1543,7 @@
   },
   {
     "date": "2025-02-20",
-    "country": "UN",
+    "country": "ZZ",
     "name": "World Language Day",
     "localName": "World Language Day"
   },
@@ -1561,7 +1561,7 @@
   },
   {
     "date": "2025-02-21",
-    "country": "LC",
+    "country": "ZZ",
     "name": "St. Lucia Independence Day",
     "localName": "St. Lucia Independence Day"
   },
@@ -1579,7 +1579,7 @@
   },
   {
     "date": "2025-02-22",
-    "country": "BN",
+    "country": "ZZ",
     "name": "National Day (Brunei)",
     "localName": "National Day (Brunei)"
   },
@@ -1621,13 +1621,13 @@
   },
   {
     "date": "2025-02-25",
-    "country": "US",
+    "country": "ZZ",
     "name": "Black Lives Matter Day",
     "localName": "Black Lives Matter Day"
   },
   {
     "date": "2025-02-26",
-    "country": "DO",
+    "country": "ZZ",
     "name": "Domican Republic Independence Day",
     "localName": "Domican Republic Independence Day"
   },
@@ -1639,13 +1639,13 @@
   },
   {
     "date": "2025-02-28",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Yap Day",
     "localName": "Yap Day"
   },
   {
     "date": "2025-02-28",
-    "country": "MH",
+    "country": "ZZ",
     "name": "Remembrance Day (RMI)",
     "localName": "Remembrance Day (RMI)"
   },
@@ -1675,13 +1675,13 @@
   },
   {
     "date": "2025-03-02",
-    "country": "JP",
+    "country": "ZZ",
     "name": "Hinamatsuri (雛祭り)",
     "localName": "Hinamatsuri (雛祭り)"
   },
   {
     "date": "2025-03-02",
-    "country": "TW",
+    "country": "ZZ",
     "name": "Lantern Festival (Taiwan, 臺灣燈會)",
     "localName": "Lantern Festival (Taiwan, 臺灣燈會)"
   },
@@ -1717,25 +1717,25 @@
   },
   {
     "date": "2025-03-08",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Commonwealth Day (UK Commonwealth) )",
     "localName": "Commonwealth Day (UK Commonwealth) )"
   },
   {
     "date": "2025-03-09",
-    "country": "US",
+    "country": "ZZ",
     "name": "Hariet Tubman Day",
     "localName": "Hariet Tubman Day"
   },
   {
     "date": "2025-03-10",
-    "country": "CN",
+    "country": "ZZ",
     "name": "Zhonghe Festival (龍抬頭)",
     "localName": "Zhonghe Festival (龍抬頭)"
   },
   {
     "date": "2025-03-11",
-    "country": "MX",
+    "country": "ZZ",
     "name": "Aztec New Year (Yancuic Xīhuitl)",
     "localName": "Aztec New Year (Yancuic Xīhuitl)"
   },
@@ -1783,7 +1783,7 @@
   },
   {
     "date": "2025-03-16",
-    "country": "US",
+    "country": "ZZ",
     "name": "St. Patrick's Day",
     "localName": "St. Patrick's Day"
   },
@@ -1795,13 +1795,13 @@
   },
   {
     "date": "2025-03-18",
-    "country": "CN",
+    "country": "ZZ",
     "name": "Zhonge Festival (China, 中和)",
     "localName": "Zhonge Festival (China, 中和)"
   },
   {
     "date": "2025-03-19",
-    "country": "CN",
+    "country": "ZZ",
     "name": "Longtaitou Festival (China, 龍抬頭)",
     "localName": "Longtaitou Festival (China, 龍抬頭)"
   },
@@ -1867,7 +1867,7 @@
   },
   {
     "date": "2025-03-25",
-    "country": "US",
+    "country": "ZZ",
     "name": "Prince Kuhio Day (Hawai'i)",
     "localName": "Prince Kuhio Day (Hawai'i)"
   },
@@ -1879,7 +1879,7 @@
   },
   {
     "date": "2025-03-29",
-    "country": "PS",
+    "country": "ZZ",
     "name": "Land Day (Palestine)",
     "localName": "Land Day (Palestine)"
   },
@@ -1897,19 +1897,19 @@
   },
   {
     "date": "2025-03-30",
-    "country": "US",
+    "country": "ZZ",
     "name": "César Chavez day (USA)",
     "localName": "César Chavez day (USA)"
   },
   {
     "date": "2025-03-30",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Culture Day (FSM)",
     "localName": "Culture Day (FSM)"
   },
   {
     "date": "2025-03-31",
-    "country": "US",
+    "country": "ZZ",
     "name": "April Fool's Day",
     "localName": "April Fool's Day"
   },
@@ -1951,7 +1951,7 @@
   },
   {
     "date": "2025-04-04",
-    "country": "CN",
+    "country": "ZZ",
     "name": "Qingming Festival (China, 清明節)",
     "localName": "Qingming Festival (China, 清明節)"
   },
@@ -1969,7 +1969,7 @@
   },
   {
     "date": "2025-04-04",
-    "country": "US",
+    "country": "ZZ",
     "name": "Merrie Monarch Festival (Hawai'i)",
     "localName": "Merrie Monarch Festival (Hawai'i)"
   },
@@ -1981,7 +1981,7 @@
   },
   {
     "date": "2025-04-05",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Tartan Day (Scotland)",
     "localName": "Tartan Day (Scotland)"
   },
@@ -2054,13 +2054,13 @@
   },
   {
     "date": "2025-04-15",
-    "country": "SY",
+    "country": "ZZ",
     "name": ", Syria Independence Day 4/17",
     "localName": ", Syria Independence Day 4/17"
   },
   {
     "date": "2025-04-19",
-    "country": "US",
+    "country": "ZZ",
     "name": "Chinese Language Day",
     "localName": "Chinese Language Day"
   },
@@ -2090,7 +2090,7 @@
   },
   {
     "date": "2025-04-22",
-    "country": "US",
+    "country": "ZZ",
     "name": "Spanish Language Day",
     "localName": "Spanish Language Day"
   },
@@ -2102,7 +2102,7 @@
   },
   {
     "date": "2025-04-24",
-    "country": "NZ",
+    "country": "ZZ",
     "name": "Anzac Day Māori",
     "localName": "Anzac Day Māori"
   },
@@ -2120,7 +2120,7 @@
   },
   {
     "date": "2025-04-24",
-    "country": "EG",
+    "country": "ZZ",
     "name": "Liberation Day (Sinai)",
     "localName": "Liberation Day (Sinai)"
   },
@@ -2132,13 +2132,13 @@
   },
   {
     "date": "2025-04-26",
-    "country": "NL",
+    "country": "ZZ",
     "name": "Koningsday",
     "localName": "Koningsday"
   },
   {
     "date": "2025-04-26",
-    "country": "PH",
+    "country": "ZZ",
     "name": "Lapu Lapu Day",
     "localName": "Lapu Lapu Day"
   },
@@ -2180,13 +2180,13 @@
   },
   {
     "date": "2025-04-30",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Beltane (Celtic)",
     "localName": "Beltane (Celtic)"
   },
   {
     "date": "2025-04-30",
-    "country": "US",
+    "country": "ZZ",
     "name": "Lei Day (Hawai'i)",
     "localName": "Lei Day (Hawai'i)"
   },
@@ -2198,13 +2198,13 @@
   },
   {
     "date": "2025-04-30",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Calan Mai (Wales)",
     "localName": "Calan Mai (Wales)"
   },
   {
     "date": "2025-04-30",
-    "country": "RM",
+    "country": "ZZ",
     "name": "Constitution Day (RMI)",
     "localName": "Constitution Day (RMI)"
   },
@@ -2270,13 +2270,13 @@
   },
   {
     "date": "2025-05-08",
-    "country": "RU",
+    "country": "ZZ",
     "name": "Victory Day (Russia, День Победы)",
     "localName": "Victory Day (Russia, День Победы)"
   },
   {
     "date": "2025-05-09",
-    "country": "FM",
+    "country": "ZZ",
     "name": "Constitution Day (FSM)",
     "localName": "Constitution Day (FSM)"
   },
@@ -2306,7 +2306,7 @@
   },
   {
     "date": "2025-05-18",
-    "country": "US",
+    "country": "ZZ",
     "name": "Malcom X Day",
     "localName": "Malcom X Day"
   },
@@ -2318,7 +2318,7 @@
   },
   {
     "date": "2025-05-19",
-    "country": "TL",
+    "country": "ZZ",
     "name": "East Timor Republic Day",
     "localName": "East Timor Republic Day"
   },
@@ -2354,7 +2354,7 @@
   },
   {
     "date": "2025-05-24",
-    "country": "US",
+    "country": "ZZ",
     "name": "Memorial Day",
     "localName": "Memorial Day"
   },
@@ -2397,13 +2397,13 @@
   },
   {
     "date": "2025-05-26",
-    "country": "GP",
+    "country": "ZZ",
     "name": "Slavery Abolition Day (Guadalupe)",
     "localName": "Slavery Abolition Day (Guadalupe)"
   },
   {
     "date": "2025-05-27",
-    "country": "MF",
+    "country": "ZZ",
     "name": "Abolition Day (Saint Martin)",
     "localName": "Abolition Day (Saint Martin)"
   },
@@ -2469,7 +2469,7 @@
   },
   {
     "date": "2025-06-10",
-    "country": "US",
+    "country": "ZZ",
     "name": "King Kamehameha Day",
     "localName": "King Kamehameha Day"
   },
@@ -2481,7 +2481,7 @@
   },
   {
     "date": "2025-06-11",
-    "country": "RU",
+    "country": "ZZ",
     "name": "Russia Day",
     "localName": "Russia Day"
   },
@@ -2493,13 +2493,13 @@
   },
   {
     "date": "2025-06-13",
-    "country": "Falkland Islands",
+    "country": "ZZ",
     "name": "Falkland Islands Liberation Day",
     "localName": "Falkland Islands Liberation Day"
   },
   {
     "date": "2025-06-14",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Magna Carta Day (England)",
     "localName": "Magna Carta Day (England)"
   },
@@ -2529,13 +2529,13 @@
   },
   {
     "date": "2025-06-18",
-    "country": "US",
+    "country": "ZZ",
     "name": "Juneteenth",
     "localName": "Juneteenth"
   },
   {
     "date": "2025-06-18",
-    "country": "CN",
+    "country": "ZZ",
     "name": "Dragon Boat Festival (China, 端午節)",
     "localName": "Dragon Boat Festival (China, 端午節)"
   },
@@ -2577,13 +2577,13 @@
   },
   {
     "date": "2025-06-20",
-    "country": "LT",
+    "country": "ZZ",
     "name": "Litha",
     "localName": "Litha"
   },
   {
     "date": "2025-06-22",
-    "country": "JU",
+    "country": "ZZ",
     "name": "Jura Independence Day",
     "localName": "Jura Independence Day"
   },
@@ -2595,19 +2595,19 @@
   },
   {
     "date": "2025-06-22",
-    "country": "LV",
+    "country": "ZZ",
     "name": "Līgo",
     "localName": "Līgo"
   },
   {
     "date": "2025-06-23",
-    "country": "LV",
+    "country": "ZZ",
     "name": "Jāņi",
     "localName": "Jāņi"
   },
   {
     "date": "2025-06-23",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Armed Forces Day (UK)",
     "localName": "Armed Forces Day (UK)"
   },
@@ -2619,7 +2619,7 @@
   },
   {
     "date": "2025-06-23",
-    "country": "GB",
+    "country": "ZZ",
     "name": "Midsummer (Northern Europe)",
     "localName": "Midsummer (Northern Europe)"
   },
@@ -2679,7 +2679,7 @@
   },
   {
     "date": "2025-06-29",
-    "country": "CD",
+    "country": "ZZ",
     "name": "Congo Independence Day",
     "localName": "Congo Independence Day"
   }
