@@ -5,25 +5,14 @@ import countryTable from "./data/countryTable.json";
 import type { Holiday } from "./types";
 import "./styles.css";
 
-// Map ISO country codes to their full names once at startup
 const codeToName = new Map<string, string>();
 countryTable.countries.forEach((c: { code: string; name: string }) => {
   codeToName.set(c.code.toUpperCase(), c.name);
 });
 
 const MONTHS = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
 ];
 
 interface WeekRow {
@@ -42,9 +31,6 @@ interface Timeframe {
 }
 
 const App: React.FC = () => {
-  // ────────────────────────────────────────────────────────────────────────────────
-  // State
-  // ────────────────────────────────────────────────────────────────────────────────
   const [selectedMonth, setSelectedMonth] = useState<string | null>(null);
   const [year, setYear] = useState("2025");
   const [allHolidays, setAllHolidays] = useState<Holiday[]>([]);
@@ -52,56 +38,39 @@ const App: React.FC = () => {
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
   const [weekDataSets, setWeekDataSets] = useState<Record<string, WeekRow[]>>({});
 
-  const [semester1, setSemester1] = useState<Timeframe>({
-    label: "Semester 1",
-    start: "",
-    end: "",
-  });
-  const [semester2, setSemester2] = useState<Timeframe>({
-    label: "Semester 2",
-    start: "",
-    end: "",
-  });
-  const [summer, setSummer] = useState<Timeframe>({
-    label: "Summer",
-    start: "",
-    end: "",
-  });
+  const [semester1, setSemester1] = useState<Timeframe>({ label: "Semester 1", start: "", end: "" });
+  const [semester2, setSemester2] = useState<Timeframe>({ label: "Semester 2", start: "", end: "" });
+  const [summer, setSummer] = useState<Timeframe>({ label: "Summer", start: "", end: "" });
 
-  // ────────────────────────────────────────────────────────────────────────────────
-  // Prefill holiday data whenever the year changes
-  // ────────────────────────────────────────────────────────────────────────────────
   useEffect(() => {
-    const holidaysForYear: Holiday[] = [...calendarificHolidayData, ...culturalHolidayData]
-      .filter((h) => new Date(h.date).getFullYear() === +year)
-      .map((h) => {
+    const holidays = [...calendarificHolidayData, ...culturalHolidayData]
+      .filter((h: Holiday) => {
+        const d = new Date(h.date);
+        return d.getFullYear() === +year;
+      })
+      .map((h: Holiday) => {
         const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
-        return { ...h, country: fullName } as Holiday;
+        return { ...h, country: fullName };
       });
-
-    setAllHolidays(holidaysForYear);
-    setAvailableCountries(
-      Array.from(new Set(holidaysForYear.map((h) => h.country))).sort(),
-    );
+    setAllHolidays(holidays);
   }, [year]);
 
-  // ────────────────────────────────────────────────────────────────────────────────
-  // Helpers
-  // ────────────────────────────────────────────────────────────────────────────────
-  const generateWeeks = (
-    startDate: Date,
-    endDate: Date,
-    label: string,
-  ): WeekRow[] => {
+  useEffect(() => {
+    if (!selectedMonth && allHolidays.length > 0) {
+      const names = Array.from(new Set(allHolidays.map((h) => h.country))).sort();
+      setAvailableCountries(names);
+      setSelectedCountries(names);
+    }
+  }, [allHolidays, selectedMonth]);
+
+  const generateWeeks = (startDate: Date, endDate: Date, label: string): WeekRow[] => {
     const rows: WeekRow[] = [];
     const cursor = new Date(startDate);
     let wk = 1;
-
     while (cursor <= endDate) {
       const start = new Date(cursor);
       const end = new Date(start);
       end.setDate(end.getDate() + 6);
-
       rows.push({
         week: `${label} – Week ${wk}`,
         lessons: "",
@@ -110,49 +79,39 @@ const App: React.FC = () => {
         assessment: "",
         importantDates: "",
       });
-
       cursor.setDate(cursor.getDate() + 7);
-      wk += 1;
+      wk++;
     }
-
     return rows;
   };
 
-  // ────────────────────────────────────────────────────────────────────────────────
-  // Month selection (unchanged logic)
-  // ────────────────────────────────────────────────────────────────────────────────
   const handleMonthSelect = async (monthLabel: string) => {
     const monthIdx = MONTHS.indexOf(monthLabel);
     setSelectedMonth(monthLabel);
     setSelectedCountries([]);
     setWeekDataSets({});
 
-    const holidays = [...calendarificHolidayData, ...culturalHolidayData]
-      .filter((h: Holiday) => {
-        const d = new Date(h.date);
-        return d.getFullYear() === +year && d.getMonth() === monthIdx;
-      })
-      .map((h: Holiday) => {
-        const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
-        return { ...h, country: fullName };
-      });
+    const holidays = [...calendarificHolidayData, ...culturalHolidayData].filter((h: Holiday) => {
+      const d = new Date(h.date);
+      return d.getFullYear() === +year && d.getMonth() === monthIdx;
+    }).map((h: Holiday) => {
+      const fullName = codeToName.get(h.country.toUpperCase()) ?? h.country;
+      return { ...h, country: fullName };
+    });
 
     setAllHolidays(holidays);
-    setAvailableCountries(Array.from(new Set(holidays.map((h) => h.country))).sort());
+    const names = Array.from(new Set(holidays.map((h) => h.country))).sort();
+    setAvailableCountries(names);
   };
 
   const toggleCountry = (name: string) => {
     setSelectedCountries((prev) =>
-      prev.includes(name) ? prev.filter((c) => c !== name) : [...prev, name],
+      prev.includes(name) ? prev.filter((c) => c !== name) : [...prev, name]
     );
   };
 
-  // ────────────────────────────────────────────────────────────────────────────────
-  // Lesson‑plan generation (unchanged logic)
-  // ────────────────────────────────────────────────────────────────────────────────
   const generateLessonPlan = () => {
     const filtered = allHolidays.filter((h) => selectedCountries.includes(h.country));
-
     const result: Record<string, WeekRow[]> = {};
 
     const processTimeframe = (t: Timeframe) => {
@@ -178,7 +137,6 @@ const App: React.FC = () => {
             .join("\n"),
         };
       });
-
       result[t.label] = weeks;
     };
 
@@ -186,12 +144,7 @@ const App: React.FC = () => {
     setWeekDataSets(result);
   };
 
-  const updateCell = (
-    label: string,
-    idx: number,
-    field: keyof WeekRow,
-    val: string,
-  ) => {
+  const updateCell = (label: string, idx: number, field: keyof WeekRow, val: string) => {
     setWeekDataSets((prev) => {
       const copy = { ...prev };
       copy[label][idx] = { ...copy[label][idx], [field]: val };
@@ -199,57 +152,35 @@ const App: React.FC = () => {
     });
   };
 
-  // ────────────────────────────────────────────────────────────────────────────────
-  // JSX
-  // ────────────────────────────────────────────────────────────────────────────────
   return (
     <div className="app">
       <h1>Holiday Planner</h1>
 
-      {/* ───────── Step 1 – Pick month or timeframe ───────── */}
       {!selectedMonth && (
         <>
           <h2>Step 1 – Choose Month or Define Timeframe</h2>
           {MONTHS.map((m) => (
-            <button key={m} onClick={() => handleMonthSelect(m)} style={{ margin: 4 }}>
-              {m}
-            </button>
+            <button key={m} onClick={() => handleMonthSelect(m)} style={{ margin: 4 }}>{m}</button>
           ))}
           <br />
           <label style={{ display: "block", marginTop: 12 }}>
-            Year:{" "}
-            <input
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-              style={{ width: 80 }}
-            />
+            Year: <input value={year} onChange={(e) => setYear(e.target.value)} style={{ width: 80 }} />
           </label>
 
           <div className="timeframes">
             {[semester1, semester2, summer].map((t, i) => (
               <div key={t.label} style={{ marginTop: 10 }}>
-                <strong>{t.label}</strong>
-                <br />
-                Start:{" "}
-                <input
-                  type="date"
-                  value={t.start}
-                  onChange={(e) => {
-                    const update = [semester1, semester2, summer];
-                    update[i] = { ...update[i], start: e.target.value };
-                    [setSemester1, setSemester2, setSummer][i](update[i]);
-                  }}
-                />
-                End:{" "}
-                <input
-                  type="date"
-                  value={t.end}
-                  onChange={(e) => {
-                    const update = [semester1, semester2, summer];
-                    update[i] = { ...update[i], end: e.target.value };
-                    [setSemester1, setSemester2, setSummer][i](update[i]);
-                  }}
-                />
+                <strong>{t.label}</strong><br />
+                Start: <input type="date" value={t.start} onChange={(e) => {
+                  const update = [semester1, semester2, summer];
+                  update[i] = { ...update[i], start: e.target.value };
+                  [setSemester1, setSemester2, setSummer][i](update[i]);
+                }} />
+                End: <input type="date" value={t.end} onChange={(e) => {
+                  const update = [semester1, semester2, summer];
+                  update[i] = { ...update[i], end: e.target.value };
+                  [setSemester1, setSemester2, setSummer][i](update[i]);
+                }} />
               </div>
             ))}
 
@@ -260,7 +191,6 @@ const App: React.FC = () => {
         </>
       )}
 
-      {/* ───────── Generated tables ───────── */}
       {Object.keys(weekDataSets).length > 0 && (
         <>
           {Object.entries(weekDataSets).map(([label, weeks]) => (
@@ -281,22 +211,16 @@ const App: React.FC = () => {
                   {weeks.map((row, i) => (
                     <tr key={row.week}>
                       <td>{row.week}</td>
-                      {(
-                        [
-                          "lessons",
-                          "concepts",
-                          "holidayIntegrations",
-                          "assessment",
-                          "importantDates",
-                        ] as (keyof WeekRow)[]
-                      ).map((field) => (
-                        <td key={field}>
-                          <textarea
-                            value={row[field]}
-                            onChange={(e) => updateCell(label, i, field, e.target.value)}
-                          />
-                        </td>
-                      ))}
+                      {["lessons", "concepts", "holidayIntegrations", "assessment", "importantDates"].map(
+                        (field) => (
+                          <td key={field}>
+                            <textarea
+                              value={row[field as keyof WeekRow]}
+                              onChange={(e) => updateCell(label, i, field as keyof WeekRow, e.target.value)}
+                            />
+                          </td>
+                        )
+                      )}
                     </tr>
                   ))}
                 </tbody>
@@ -304,9 +228,7 @@ const App: React.FC = () => {
             </div>
           ))}
 
-          <button onClick={() => window.print()} style={{ marginTop: 16 }}>
-            Print
-          </button>
+          <button onClick={() => window.print()} style={{ marginTop: 16 }}>Print</button>
         </>
       )}
     </div>
